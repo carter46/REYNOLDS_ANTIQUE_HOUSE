@@ -1,0 +1,12 @@
+.nav-pills .nav-link {
+  color: #555;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+

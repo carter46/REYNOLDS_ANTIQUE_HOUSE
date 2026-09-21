@@ -1,0 +1,42 @@
+.text-uppercase {
+  letter-spacing: 0.1em;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.form-control:hover {
+  border-color: white;
+}
+
+.form-control {
+  display: block;
+  width: 80%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  background-color: rgba(255,255,255,0);
+  background-clip: padding-box;
+  border: none;
+  border-radius: 0;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+.form-control:focus {
+  color: #000000;
+  background-color: #fbae16;
+  border-color: initial;
+  outline: 0;
+  box-shadow: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+

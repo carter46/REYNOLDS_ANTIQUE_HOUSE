@@ -7,16 +7,36 @@
   <meta name="description" content="About Reynolds Antique House." />
   <meta name="theme-color" content="#1a1410" />
   <link rel="stylesheet" href="/assets/css/chrome.css" />
+  <link rel="stylesheet" href="/assets/css/home-newel.css" />
 </head>
 <body data-page="about">
   <div id="site-header-root"></div>
   <main id="main">
-<section class="rah-page rah-prose">
-        <h1>About Reynolds Antique House</h1>
-        <p>Reynolds Antique House presents a curated selection of antiques and decorative arts. This static site preserves the collection for browsing after a migration from our previous online gallery.</p>
-        <p>Every image and page asset is hosted locally — the catalog does not depend on the former store, CDNs, or third-party commerce systems.</p>
-        <p><a class="rah-btn" href="/products.html">View the Collection</a></p>
-      </section>
+    <section class="newel-featured-story" aria-labelledby="about-title" style="margin-top:2rem;">
+      <div class="newel-featured-story__inner">
+        <figure class="newel-featured-story__media">
+          <img class="newel-featured-story__image" src="/assets/img/keneddy_img.webp" alt="Historical gallery archive imagery" width="1080" height="1080" />
+        </figure>
+        <article class="newel-featured-story__content">
+          <p class="newel-featured-story__eyebrow">Our Story</p>
+          <h1 class="newel-featured-story__title" id="about-title">About <em>Reynolds Antique House</em></h1>
+          <p class="newel-featured-story__copy">
+            Reynolds Antique House presents a curated gallery of antiques, fine art, mirrors, lighting,
+            and decorative objects. This site preserves the original gallery layout and browsing experience
+            while serving a fully local static catalog.
+          </p>
+          <p class="newel-featured-story__copy">
+            Historical archive material — including stories from the prior gallery lineage such as Jacqueline
+            Kennedy’s 1963 visit — is retained as heritage context. Product descriptions and maker names are
+            preserved as provenance.
+          </p>
+          <a class="newel-featured-story__cta" href="/products.html">
+            Browse the Collection
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+          </a>
+        </article>
+      </div>
+    </section>
   </main>
   <div id="site-footer-root"></div>
   <script src="/js/site-chrome.js"></script>

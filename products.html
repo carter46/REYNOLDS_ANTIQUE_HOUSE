@@ -11,53 +11,72 @@
 <body data-page="products">
   <div id="site-header-root"></div>
   <main id="main">
-<section class="rah-page">
-        <h1 class="rah-section-title">Collection</h1>
-        <p class="rah-section-lead">342 pieces with complete local imagery.</p>
-        <div class="rah-filters" id="category-filters">
-          <button type="button" data-cat="all" class="is-active">All</button>
-<button type="button" data-cat="Furniture">Furniture</button>
-<button type="button" data-cat="Sculpture">Sculpture</button>
-<button type="button" data-cat="Mirrors">Mirrors</button>
-<button type="button" data-cat="Lighting">Lighting</button>
-<button type="button" data-cat="Decor">Decor</button>
-<button type="button" data-cat="Art">Art</button>
-<button type="button" data-cat="Accessories">Accessories</button>
-        </div>
-        <div class="rah-grid" id="product-grid"></div>
-      </section>
-      <script src="/js/product-catalog.js"></script>
-      <script>
-        (async function () {
-          const data = await ReynoldsCatalog.load();
-          const grid = document.getElementById("product-grid");
-          const params = new URLSearchParams(window.location.search);
-          const initialCat = params.get("cat") || "all";
-          function render(list) {
-            grid.innerHTML = list.map(ReynoldsCatalog.cardHtml).join("");
-          }
-          function activate(cat) {
-            document.querySelectorAll("#category-filters button").forEach(function (b) {
-              b.classList.toggle("is-active", b.getAttribute("data-cat") === cat);
-            });
-            render(ReynoldsCatalog.byCategory(cat));
-          }
-          const known = Array.from(document.querySelectorAll("#category-filters button")).map(function (b) {
-            return b.getAttribute("data-cat");
+    <section class="rah-page">
+      <h1 class="rah-section-title">Collection</h1>
+      <p class="rah-section-lead" id="collection-lead">Browse the gallery inventory.</p>
+      <div class="rah-filters" id="category-filters">
+        <button type="button" data-cat="all" class="is-active">All</button>
+        <button type="button" data-cat="Furniture">Furniture</button>
+        <button type="button" data-cat="Sculpture">Sculpture</button>
+        <button type="button" data-cat="Mirrors">Mirrors</button>
+        <button type="button" data-cat="Lighting">Lighting</button>
+        <button type="button" data-cat="Decor">Decor</button>
+        <button type="button" data-cat="Art">Art</button>
+        <button type="button" data-cat="Accessories">Accessories</button>
+      </div>
+      <div class="rah-grid" id="product-grid"></div>
+    </section>
+    <script src="/js/product-catalog.js"></script>
+    <script>
+      (async function () {
+        await ReynoldsCatalog.load();
+        const grid = document.getElementById("product-grid");
+        const lead = document.getElementById("collection-lead");
+        const params = new URLSearchParams(window.location.search);
+        const q = params.get("q") || "";
+        const initialCat = params.get("cat") || "all";
+        function render(list) {
+          grid.innerHTML = list.map(ReynoldsCatalog.cardHtml).join("");
+        }
+        function activate(cat) {
+          document.querySelectorAll("#category-filters button").forEach(function (b) {
+            b.classList.toggle("is-active", b.getAttribute("data-cat") === cat);
           });
-          activate(known.indexOf(initialCat) >= 0 ? initialCat : "all");
-          document.getElementById("category-filters").addEventListener("click", function (e) {
-            const btn = e.target.closest("button[data-cat]");
-            if (!btn) return;
-            const cat = btn.getAttribute("data-cat");
-            activate(cat);
-            const url = new URL(window.location.href);
-            if (cat === "all") url.searchParams.delete("cat");
-            else url.searchParams.set("cat", cat);
-            history.replaceState(null, "", url.pathname + url.search);
+          let list = ReynoldsCatalog.byCategory(cat);
+          if (q) list = ReynoldsCatalog.search(q).filter(function (p) {
+            if (!cat || cat === "all") return true;
+            return (p.category || "").toLowerCase().includes(cat.toLowerCase());
           });
-        })();
-      </script>
+          render(list);
+          lead.textContent = q
+            ? ('Search results for "' + q + '" — ' + list.length + " pieces")
+            : (list.length + " pieces with complete local imagery.");
+        }
+        if (q) {
+          const input = document.getElementById("search-input");
+          // search input injected after chrome loads — defer fill
+          setTimeout(function () {
+            const el = document.getElementById("search-input");
+            if (el) el.value = q;
+          }, 0);
+        }
+        const known = Array.from(document.querySelectorAll("#category-filters button")).map(function (b) {
+          return b.getAttribute("data-cat");
+        });
+        activate(known.indexOf(initialCat) >= 0 ? initialCat : "all");
+        document.getElementById("category-filters").addEventListener("click", function (e) {
+          const btn = e.target.closest("button[data-cat]");
+          if (!btn) return;
+          const cat = btn.getAttribute("data-cat");
+          activate(cat);
+          const url = new URL(window.location.href);
+          if (cat === "all") url.searchParams.delete("cat");
+          else url.searchParams.set("cat", cat);
+          if (q) url.searchParams.set("q", q);
+          history.replaceState(null, "", url.pathname + url.search);
+        });
+      })();
+    </script>
   </main>
   <div id="site-footer-root"></div>
   <script src="/js/site-chrome.js"></script>

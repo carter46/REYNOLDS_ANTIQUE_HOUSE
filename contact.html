@@ -11,9 +11,16 @@
 <body data-page="contact">
   <div id="site-header-root"></div>
   <main id="main">
-<section class="rah-page rah-prose">
-        <h1>Contact</h1>
-        <p>Reach the gallery by email. This form opens your mail client — there is no remote form backend on this static site.</p>
+    <section class="rah-page">
+      <h1 class="rah-section-title">Contact</h1>
+      <p class="rah-section-lead">Reach Reynolds Antique House. This static form opens your mail client — no remote form backend or reCAPTCHA.</p>
+      <div style="display:grid;gap:2rem;max-width:960px;margin:0 auto;grid-template-columns:1fr;">
+        <div class="rah-prose" style="text-align:left;">
+          <h2 style="text-align:left;font-size:1.35rem;">Gallery</h2>
+          <p>New York City · Est. 1939 lineage</p>
+          <p><a href="mailto:info@reynoldsantiquehouse.com">info@reynoldsantiquehouse.com</a></p>
+          <p><a href="/estate-services.html">Sell / Consign / Estate Services</a></p>
+        </div>
         <form class="rah-contact-form" action="mailto:info@reynoldsantiquehouse.com" method="post" enctype="text/plain">
           <label for="name">Name</label>
           <input id="name" name="name" required />
@@ -23,7 +30,8 @@
           <textarea id="message" name="message" rows="6" required></textarea>
           <button class="rah-btn" type="submit">Send Email</button>
         </form>
-      </section>
+      </div>
+    </section>
   </main>
   <div id="site-footer-root"></div>
   <script src="/js/site-chrome.js"></script>

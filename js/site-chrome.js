@@ -1,10 +1,53 @@
 (function () {
   const NAV = [
-    { id: "products", label: "Collection", href: "/products.html" },
-    { id: "furniture", label: "Furniture", href: "/products.html?cat=Furniture" },
-    { id: "sculpture", label: "Sculpture", href: "/products.html?cat=Sculpture" },
-    { id: "mirrors", label: "Mirrors", href: "/products.html?cat=Mirrors" },
-    { id: "lighting", label: "Lighting", href: "/products.html?cat=Lighting" },
+    {
+      id: "furniture",
+      label: "Furniture",
+      href: "/products.html?cat=Furniture",
+      mega: [
+        { label: "All Furniture", href: "/products.html?cat=Furniture" },
+        { label: "Collection", href: "/products.html" }
+      ]
+    },
+    {
+      id: "art",
+      label: "Art",
+      href: "/products.html?cat=Art",
+      mega: [{ label: "All Art", href: "/products.html?cat=Art" }]
+    },
+    {
+      id: "sculpture",
+      label: "Sculpture",
+      href: "/products.html?cat=Sculpture",
+      mega: [{ label: "All Sculpture", href: "/products.html?cat=Sculpture" }]
+    },
+    {
+      id: "mirrors",
+      label: "Mirrors",
+      href: "/products.html?cat=Mirrors",
+      mega: [{ label: "All Mirrors", href: "/products.html?cat=Mirrors" }]
+    },
+    {
+      id: "decor",
+      label: "Decorative Objects",
+      href: "/products.html?cat=Decor",
+      mega: [
+        { label: "Decor", href: "/products.html?cat=Decor" },
+        { label: "Accessories", href: "/products.html?cat=Accessories" }
+      ]
+    },
+    {
+      id: "lighting",
+      label: "Lighting",
+      href: "/products.html?cat=Lighting",
+      mega: [{ label: "All Lighting", href: "/products.html?cat=Lighting" }]
+    },
+    {
+      id: "creators",
+      label: "Creators",
+      href: "/index.html#row-creators",
+      mega: [{ label: "Trending Creators", href: "/index.html#row-creators" }]
+    },
     { id: "about", label: "About", href: "/about.html" },
     { id: "trade", label: "Trade", href: "/trade-program.html" },
     { id: "estate", label: "Estate Services", href: "/estate-services.html" },
@@ -13,9 +56,24 @@
 
   function isCurrent(page, item) {
     if (page === item.id) return true;
-    if (page === "product" && item.id === "products") return true;
-    if (page === "home" && item.id === "products") return false;
+    if (page === "product" && (item.id === "furniture" || item.id === "products")) return true;
+    if (page === "home" && item.id === "creators") return false;
     return false;
+  }
+
+  function megaHtml(item) {
+    if (!item.mega || !item.mega.length) return "";
+    return (
+      '<div class="mega mega--' +
+      item.id +
+      '"><div class="mega__col"><ul class="mega__links">' +
+      item.mega
+        .map(function (l) {
+          return '<li><a href="' + l.href + '">' + l.label + "</a></li>";
+        })
+        .join("") +
+      "</ul></div></div>"
+    );
   }
 
   function navTriggers(page) {
@@ -29,7 +87,9 @@
         (cur ? ' aria-current="page"' : "") +
         ">" +
         item.label +
-        "</a></div>"
+        "</a>" +
+        megaHtml(item) +
+        "</div>"
       );
     }).join("\n");
   }
@@ -52,6 +112,28 @@
   function renderHeader(page) {
     return [
       '<a class="rah-skip" href="#main">Skip to content</a>',
+      '<div class="utility-bar">',
+      '  <div class="utility-bar__inner">',
+      '    <div class="utility-bar__left">',
+      '      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">',
+      '        <path d="M12 21C12 21 4 13.5 4 8.5C4 5.46 7.134 3 12 3C16.866 3 20 5.46 20 8.5C20 13.5 12 21 12 21Z"/>',
+      '        <circle cx="12" cy="8.5" r="2.5"/>',
+      "      </svg>",
+      "      New York City &nbsp;·&nbsp; Est. 1939",
+      "    </div>",
+      '    <div class="utility-bar__right">',
+      '      <a href="/estate-services.html">Sell / Consign</a>',
+      '      <div class="utility-bar__divider"></div>',
+      '      <a href="/estate-services.html">Auctions</a>',
+      '      <div class="utility-bar__divider"></div>',
+      '      <a href="/trade-program.html">Trade Program</a>',
+      '      <div class="utility-bar__divider"></div>',
+      '      <a href="/about.html">About Us</a>',
+      '      <div class="utility-bar__divider"></div>',
+      '      <a href="/contact.html">Contact</a>',
+      "    </div>",
+      "  </div>",
+      "</div>",
       '<header class="header" id="site-header" aria-label="Primary">',
       '  <div class="header__inner">',
       '    <div class="header__search">',
@@ -63,13 +145,23 @@
       "        </span>",
       '        <span class="menu-toggle__label">Menu</span>',
       "      </button>",
+      '      <form id="product-search" class="search-input-style search-btn" action="/products.html" method="get" role="search">',
+      '        <div class="input-group">',
+      '          <input id="search-input" name="q" type="search" placeholder="Search..." class="form-control search-overlay__input" autocomplete="off" aria-label="Search the collection" />',
+      '          <div class="input-group-addon">',
+      '            <button type="submit" class="search-submit" aria-label="Submit search">',
+      '              <img src="/assets/img/search-icon.png" alt="" width="16" height="16" />',
+      "            </button>",
+      "          </div>",
+      "        </div>",
+      "      </form>",
       "    </div>",
       '    <a href="/index.html" class="logo" aria-label="Reynolds Antique House home">',
-      '      <span class="logo__wordmark">Reynolds Antique House</span>',
-      '      <span class="logo__tag">Fine Antiques &amp; Decorative Arts</span>',
+      '      <img class="logo__image" src="/assets/images/reynolds_logoe.png" alt="Reynolds Antique House" width="220" height="109" />',
       "    </a>",
-      '    <div class="header__icons">',
-      '      <span class="search-disabled-note">Browse the Collection to explore the catalog. Live search returns in a future update.</span>',
+      '    <div class="header__icons" aria-hidden="true">',
+      '      <span class="icon-btn icon-btn--spacer"></span>',
+      '      <span class="icon-btn icon-btn--spacer"></span>',
       "    </div>",
       "  </div>",
       '  <div class="header__gold-rule" aria-hidden="true"></div>',
@@ -87,7 +179,7 @@
       '      <button class="menu-flyout__close" type="button" aria-label="Close menu" data-menu-close>×</button>',
       "    </div>",
       '    <nav class="menu-flyout__nav">' + mobileLinks(page) + "</nav>",
-      '    <p class="menu-flyout__note">Browse the Collection page to explore the catalog. Live search returns in a future update.</p>',
+      '    <p class="menu-flyout__note">Search the collection from the header search field.</p>',
       "  </div>",
       "</div>"
     ].join("\n");
@@ -96,11 +188,13 @@
   function renderFooter() {
     const y = new Date().getFullYear();
     return [
-      '<footer class="rah-site-footer" id="site-footer">',
-      '  <div class="rah-footer-inner">',
+      '<footer class="rah-site-footer newel-footer-restore" id="site-footer">',
+      '  <div class="rah-footer-inner footer_top_container">',
       "    <div>",
-      '      <div class="rah-footer-brand">Reynolds Antique House</div>',
-      "      <p>A curated static gallery of antiques, fine art, and decorative objects.</p>",
+      '      <a href="/index.html" class="footer-logo-link">',
+      '        <img src="/assets/images/reynolds_logoe.png" alt="Reynolds Antique House" class="footer-logo" width="180" height="89" />',
+      "      </a>",
+      "      <p>A curated gallery of antiques, fine art, and decorative objects.</p>",
       "    </div>",
       "    <div>",
       "      <h4>Explore</h4>",
@@ -112,10 +206,11 @@
       "      </ul>",
       "    </div>",
       "    <div>",
-      "      <h4>Contact</h4>",
+      "      <h4>Support</h4>",
       "      <ul>",
-      '        <li><a href="/contact.html">Contact form</a></li>',
+      '        <li><a href="/contact.html">Contact</a></li>',
       '        <li><a href="mailto:info@reynoldsantiquehouse.com">info@reynoldsantiquehouse.com</a></li>',
+      '        <li><a href="/estate-services.html">Sell / Consign</a></li>',
       "      </ul>",
       "    </div>",
       "  </div>",
@@ -164,6 +259,17 @@
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") closeMenu();
     });
+
+    // Local catalog search (no Searchspring)
+    const form = document.getElementById("product-search");
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const q = (document.getElementById("search-input") || {}).value || "";
+        const url = "/products.html" + (q.trim() ? "?q=" + encodeURIComponent(q.trim()) : "");
+        window.location.href = url;
+      });
+    }
   }
 
   if (document.readyState === "loading") {

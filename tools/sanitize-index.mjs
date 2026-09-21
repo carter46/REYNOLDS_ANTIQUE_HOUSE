@@ -1,0 +1,13 @@
+import fs from "fs";
+let h = fs.readFileSync("index.html", "utf8");
+const before = h.length;
+h = h.replace(/https:\/\/blog\.newel\.com\/[^"'\s>]*/g, "/about.html");
+h = h.replace(/https:\/\/live\.newelauctions\.com\/[^"'\s>]*/g, "/estate-services.html");
+h = h.replace(/https:\/\/(www\.)?newel\.com\/[^"'\s>]*/g, "/products.html");
+h = h.replace(/https:\/\/www\.newelauctions\.com\/[^"'\s>]*/g, "/estate-services.html");
+h = h.replace(/src="img\/na-homepage-auction-lots-gif\.gif"/g, 'src="/assets/images/reynolds_logoe.png"');
+h = h.replace(/src="img\//g, 'src="/assets/img/');
+h = h.replace(/\s+target="_blank"/g, "");
+fs.writeFileSync("index.html", h);
+const left = [...new Set([...h.matchAll(/https?:\/\/[^"'\s>]+/g)].map((m) => m[0]))];
+console.log(JSON.stringify({ before, after: h.length, externalSample: left.slice(0, 40) }, null, 2));

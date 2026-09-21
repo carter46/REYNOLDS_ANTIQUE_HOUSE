@@ -21,6 +21,19 @@ window.ReynoldsCatalog = (function () {
     return cache.products.filter((p) => (p.category || "").toLowerCase().includes(c));
   }
 
+  function search(query) {
+    if (!cache) return [];
+    const q = (query || "").trim().toLowerCase();
+    if (!q) return cache.products.slice();
+    return cache.products.filter((p) => {
+      const hay = [p.title, p.sku, p.id, p.category, p.description, p.material, p.style, p.period]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+      return hay.includes(q);
+    });
+  }
+
   function related(product, limit) {
     if (!cache || !product) return [];
     return cache.products
@@ -39,5 +52,5 @@ window.ReynoldsCatalog = (function () {
     );
   }
 
-  return { load, getProduct, byCategory, related, cardHtml };
+  return { load, getProduct, byCategory, search, related, cardHtml };
 })();
