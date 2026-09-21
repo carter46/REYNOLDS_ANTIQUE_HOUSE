@@ -1797,18 +1797,6 @@ form#product-search {
   font-size: 15px !important;
   text-align: center;
 }
-.featured_container .carousel-inner {
-  display: flex;
-}
-.featured_container .carousel-item {
-  margin-right: 0;
-  flex: 0 0 100%;
-  display: none;
-}
-.featured_container .carousel-item.active {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 /* Force mobile chrome parity on homepage */
 @media (max-width: 1100px) {

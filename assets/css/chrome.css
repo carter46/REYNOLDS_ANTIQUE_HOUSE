@@ -732,117 +732,18 @@ a:hover { color: var(--rah-gold-dark); }
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   align-items: stretch;
 }
-/* Newel-style product cards (site-wide) */
-.rah-product-card,
+/* Catalog grid cards only — do NOT override homepage .featured_container Newel cards */
+.rah-grid .rah-product-card,
 .rah-grid .featured_container_col {
   height: 100%;
   margin: 0;
 }
-.rah-product-card .card,
-.rah-product-card .shadow1,
-.rah-grid .card.card-body {
-  height: 100%;
-  border: 1px solid var(--rule-glb-hdr);
-  background: #fff;
-  box-shadow: 0 10px 28px rgba(26, 22, 20, 0.06);
-  padding: 1.1rem 1rem 1.35rem;
-  border-radius: 2px;
+.rah-grid .rah-product-card .hvrcls,
+.rah-grid .shadow1.hvrcls {
+  /* let newel/styles.css .hvrcls own homepage; grid pages get compact shell */
 }
-.rah-product-card .product-container,
-.rah-grid .product-container,
-.featured_container .product-container {
-  text-align: center;
-  background: transparent;
-  min-height: 260px;
-  height: 300px;
-  position: relative;
-  display: block;
-  margin-bottom: 0.75rem;
-  overflow: hidden;
-}
-.rah-product-card .product-image,
-.rah-grid .product-image,
-.featured_container .product-image,
-.product-image {
-  width: auto !important;
-  max-width: 100% !important;
-  height: auto !important;
-  max-height: 280px !important;
-  object-fit: contain !important;
-  object-position: center;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  top: auto;
-  left: auto;
-  right: auto;
-  bottom: auto;
-}
-.rah-product-card .price-part,
-.rah-grid .price-part {
-  padding: 0.25rem 0.35rem 0;
-}
-.rah-product-card .prod_title,
-.rah-grid .prod_title {
-  font-family: var(--rah-font-display);
-  font-size: 1.05rem;
-  font-weight: 400;
-  line-height: 1.35;
-  min-height: 3.6em;
-  margin: 0 0 0.75rem;
-  text-align: center;
-  color: var(--ink-glb-hdr);
-}
-.rah-product-card .prod_title a,
-.rah-grid .prod_title a {
-  color: inherit;
-  text-decoration: none;
-}
-.rah-product-card .prod_title a:hover,
-.rah-grid .prod_title a:hover {
-  color: var(--crimson-glb-hdr);
-}
-.rah-product-card .price-row,
-.rah-grid .price-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.75rem;
-  align-items: flex-end;
-  width: 100%;
-}
-.rah-product-card .prince_colm {
-  flex: 1;
-  min-width: 0;
-}
-.rah-product-card .prod-price,
-.rah-grid .prod-price {
-  margin: 0;
-  font-family: var(--rah-font-display);
-  font-size: 1.1rem;
-  color: var(--ink-glb-hdr);
-  text-align: left;
-}
-.rah-product-card .prod-currency,
-.rah-grid .prod-currency {
-  font-size: 0.8rem;
-  color: var(--rah-muted);
-}
-.rah-product-card .prod-sku,
-.rah-grid .prod-sku {
-  margin: 0.35rem 0 0;
-  font-size: 0.78rem;
-  color: var(--rah-muted);
-  letter-spacing: 0.04em;
-}
-.rah-product-card .dimension_col,
-.rah-grid .dimension_col {
-  width: 34%;
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-.rah-product-card .prod-dims,
+.rah-grid .prince_colm { width: 66%; }
+.rah-grid .dimension_col { width: 34%; }
 .rah-grid .prod-dims {
   margin: 0;
   font-size: 12px;
@@ -850,7 +751,6 @@ a:hover { color: var(--rah-gold-dark); }
   color: #000;
   text-align: right;
   line-height: 1.45;
-  max-width: none;
 }
 .rah-card-link { display: block; color: inherit; text-align: center; }
 .rah-card-img {
@@ -1005,37 +905,6 @@ form#product-search {
   z-index: 20 !important;
   pointer-events: auto !important;
 }
-.featured_container .card {
-  height: 100%;
-  min-height: 520px;
-}
-.featured_container .product-image {
-  width: 100%;
-  height: 280px;
-  object-fit: contain;
-  margin: 0 auto;
-}
-.featured_container .prod_title {
-  min-height: 3.2em;
-  font-size: 15px !important;
-  text-align: center;
-}
-.featured_container .carousel-inner {
-  display: flex;
-}
-.featured_container .carousel-item {
-  margin-right: 0;
-  flex: 0 0 100%;
-}
-.featured_container .carousel-item.active,
-.featured_container .carousel-item-next,
-.featured_container .carousel-item-prev {
-  display: flex;
-  flex-wrap: nowrap;
-}
-.featured_container .imgboxsplit {
-  flex: 0 0 auto;
-}
 
 /* Reynolds visibility / card parity patches */
 #product-search, form#product-search.search-input-style { display: flex !important; }
@@ -1054,16 +923,6 @@ form#product-search {
   display: block;
 }
 .featured_container .prod_title { min-height: 3.2em; font-size: 15px !important; text-align: center; }
-.featured_container .carousel-item.active { display: flex; flex-wrap: nowrap; }
-.featured_container .imgboxsplit {
-  flex: 0 0 auto;
-}
-@media (min-width: 1200px) {
-  .featured_container .imgboxsplit.col-xl-4 { width: 33.333333%; max-width: 33.333333%; }
-}
-@media (min-width: 1400px) {
-  .featured_container .imgboxsplit.col-xxl-3 { width: 25%; max-width: 25%; }
-}
 @media (max-width: 900px) {
   .newel-footer-restore .row { grid-template-columns: 1fr !important; }
 }
