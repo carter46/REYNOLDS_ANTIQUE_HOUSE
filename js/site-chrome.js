@@ -338,6 +338,10 @@
       '        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
       "      </button>",
       "    </div>",
+      '    <form class="menu-flyout__search" id="flyout-search" action="/products.html" method="get" role="search">',
+      '      <input name="q" type="search" placeholder="Search..." autocomplete="off" aria-label="Search the collection" />',
+      '      <button type="submit" aria-label="Submit search"><img src="/assets/img/search-icon.png" alt="" width="16" height="16" /></button>',
+      "    </form>",
       mobileAccordion(),
       '    <div class="menu-flyout__utility">',
       '      <div class="menu-flyout__utility-title">Quick links</div>',
@@ -453,6 +457,7 @@
     }
     wireSearch(document.getElementById("product-search"));
     wireSearch(document.getElementById("responsiveSearchLauncher"));
+    wireSearch(document.getElementById("flyout-search"));
   }
 
   if (document.readyState === "loading") {

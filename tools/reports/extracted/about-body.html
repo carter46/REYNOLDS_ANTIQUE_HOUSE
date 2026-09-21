@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | Reynolds Antique House</title>
-  <meta name="description" content="About Reynolds Antique House — gallery heritage since 1939." />
-  <meta name="theme-color" content="#1a1410" />
-  <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css?v=1789992304326" />
-  <link rel="stylesheet" href="/assets/fonts/typekit/tid5nrh.css" />
-  <link rel="stylesheet" href="/assets/css/chrome.css?v=1789992304326" />
-  <link rel="stylesheet" href="/assets/css/home-newel.css?v=1789992304326" />
-  <link rel="stylesheet" href="/assets/css/newel/styles.css?v=1789992304326" />
-
-</head>
-<body data-page="about">
-  <div id="site-header-root"></div>
-  <main id="main" class="rah-about">
 <style>
-
   :root{
     --cream:#F8F2E8;
     --cream-deep:#EEE3CE;
@@ -30,14 +11,23 @@
     --hair:rgba(28,28,30,0.14);
     --hair-dark:rgba(214,173,83,0.32);
   }
-  
-  
-  .rah-about{font-family:'EB Garamond',Georgia,serif;}
-  
-  
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink3);
+    font-family:'EB Garamond', serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .desktop_view,.menu_mbl_view {
+    background-color: #fff !important;
+  }
+  .input-group-addon img {margin-top: 6px;}
 
-  .rah-about img{display:inline;max-width:100%;height:auto;}
-  .rah-about a{color:inherit;text-decoration:none;}
+  img{display:inline; max-width:100%; height:auto;}
+  a{color:inherit; text-decoration:none;}
   .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
   h1,h2,h3{font-family:'Cormorant Garamond', serif; font-weight:500; letter-spacing:0.01em; color:var(--charcoal);}
 
@@ -63,7 +53,7 @@
   /* ---------- HERO ---------- */
   .hero{
     position:relative; min-height:88vh; display:flex; align-items:flex-end;
-    background:#111 url('/assets/img/about/Showroom.jpg') center/cover no-repeat;
+    background:#111 url('../reynoldsantiquehouse.com/img/Showroom.jpg') center/cover no-repeat;
   }
   .hero::before{
     content:''; position:absolute; inset:0;
@@ -190,7 +180,7 @@
   .plate::before{ left:9px; } .plate::after{ right:9px; }
   .plate-since{ font-size:0.66rem; letter-spacing:0.22em; text-transform:uppercase; color:#4a3510; font-weight:600; opacity:0.85; }
   .plate-name{ font-family:'Cormorant Garamond', serif; font-weight:600; font-size:1.7rem; color:#2A1E08; margin-top:6px; text-shadow:0 1px 0 rgba(255,255,255,0.3); }
-  .plaque-.rah-about{font-family:'EB Garamond',Georgia,serif;}
+  .plaque-body{ padding:20px 22px 28px; flex:1; display:flex; flex-direction:column; }
   .plaque-body p{ color:rgba(248,242,232,0.72); font-size:0.95rem; flex:1; }
   .plaque-link{
     margin-top:18px; display:inline-flex; align-items:center; gap:8px;
@@ -274,8 +264,7 @@
 
   .reveal{ opacity:0; transform:translateY(18px); transition:opacity .8s ease, transform .8s ease; }
   .reveal.in{ opacity:1; transform:translateY(0); }
-  @media (prefers-reduced-motion:reduce){  .reveal{ opacity:1; transform:none; transition:none; } }
-
+  @media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } .reveal{ opacity:1; transform:none; transition:none; } }
 </style>
 <section class="hero">
   <div class="hero-inner">
@@ -304,7 +293,7 @@
       <p>Leadership has passed hand to hand ever since: founder Meyer Newman, to his son Bruce Newman, to his grandson Lewis Baer, to today's fourth-generation CEO, Jake Baer. Every piece Reynolds Antique House handles now, whether bound for sale, auction, or a film set, moves through a single home in Long Island City.</p>
     </div>
     <div class="lede2-figure reveal">
-      <img src="/assets/img/about/jake_baer-715x1024-1.jpg" alt="Jake Baer, fourth-generation CEO of Reynolds Antique House">
+      <img src="../blog.newel.com/wp-content/uploads/2019/12/jake_baer-715x1024-1.jpg" alt="Jake Baer, fourth-generation CEO of Reynolds Antique House">
       <div class="lede2-cap">Our Gallery Heritage</div>
     </div>
   </div>
@@ -319,61 +308,61 @@
   <div class="t-track">
     <div class="t-item reveal">
       <div class="t-year">1939</div>
-      <div class="t-figure"><img src="/assets/img/about/1SCAN00062-768x819.jpg" alt="Reynolds Antique House founding, 1939"></div>
+      <div class="t-figure"><img src="../blog.newel.com/wp-content/uploads/2019/12/1SCAN00062-768x819.jpg" alt="Reynolds Antique House founding, 1939"></div>
       <div class="t-title">Meyer Newman opens Reynolds Antique House</div>
       <div class="t-desc">Twenty antiques from his own home, displayed on a table in an empty storefront, built to furnish Broadway productions like <em>Pygmalion</em>.</div>
     </div>
     <div class="t-item reveal">
       <div class="t-year">1940s&ndash;60s</div>
-      <div class="t-figure"><img src="/assets/img/about/1USS-broadway-theradioannualandtelevisionyearbook-1961.jpg" alt="Reynolds Antique House and early television"></div>
+      <div class="t-figure"><img src="../blog.newel.com/wp-content/uploads/2019/12/1USS-broadway-theradioannualandtelevisionyearbook-1961.jpg" alt="Reynolds Antique House and early television"></div>
       <div class="t-title">Broadway, then television</div>
       <div class="t-desc">Reynolds Antique House furnishes <em>The King and I</em> and <em>The Sound of Music</em>, then becomes a main prop source for New York's earliest live TV.</div>
     </div>
     <div class="t-item reveal">
       <div class="t-year">1975</div>
-      <div class="t-figure"><img src="/assets/img/about/1SCAN0009.jpg" alt="Bruce Newman"></div>
+      <div class="t-figure"><img src="../blog.newel.com/wp-content/uploads/2019/12/1SCAN0009.jpg" alt="Bruce Newman"></div>
       <div class="t-title">Bruce Newman becomes CEO</div>
       <div class="t-desc">Meyer's son inherits the company, keeping it in the family for a second generation.</div>
     </div>
     <div class="t-item reveal">
       <div class="t-year">1977</div>
-      <div class="t-figure"><img src="/assets/img/about/1Newel-LLC-is-located-at-425-E.-53rd-St.-in-New-York1.jpg" alt="425 East 53rd Street"></div>
+      <div class="t-figure"><img src="../blog.newel.com/wp-content/uploads/2019/12/1Newel-LLC-is-located-at-425-E.-53rd-St.-in-New-York1.jpg" alt="425 East 53rd Street"></div>
       <div class="t-title">One roof, for the first time</div>
       <div class="t-desc">Reynolds Antique House moves to 425 East 53rd Street, a six-story building, the first time the full inventory is stored under a single roof.</div>
     </div>
     <div class="t-item reveal">
       <div class="t-year">1998</div>
-      <div class="t-figure"><img src="/assets/img/about/1SCAN0007-806x1024.jpg" alt="Reynolds Antique House goes online, 1998"></div>
+      <div class="t-figure"><img src="../blog.newel.com/wp-content/uploads/2019/12/1SCAN0007-806x1024.jpg" alt="Reynolds Antique House goes online, 1998"></div>
       <div class="t-title">Reynolds Antique House goes online</div>
       <div class="t-desc">Reynolds Antique House.com launches, the first antiques dealer to publish prices, images, and measurements on the web. Forbes names it "Best of the Web" in 2000.</div>
     </div>
     <div class="t-item reveal">
       <div class="t-year">2001</div>
-      <div class="t-figure"><img src="/assets/img/about/7lewisbaeracumenmag039-1-1024x746.jpg" alt="Lewis Baer"></div>
+      <div class="t-figure"><img src="../blog.newel.com/wp-content/uploads/2019/12/7lewisbaeracumenmag039-1-1024x746.jpg" alt="Lewis Baer"></div>
       <div class="t-title">Lewis Baer becomes CEO</div>
       <div class="t-desc">Meyer's grandson buys the company from his uncle Bruce, becoming Reynolds Antique House's third-generation CEO.</div>
     </div>
     <div class="t-item reveal">
       <div class="t-year">2015</div>
-      <div class="t-figure"><img src="/assets/img/about/11Newel_Showroom_10-749x1024.jpg" alt="Long Island City warehouse"></div>
+      <div class="t-figure"><img src="../blog.newel.com/wp-content/uploads/2019/12/11Newel_Showroom_10-749x1024.jpg" alt="Long Island City warehouse"></div>
       <div class="t-title">The move to Long Island City</div>
       <div class="t-desc">Reynolds Antique House relocates its warehouse operations to Long Island City, the seed of today's single hub.</div>
     </div>
     <div class="t-item reveal">
       <div class="t-year">2016</div>
-      <div class="t-figure"><img src="/assets/img/about/1IMG_8113-1024x1024.jpg" alt="Reynolds Antique House Props founded"></div>
+      <div class="t-figure"><img src="../blog.newel.com/wp-content/uploads/2019/12/1IMG_8113-1024x1024.jpg" alt="Reynolds Antique House Props founded"></div>
       <div class="t-title">Jake Baer becomes CEO. Reynolds Antique House Props is born.</div>
       <div class="t-desc">Lewis's son becomes Reynolds Antique House's fourth-generation CEO, and Reynolds Antique House Props launches, formally separating the rental business.</div>
     </div>
     <div class="t-item reveal">
       <div class="t-year">2023</div>
-      <div class="t-figure"><img src="/assets/img/about/0014-2-1024x683.jpg" alt="Reynolds Antique House collection expansion"></div>
+      <div class="t-figure"><img src="../blog.newel.com/wp-content/uploads/2019/12/0014-2-1024x683.jpg" alt="Reynolds Antique House collection expansion"></div>
       <div class="t-title">The archive grows</div>
       <div class="t-desc">Reynolds Antique House acquires Gary Rubinstein Antiques and Modern Design, folding another storied collection into the Reynolds Antique House archive.</div>
     </div>
     <div class="t-item reveal">
       <div class="t-year" style="position:relative;left: 7px;">2024</div>
-      <div class="t-figure"><img src="/assets/img/about/newel-auctions-lg.jpg" alt="Reynolds Antique House Auctions launch" style="object-fit:contain;"></div>
+      <div class="t-figure"><img src="/assets/img/newel-auctions-lg.jpg" alt="Reynolds Antique House Auctions launch" style="object-fit:contain;"></div>
       <div class="t-title">Reynolds Antique House Auctions holds its first sale</div>
       <div class="t-desc">Reynolds Antique House enters the auction world on November 21, alongside the debut of Reynolds Antique House Contemporary Artists.</div>
     </div>
@@ -394,11 +383,11 @@
     </div>
     <div class="plaques">
       <div class="plaque reveal">
-        <div class="plaque-figure"><img src="/assets/img/about/Showroom.jpg" alt="Reynolds Antique House gallery floor"></div>
+        <div class="plaque-figure"><img src="../reynoldsantiquehouse.com/img/Showroom.jpg" alt="Reynolds Antique House gallery floor"></div>
         <div class="plate">
           <!-- <div class="plate-since">Est. 1939</div>
           <div class="plate-name">Reynolds Antique House</div> -->
-          <img src="/assets/img/about/Showroom.jpg" alt="Reynolds Antique House">
+          <img src="../static.wixstatic.com/media/798b6e_761f96a210ea445f952a58c5e91a96d9_mv2.png/v1/crop/x_224%2cy_149%2cw_602%2ch_298/fill/w_178%2ch_88%2cal_c%2cq_85%2cusm_0.66_1.00_0.01%2cenc_avif%2cquality_auto/5.png" alt="Reynolds Antique House">
         </div>
         <div class="plaque-body">
           <p>The original gallery. 40,000+ antique, vintage, and contemporary pieces spanning the 17th to 21st centuries, sold to collectors, designers, and the trade.</p>
@@ -409,12 +398,12 @@
       <div class="plaque reveal">
         <div class="plaque-figure">
           <img src="../reynoldsantiquehouse.com/img/newel-auctions.jpg" alt="Reynolds Antique House Auctions">
-          <div class="plaque-seal"><img src="/assets/img/about/la-newel-auctions-logo-2-1024x1024.png" alt="Reynolds Antique House Auctions logo"></div>
+          <div class="plaque-seal"><img src="../blog.newel.com/wp-content/uploads/2019/12/la-newel-auctions-logo-2-1024x1024.png" alt="Reynolds Antique House Auctions logo"></div>
         </div>
         <div class="plate">
           <!-- <div class="plate-since">Est. 2024</div>
           <div class="plate-name">Reynolds Antique House Auctions</div> -->
-          <img src="/assets/img/about/Showroom.jpg" alt="Reynolds Antique House Auctions" style="margin-top: -3px;margin-left: -2px;">
+          <img src="../static.wixstatic.com/media/798b6e_2ff991ae80614097ab22b6739861ea67_mv2.png/v1/crop/x_170%2cy_49%2cw_251%2ch_147/fill/w_178%2ch_104%2cal_c%2cq_85%2cusm_0.66_1.00_0.01%2cenc_av/Copy%20of%20Modern%20%26%20Contemporary%20Art%20and%20Desi.png" alt="Reynolds Antique House Auctions" style="margin-top: -3px;margin-left: -2px;">
         </div>
         <div class="plaque-body">
           <p>Live and online sales of fine art, antiques, jewelry, and fashion. Recurring sales include Design Across the Centuries and the annual Discovery Sale.</p>
@@ -427,7 +416,7 @@
         <div class="plate">
           <!-- <div class="plate-since">Prop &amp; Staging</div>
           <div class="plate-name">Reynolds Antique House Rentals</div> -->
-          <img src="/assets/img/about/Showroom.jpg" alt="Reynolds Antique House Rentals" style="margin-top: 5px;">
+          <img src="../static.wixstatic.com/media/798b6e_2e2a7c7d56294b8c990dbd48f925ee4b_mv2.png/v1/crop/x_24%2cy_32%2cw_258%2ch_145/fill/w_178%2ch_100%2cal_c%2cq_85%2cusm_0.66_1.00_0.01%2cenc_avif%2cquality_auto/RENTALS.png" alt="Reynolds Antique House Rentals" style="margin-top: 5px;">
         </div>
         <div class="plaque-body">
           <p>Short-term rentals for film, TV, photoshoots, staging, and events, pulled from the same floor as the gallery. Trusted by productions including SNL and The Gilded Age.</p>
@@ -490,7 +479,7 @@
 <section class="row3">
   <div class="wrap row3-grid">
     <div class="row3-figure reveal">
-      <img src="/assets/img/about/newel-about-us-sustainability-6.jpg" alt="Reynolds Antique House sustainability">
+      <img src="/assets/img/newel-about-us-sustainability-6.jpg" alt="Reynolds Antique House sustainability">
     </div>
     <div class="reveal">
       <div class="eyebrow33">Quality &amp; Sustainability</div>
@@ -569,7 +558,7 @@
             <p>The Reynolds Antique House team is committed to continually growing and strengthening our relationships with our clients. Our knowledgeable staff is always available to answer any questions you may have and provide assistance in picking the perfect piece for your home. We look forward to helping you find something special! </p>
     </div>
     <div class="col-lg-6">
-        <img style="max-height: 340px;" class="img-responsive" src="/assets/img/about/keneddy_img.webp">
+        <img style="max-height: 340px;" class="img-responsive" src="/img/about_us_1.png">
         <b style="color: black">REYNOLDS ANTIQUE HOUSE ART GALLERIES ESTABLISHED 1939</b>
     </div>
     <div class="col-lg-6" style="text-align: justify; color: black; margin-top: 10px">
@@ -593,7 +582,7 @@
         </p>
     </div>
     <div class="col-lg-6">
-        <img style="max-height: 340px;" class="img-responsive" src="/assets/img/about/keneddy_img.webp">
+        <img style="max-height: 340px;" class="img-responsive" src="/img/about_us_2.png">
     </div>
     <div class="col-lg-6" style="text-align: justify; color: black; padding-top: 1em;">
         <p>
@@ -611,25 +600,5 @@
         </p>
     </div>
 </div>    </div>-->
- 
-  </main>
-  <div id="site-footer-root"></div>
-  <script src="/js/site-chrome.js?v=1789992304326"></script>
-  <script>
-  (function () {
-    var reveals = document.querySelectorAll('.rah-about .reveal');
-    if (!reveals.length) return;
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.12 });
-      reveals.forEach(function (el) { io.observe(el); });
-    } else {
-      reveals.forEach(function (el) { el.classList.add('in'); });
-    }
-  })();
-  </script>
-</body>
-</html>
+ <!--body content part end -->     
+  <!-- footer part start -->

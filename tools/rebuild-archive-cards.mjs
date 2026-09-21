@@ -45,7 +45,7 @@ function card(p, i) {
   const img =
     (p.images && p.images[0] && p.images[0].src) ||
     "/assets/images/placeholders/no-image.jpg";
-  const href = "/product-details.html?id=" + encodeURIComponent(p.id);
+  const href = "/product-details.html?id=" + encodeURIComponent(p.id) + "#id=" + encodeURIComponent(p.id);
   const price = p.price || "";
   const dim = dimsHtml(p);
   const active = i === 0 ? " active" : "";
@@ -73,7 +73,9 @@ function card(p, i) {
                     </div>
                   </div>
                   <div class="d-flex flex-row justify-content-end align-items-end dimension_col">
-                    <p class="fw-light" style="text-align:right;color:#000;font-size:12px;font-family:ASTORIA,Georgia,serif;font-style:italic;margin:0;line-height:1.45;">${dim}</p>
+                    <div class="d-flex d-xxl-flex flex-row justify-content-xxl-end align-items-xxl-end">
+                      <p class="fw-light" style="text-align:right;color:#000!important;font-size:12px;letter-spacing:0;font-family:ASTORIA,Georgia,serif;line-height:24px;margin:0;font-style:italic;">${dim || "&nbsp;"}</p>
+                    </div>
                   </div>
                 </div>
               </div>

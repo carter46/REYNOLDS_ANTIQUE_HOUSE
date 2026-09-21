@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trade Program | Reynolds Antique House</title>
-  <meta name="description" content="Trade program at Reynolds Antique House for designers and architects." />
-  <meta name="theme-color" content="#1a1410" />
-  <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css?v=1789992304326" />
-  <link rel="stylesheet" href="/assets/fonts/typekit/tid5nrh.css" />
-  <link rel="stylesheet" href="/assets/css/chrome.css?v=1789992304326" />
-  <link rel="stylesheet" href="/assets/css/home-newel.css?v=1789992304326" />
-  <link rel="stylesheet" href="/assets/css/newel/styles.css?v=1789992304326" />
-
-</head>
-<body data-page="trade-program">
-  <div id="site-header-root"></div>
-  <main id="main" class="rah-trade">
 <style>
-
   :root{
     --cream:#F8F2E8;
     --cream-deep:#EEE3CE;
@@ -30,14 +11,18 @@
     --hair:rgba(28,28,30,0.14);
     --hair-dark:rgba(214,173,83,0.32);
   }
-  
-  
-  .rah-trade{font-family:'EB Garamond',Georgia,serif;}
-   
-  
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{ background:var(--cream); color:var(--ink4); font-family:'EB Garamond', serif; font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased; }
+   .desktop_view,.menu_mbl_view {
+    background-color: #fff !important;
+  }
+  .input-group-addon img {
+    margin-top: 5px;
+  }
 
-  .rah-trade img{display:inline;max-width:100%;height:auto;}
-  .rah-trade a{color:inherit;text-decoration:none;}
+  img{display:inline; max-width:100%; height:auto;}
+  a{color:inherit; text-decoration:none;}
   .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
   h1,h2,h3{font-family:'Cormorant Garamond', serif; font-weight:500; letter-spacing:0.01em; color:var(--charcoal);}
   .eyebrow4{ font-family:'EB Garamond', serif; font-size:0.74rem; letter-spacing:0.32em; text-transform:uppercase; color:var(--gold4); font-weight:600; display:inline-block; margin-bottom:18px; }
@@ -233,7 +218,7 @@ border-color: #fff transparent transparent transparent !important;
 
   .reveal{ opacity:0; transform:translateY(18px); transition:opacity .8s ease, transform .8s ease; }
   .reveal.in{ opacity:1; transform:translateY(0); }
-  @media (prefers-reduced-motion:reduce){  .reveal{ opacity:1; transform:none; transition:none; } }
+  @media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } .reveal{ opacity:1; transform:none; transition:none; } }
 
 .float_btn {
     position: fixed;
@@ -247,7 +232,6 @@ border-color: #fff transparent transparent transparent !important;
     z-index: 56;
     --above-all-in-container: 10000;
 }
-
 
 </style>
 <section class="hero">
@@ -472,7 +456,11 @@ border-color: #fff transparent transparent transparent !important;
     <a class="btn-gold" href="#apply">Apply Now</a>
   </div>
         
-
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 <script>
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
@@ -484,25 +472,5 @@ border-color: #fff transparent transparent transparent !important;
     reveals.forEach(el => el.classList.add('in'));
   }
 </script>
- 
-  </main>
-  <div id="site-footer-root"></div>
-  <script src="/js/site-chrome.js?v=1789992304326"></script>
-  <script>
-  (function () {
-    var reveals = document.querySelectorAll('.rah-trade .reveal');
-    if (!reveals.length) return;
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.12 });
-      reveals.forEach(function (el) { io.observe(el); });
-    } else {
-      reveals.forEach(function (el) { el.classList.add('in'); });
-    }
-  })();
-  </script>
-</body>
-</html>
+ <!--body content part end -->     
+  <!-- footer part start -->

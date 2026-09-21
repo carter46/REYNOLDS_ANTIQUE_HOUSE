@@ -10,8 +10,17 @@ window.ReynoldsCatalog = (function () {
   }
 
   function getProduct(id) {
-    if (!cache || !cache.products) return null;
-    return cache.products.find((p) => p.id === id) || null;
+    if (!cache || !cache.products || id == null || id === "") return null;
+    const raw = decodeURIComponent(String(id)).trim();
+    const key = raw.toLowerCase();
+    return (
+      cache.products.find((p) => p.id === raw) ||
+      cache.products.find((p) => String(p.id).toLowerCase() === key) ||
+      cache.products.find((p) => String(p.sku || "").toLowerCase() === key) ||
+      cache.products.find((p) => String(p.sku || "").toLowerCase() === key.replace(/^product-/, "")) ||
+      cache.products.find((p) => String(p.id).toLowerCase() === "product-" + key) ||
+      null
+    );
   }
 
   function byCategory(cat) {
@@ -48,51 +57,61 @@ window.ReynoldsCatalog = (function () {
       .replace(/"/g, "&quot;");
   }
 
-  /** Newel-style product card used site-wide */
+  function dimsHtml(p) {
+    if (p.dimensionsHtml) return p.dimensionsHtml;
+    if (p.dimensions) return esc(p.dimensions).replace(/\n/g, "<br>");
+    return [p.width && ("Width: " + esc(p.width)), p.depth && ("Depth: " + esc(p.depth)), p.height && ("Height: " + esc(p.height))]
+      .filter(Boolean)
+      .join("<br>");
+  }
+
+  /** Archive Newel product card markup (commerce controls removed).
+   * Nesting must match archive: card.card-body > featured_container_col > hvrcls
+   * Never put card/card-body on the same node as hvrcls — Bootstrap padding kills the absolute image well.
+   */
   function cardHtml(p) {
     const img =
       (p.images && p.images[0] && p.images[0].src) ||
       "/assets/images/placeholders/no-image.jpg";
-    const href = "/product-details.html?id=" + encodeURIComponent(p.id);
+    const href =
+      "/product-details.html?id=" +
+      encodeURIComponent(p.id) +
+      "#id=" +
+      encodeURIComponent(p.id);
     const price = p.price || "";
-    const dimHtml =
-      p.dimensionsHtml ||
-      (p.dimensions
-        ? esc(p.dimensions).replace(/\n/g, "<br>")
-        : [p.width && "Width: " + esc(p.width), p.depth && "Depth: " + esc(p.depth), p.height && "Height: " + esc(p.height)]
-            .filter(Boolean)
-            .join("<br>"));
+    const dim = dimsHtml(p);
     return (
-      '<article class="rah-product-card featured_container_col">' +
-      '<div class="shadow1 hvrcls img_box_shadow card card-body">' +
-      '<div class="product-container">' +
-      '<a href="' +
-      href +
-      '"><img src="' +
-      esc(img) +
-      '" class="product-image" alt="' +
-      esc(p.title) +
-      '" loading="lazy" width="400" height="400" /></a>' +
+      '<div class="card card-body">' +
+      '<div class="featured_container_col rah-product-card">' +
+      '<div class="shadow1 hvrcls img_box_shadow">' +
+      '<div class="d-xxl-flex justify-content-xxl-center product-container" style="text-align:center;">' +
+      '<a href="' + href + '"><img src="' + esc(img) + '" class="product-image" alt="' + esc(p.title) + '" loading="lazy" /></a>' +
       "</div>" +
-      '<div class="price-part">' +
-      '<h2 class="fw-light text-dark prod_title"><a href="' +
-      href +
-      '">' +
-      esc(p.title) +
-      "</a></h2>" +
-      '<div class="price-row">' +
-      '<div class="prince_colm">' +
+      '<div class="price-part d-xxl-flex flex-column justify-content-xxl-center align-items-xxl-center" style="border-top:1px none var(--bs-primary-bg-subtle);">' +
+      '<h2 class="fw-light text-dark prod_title"><a href="' + href + '" style="color:inherit;text-decoration:none;">' + esc(p.title) + "</a></h2>" +
+      '<div class="d-flex d-xxl-flex flex-row justify-content-xxl-start align-items-xxl-end" style="width:100%;position:relative;top:15px;">' +
+      '<div class="d-flex flex-column justify-content-xxl-start align-items-xxl-start prince_colm">' +
+      '<div class="d-flex d-xxl-flex flex-row justify-content-xxl-start align-items-xxl-end" style="width:100%;">' +
+      '<p class="fw-normal text-dark" style="color:#000;font-size:14px;letter-spacing:0;font-family:ASTORIA,Georgia,serif;text-align:left;line-height:18px;margin-bottom:-4px;">' +
+      esc(price) +
+      "</p>" +
       (price
-        ? '<p class="prod-price">' +
-          esc(price) +
-          ' <span class="prod-currency">(USD)</span></p>'
-        : '<p class="prod-price">Price on request</p>') +
-      (p.sku ? '<p class="prod-sku">#' + esc(p.sku) + "</p>" : "") +
-      "</div>" +
-      (dimHtml
-        ? '<div class="dimension_col"><p class="prod-dims">' + dimHtml + "</p></div>"
+        ? '<p class="fw-light text-dark" style="color:#000;font-size:12px;letter-spacing:0;font-family:ASTORIA,Georgia,serif;text-align:left;line-height:12px;margin:0 0 0 4px;">(USD)</p>'
         : "") +
-      "</div></div></div></article>"
+      "</div>" +
+      '<div class="d-flex d-xxl-flex flex-row align-items-xxl-center" style="line-height:16px;padding-top:10px;">' +
+      '<p class="fw-light text-start text-dark" style="font-size:14px;font-family:ASTORIA,Georgia,serif;margin:5px 0 0 0;">Available</p>' +
+      "</div>" +
+      '<div class="fw-light text-dark d-flex d-xxl-flex flex-row align-items-xxl-end" style="width:50%;">' +
+      '<p class="fw-light text-end text-muted" style="color:#000;font-size:12px;font-family:ASTORIA,Georgia,serif;margin:0;padding-top:4px;">#' +
+      esc(p.sku || "") +
+      "</p></div></div>" +
+      '<div class="d-flex flex-row justify-content-end align-items-end dimension_col">' +
+      '<div class="d-flex d-xxl-flex flex-row justify-content-xxl-end align-items-xxl-end">' +
+      '<p class="fw-light" style="text-align:right;color:#000!important;font-size:12px;letter-spacing:0;font-family:ASTORIA,Georgia,serif;line-height:24px;margin:0;font-style:italic;">' +
+      (dim || "&nbsp;") +
+      "</p></div></div>" +
+      "</div></div></div></div></div>"
     );
   }
 
