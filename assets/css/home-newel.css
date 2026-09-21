@@ -41,19 +41,34 @@
   .eyebrow2{display:inline-flex;align-items:center;gap:10px;font:600 11px/1 var(--sans2);letter-spacing:.28em;text-transform:uppercase;color:var(--gold2)}
   .eyebrow2 .dot{width:7px;height:7px;border-radius:50%;background:var(--gold2);animation:pulse 2s ease-in-out infinite}
   @keyframes  pulse{0%,100%{box-shadow:0 0 0 0 rgba(176,141,87,.45)}50%{box-shadow:0 0 0 7px rgba(176,141,87,0)}}
-  .trend-head h2{font:500 clamp(38px,5vw,58px)/1.05 var(--serif2);letter-spacing:.01em;margin-top:14px}
+  .trend-head h2{
+    font:500 clamp(26px,3.2vw,40px)/1.12 var(--serif2);
+    letter-spacing:.01em;
+    margin:14px 0 0;
+    max-width:18ch;
+  }
   .trend-head h2 em{font-style:italic;color:var(--maroon2)}
-  .trend-sub{font:400 15px/1.6 var(--sans2);color:var(--muted);max-width:340px;padding-bottom:8px}
+  .trend-sub{font:400 15px/1.6 var(--sans2);color:var(--muted);max-width:340px;padding-bottom:8px;text-align:left}
   @media(max-width:768px){.trend-sub{padding-bottom:0}}
 
   /* ── Row (group) ────────────────────────────── */
   .row2{margin-top:56px}
-  .row-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;/*border-top:1px solid rgba(20,18,16,.16);*/padding:20px 4px 22px}
-  @media(max-width:768px){.row-head{margin:0 15px;padding:18px 0}}
-  .row-title{display:flex;align-items:baseline;gap:14px}
+  .row-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 4px 22px}
+  @media(max-width:768px){.row-head{margin:0 15px;padding:18px 0;align-items:flex-start}}
+  .row-title{display:flex;flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:10px 14px;min-width:0}
   .row-title .idx{font:500 13px var(--sans2);color:var(--gold2);letter-spacing:.1em}
-  .row-title h3{font:500 clamp(22px,2vw,27px)/1.1 var(--serif2);letter-spacing:.02em;}
-  .row-title .hint{font:italic 400 17px var(--serif2);color:#000;display:none}
+  .row-title h3{
+    font:500 clamp(22px,2vw,27px)/1.1 var(--serif2);
+    letter-spacing:.02em;
+    margin:0;
+    display:inline;
+  }
+  .row-title .hint{
+    font:italic 400 17px/1.2 var(--serif2);
+    color:#000;
+    display:none;
+    margin:0;
+  }
   @media(min-width:900px){.row-title .hint{display:inline}}
   .row-tools{display:flex;align-items:center;gap:18px}
   .view-all{font:600 11px var(--sans2);letter-spacing:.22em;text-transform:uppercase;color:var(--ink2);text-decoration:none;border-bottom:1px solid var(--gold2);padding-bottom:3px;transition:color .2s}

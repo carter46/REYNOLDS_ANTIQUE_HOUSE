@@ -1026,11 +1026,15 @@ form#product-search {
 .featured_container .carousel-item {
   margin-right: 0;
   flex: 0 0 100%;
-  display: none;
 }
-.featured_container .carousel-item.active {
+.featured_container .carousel-item.active,
+.featured_container .carousel-item-next,
+.featured_container .carousel-item-prev {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+.featured_container .imgboxsplit {
+  flex: 0 0 auto;
 }
 
 /* Reynolds visibility / card parity patches */
@@ -1050,8 +1054,16 @@ form#product-search {
   display: block;
 }
 .featured_container .prod_title { min-height: 3.2em; font-size: 15px !important; text-align: center; }
-.featured_container .carousel-item.active { display: flex; flex-wrap: wrap; }
-.rah-card-img img { object-fit: contain !important; }
+.featured_container .carousel-item.active { display: flex; flex-wrap: nowrap; }
+.featured_container .imgboxsplit {
+  flex: 0 0 auto;
+}
+@media (min-width: 1200px) {
+  .featured_container .imgboxsplit.col-xl-4 { width: 33.333333%; max-width: 33.333333%; }
+}
+@media (min-width: 1400px) {
+  .featured_container .imgboxsplit.col-xxl-3 { width: 25%; max-width: 25%; }
+}
 @media (max-width: 900px) {
   .newel-footer-restore .row { grid-template-columns: 1fr !important; }
 }
