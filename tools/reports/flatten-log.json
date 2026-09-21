@@ -1,0 +1,103 @@
+[
+  {
+    "action": "rename",
+    "from": "C:\\Users\\user pc\\OneDrive\\Documents\\carter\\REYNOLDS_ANTIQUE_HOUSE\\s3-us-west-2.amazonaws.com\\prod-newel\\images\\inventory",
+    "to": "C:\\Users\\user pc\\OneDrive\\Documents\\carter\\REYNOLDS_ANTIQUE_HOUSE\\assets\\images\\inventory"
+  },
+  {
+    "action": "merge",
+    "from": "www.newel.com",
+    "to": "assets/images/marketing",
+    "moved": 5,
+    "skipped": 0
+  },
+  {
+    "action": "merge",
+    "from": "blog.newel.com",
+    "to": "assets/images/blog",
+    "moved": 11,
+    "skipped": 0
+  },
+  {
+    "action": "rename",
+    "from": "ajax.googleapis.com",
+    "to": "assets/vendor/jquery"
+  },
+  {
+    "action": "rename",
+    "from": "cdnjs.cloudflare.com",
+    "to": "assets/vendor/cdnjs"
+  },
+  {
+    "action": "rename",
+    "from": "use.typekit.net",
+    "to": "assets/vendor/typekit"
+  },
+  {
+    "action": "rename",
+    "from": "p.typekit.net",
+    "to": "assets/vendor/typekit-privacy"
+  },
+  {
+    "action": "rename",
+    "from": "stg2.newel.com",
+    "to": "assets/vendor/stg2"
+  },
+  {
+    "action": "rename",
+    "from": "static.wixstatic.com",
+    "to": "assets/vendor/wix/static"
+  },
+  {
+    "action": "rename",
+    "from": "static.parastorage.com",
+    "to": "assets/vendor/wix/parastorage"
+  },
+  {
+    "action": "rename",
+    "from": "mdbootstrap.com",
+    "to": "assets/vendor/mdbootstrap"
+  },
+  {
+    "action": "merge-newel",
+    "folder": "css",
+    "moved": 18,
+    "skipped": 0
+  },
+  {
+    "action": "merge-newel",
+    "folder": "js",
+    "moved": 7,
+    "skipped": 0
+  },
+  {
+    "action": "merge-newel",
+    "folder": "img",
+    "moved": 29,
+    "skipped": 0
+  },
+  {
+    "action": "merge-newel",
+    "folder": "fonts",
+    "moved": 24,
+    "skipped": 0
+  },
+  {
+    "action": "merge-newel",
+    "folder": "images",
+    "moved": 1,
+    "skipped": 0
+  },
+  {
+    "action": "merge-newel",
+    "folder": "bootstrap",
+    "moved": 4,
+    "skipped": 0
+  },
+  {
+    "action": "merge-newel",
+    "folder": "_img",
+    "moved": 1,
+    "skipped": 0
+  }
+]

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Reynolds Antique House</title>
+  <meta name="description" content="Contact Reynolds Antique House." />
+  <meta name="theme-color" content="#1a1410" />
+  <link rel="stylesheet" href="/assets/css/chrome.css" />
+</head>
+<body data-page="contact">
+  <div id="site-header-root"></div>
+  <main id="main">
+<section class="rah-page rah-prose">
+        <h1>Contact</h1>
+        <p>Reach the gallery by email. This form opens your mail client — there is no remote form backend on this static site.</p>
+        <form class="rah-contact-form" action="mailto:info@reynoldsantiquehouse.com" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="name" required />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+          <button class="rah-btn" type="submit">Send Email</button>
+        </form>
+      </section>
+  </main>
+  <div id="site-footer-root"></div>
+  <script src="/js/site-chrome.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+product_title,original_url,raw_sku,proposed_id,category,page_path,image_count,valid_images,missing_images,image_completeness,has_title,has_description,has_dimensions,has_price,has_category,has_thumbnail,linked_from_home,selection_reason,keep_drop
+newel.com | 520: Web server is returning an unknown error,https://newel.com/product/white-and-pink-loop-armchairs,,product-white-and-pink-loop-armchairs,,newel.com/product/white-and-pink-loop-armchairs.html,0,0,0,incomplete,true,false,false,false,false,false,false,incomplete-images,drop

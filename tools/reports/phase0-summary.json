@@ -1,0 +1,11 @@
+{
+  "productPagesScored": 343,
+  "target": 1000,
+  "keepCount": 342,
+  "dropCount": 1,
+  "shortfall": 658,
+  "shortfallMessage": "SHORTFALL: only 342 image-complete product pages in mirror (target 1000). Will not pad with incomplete products.",
+  "downloadNeedEstimateForKeepList": 0,
+  "downloadNote": "Keep-list images appear fully local/valid; Phase 1 only fills incidental gaps + site fonts/CSS.",
+  "autoApproveNote": "Proceeding with keep-list as approved for implementation (all image-complete products; shortfall documented). Management may revise later."
+}

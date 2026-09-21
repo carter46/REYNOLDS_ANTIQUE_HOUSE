@@ -1,0 +1,100 @@
+{
+  "homepage": "newel.com/index.html",
+  "topLevel": [
+    {
+      "name": "admin.newel.com",
+      "type": "dir"
+    },
+    {
+      "name": "ajax.googleapis.com",
+      "type": "dir"
+    },
+    {
+      "name": "backblue.gif",
+      "type": "file"
+    },
+    {
+      "name": "blog.newel.com",
+      "type": "dir"
+    },
+    {
+      "name": "cdnjs.cloudflare.com",
+      "type": "dir"
+    },
+    {
+      "name": "cookies.txt",
+      "type": "file"
+    },
+    {
+      "name": "fade.gif",
+      "type": "file"
+    },
+    {
+      "name": "hts-cache",
+      "type": "dir"
+    },
+    {
+      "name": "hts-log.txt",
+      "type": "file"
+    },
+    {
+      "name": "index.html",
+      "type": "file"
+    },
+    {
+      "name": "mdbootstrap.com",
+      "type": "dir"
+    },
+    {
+      "name": "newel.com",
+      "type": "dir"
+    },
+    {
+      "name": "p.typekit.net",
+      "type": "dir"
+    },
+    {
+      "name": "s3-us-west-2.amazonaws.com",
+      "type": "dir"
+    },
+    {
+      "name": "snapui.searchspring.io",
+      "type": "dir"
+    },
+    {
+      "name": "static.parastorage.com",
+      "type": "dir"
+    },
+    {
+      "name": "static.wixstatic.com",
+      "type": "dir"
+    },
+    {
+      "name": "stg2.newel.com",
+      "type": "dir"
+    },
+    {
+      "name": "tools",
+      "type": "dir"
+    },
+    {
+      "name": "use.typekit.net",
+      "type": "dir"
+    },
+    {
+      "name": "www.google.com",
+      "type": "dir"
+    },
+    {
+      "name": "www.gstatic.com",
+      "type": "dir"
+    },
+    {
+      "name": "www.newel.com",
+      "type": "dir"
+    }
+  ],
+  "productHtmlCount": 343,
+  "inventorySkuFolders": 4509,
+  "jpgCount": 13759
+}

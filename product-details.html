@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product | Reynolds Antique House</title>
+  <meta name="description" content="Product details — Reynolds Antique House." />
+  <meta name="theme-color" content="#1a1410" />
+  <link rel="stylesheet" href="/assets/css/chrome.css" />
+</head>
+<body data-page="product">
+  <div id="site-header-root"></div>
+  <main id="main">
+<section class="rah-page">
+        <div id="pdp-root"><p>Loading…</p></div>
+        <div class="rah-related">
+          <h2 class="rah-section-title">More from this category</h2>
+          <div class="rah-grid" id="related-grid"></div>
+        </div>
+      </section>
+      <script src="/js/product-catalog.js"></script>
+      <script>
+        (async function () {
+          await ReynoldsCatalog.load();
+          const params = new URLSearchParams(window.location.search);
+          const id = params.get("id");
+          const product = ReynoldsCatalog.getProduct(id);
+          const root = document.getElementById("pdp-root");
+          if (!product) {
+            root.innerHTML = '<p>Product not found. <a href="/products.html">Return to the collection</a>.</p>';
+            return;
+          }
+          document.title = product.title + " | Reynolds Antique House";
+          const images = product.images && product.images.length ? product.images : [{ src: "", alt: product.title }];
+          let index = 0;
+          function paint() {
+            const img = images[index] || images[0];
+            root.innerHTML =
+              '<div class="rah-pdp">' +
+              '<div><div class="rah-gallery-main"><img id="pdp-main" src="' + (img.src || "") + '" alt="' + (img.alt || product.title).replace(/"/g, "&quot;") + '" /></div>' +
+              '<div class="rah-thumbs" id="pdp-thumbs">' +
+              images.map(function (im, i) {
+                return '<button type="button" data-i="' + i + '" class="' + (i === index ? "is-active" : "") + '"><img src="' + im.src + '" alt="" /></button>';
+              }).join("") +
+              "</div></div>" +
+              "<div>" +
+              '<h1 class="rah-pdp-title">' + product.title + "</h1>" +
+              (product.price ? '<p class="rah-pdp-price">' + product.price + "</p>" : "") +
+              '<p class="rah-pdp-sku">' + (product.sku ? "Item # " + product.sku : "") + "</p>" +
+              '<p class="rah-pdp-desc">' + (product.description || "") + "</p>" +
+              '<ul class="rah-specs">' +
+              (product.dimensions ? "<li><strong>Dimensions</strong> " + product.dimensions + "</li>" : "") +
+              (product.material ? "<li><strong>Material</strong> " + product.material + "</li>" : "") +
+              (product.style ? "<li><strong>Style</strong> " + product.style + "</li>" : "") +
+              (product.period ? "<li><strong>Period</strong> " + product.period + "</li>" : "") +
+              (product.category ? "<li><strong>Category</strong> " + product.category + "</li>" : "") +
+              (product.availability ? "<li><strong>Status</strong> " + product.availability + "</li>" : "") +
+              "</ul>" +
+              '<a class="rah-btn" href="mailto:info@reynoldsantiquehouse.com?subject=' + encodeURIComponent("Inquiry: " + product.title + " (" + (product.sku || product.id) + ")") + '">Inquire</a>' +
+              ' <a class="rah-btn" style="background:transparent;color:var(--rah-ink)!important;border:1px solid rgba(0,0,0,.2)" href="/products.html">Back to Collection</a>' +
+              "</div></div>";
+            document.getElementById("pdp-thumbs").addEventListener("click", function (e) {
+              const btn = e.target.closest("button[data-i]");
+              if (!btn) return;
+              index = parseInt(btn.getAttribute("data-i"), 10) || 0;
+              paint();
+            });
+          }
+          paint();
+          const related = ReynoldsCatalog.related(product, 4);
+          document.getElementById("related-grid").innerHTML = related.map(ReynoldsCatalog.cardHtml).join("");
+        })();
+      </script>
+  </main>
+  <div id="site-footer-root"></div>
+  <script src="/js/site-chrome.js"></script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+file,url,reason
+assets/bootstrap/css/bootstrap.css,https://getbootstrap.com,other-external
+assets/bootstrap/css/bootstrap.css,https://github.com/twbs/bootstrap/blob/master/LICENSE,other-external
+assets/bootstrap/css/bootstrap.css,http://www.w3.org/2000/svg,other-external
+assets/bootstrap/css/bootstrap.min.css,https://getbootstrap.com/,other-external
+assets/bootstrap/css/bootstrap.min.css,https://github.com/twbs/bootstrap/blob/main/LICENSE,other-external
+assets/bootstrap/css/bootstrap.min.css,http://www.w3.org/2000/svg,other-external
+assets/bootstrap/js/bootstrap.js,https://getbootstrap.com,other-external
+assets/bootstrap/js/bootstrap.js,https://github.com/twbs/bootstrap/graphs/contributors,other-external
+assets/bootstrap/js/bootstrap.js,https://github.com/twbs/bootstrap/blob/master/LICENSE,other-external
+assets/bootstrap/js/bootstrap.js,https://goo.gl/pxwQGp,other-external
+assets/bootstrap/js/bootstrap.js,https://popper.js.org,other-external
+assets/bootstrap/js/bootstrap.js,https://github.com/twbs/bootstrap/issues/24251,other-external
+assets/bootstrap/js/bootstrap.js,https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html,other-external
+assets/bootstrap/js/bootstrap.min.js,https://getbootstrap.com/,other-external
+assets/bootstrap/js/bootstrap.min.js,https://github.com/twbs/bootstrap/graphs/contributors,other-external
+assets/bootstrap/js/bootstrap.min.js,https://github.com/twbs/bootstrap/blob/main/LICENSE,other-external
+assets/bootstrap/js/bootstrap.min.js,https://popper.js.org,other-external
+assets/css/bootstrap-mega-menu.min.css,https://mdbootstrap.com/,other-external
+assets/css/bootstrap-mega-menu.min.css,https://mdbootstrap.com/general/license/,other-external
+assets/css/bootstrap-mega-menu.min.css,https://mdbootstrap.com/docs/standard/,other-external
+assets/css/bootstrap-mega-menu.min.css,https://mdbootstrap.com/support/,other-external
+assets/css/bootstrap-mega-menu.min.css,http://www.w3.org/2000/svg,other-external
+assets/css/bootstrap-mega-menu.min.css,http://github.com/semantic-org/semantic-ui/,other-external
+assets/css/bootstrap-mega-menu.min.css,http://opensource.org/licenses/MIT,other-external
+assets/css/flexslider.css,https://www.woocommerce.com/flexslider/,other-external
+assets/css/flexslider.css,http://www.gnu.org/licenses/gpl-2.0.html,other-external
+assets/css/fonts/flexslider-icon.eot.html,https://newel.com/css/app.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.eot.html,https://newel.com/css/desktop.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.eot.html,https://newel.com/css/bootstrap-social.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.eot.html,https://newel.com/css/ion.rangeSlider.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.eot.html,https://newel.com/css/ion.rangeSlider.skinFlat.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.eot.html,https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css,other-external
+assets/css/fonts/flexslider-icon.eot.html,https://newel.com/css/custom-inputs.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.eot.html,https://newel.com/img/logo.png,legacy-or-cdn
+assets/css/fonts/flexslider-icon.eotd41d.html,https://newel.com/css/app.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.eotd41d.html,https://newel.com/css/desktop.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.eotd41d.html,https://newel.com/css/bootstrap-social.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.eotd41d.html,https://newel.com/css/ion.rangeSlider.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.eotd41d.html,https://newel.com/css/ion.rangeSlider.skinFlat.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.eotd41d.html,https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css,other-external
+assets/css/fonts/flexslider-icon.eotd41d.html,https://newel.com/css/custom-inputs.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.eotd41d.html,https://newel.com/img/logo.png,legacy-or-cdn
+assets/css/fonts/flexslider-icon.html,https://newel.com/css/app.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.html,https://newel.com/css/desktop.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.html,https://newel.com/css/bootstrap-social.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.html,https://newel.com/css/ion.rangeSlider.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.html,https://newel.com/css/ion.rangeSlider.skinFlat.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.html,https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css,other-external
+assets/css/fonts/flexslider-icon.html,https://newel.com/css/custom-inputs.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.html,https://newel.com/img/logo.png,legacy-or-cdn
+assets/css/fonts/flexslider-icon.ttf.html,https://newel.com/css/app.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.ttf.html,https://newel.com/css/desktop.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.ttf.html,https://newel.com/css/bootstrap-social.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.ttf.html,https://newel.com/css/ion.rangeSlider.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.ttf.html,https://newel.com/css/ion.rangeSlider.skinFlat.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.ttf.html,https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css,other-external
+assets/css/fonts/flexslider-icon.ttf.html,https://newel.com/css/custom-inputs.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.ttf.html,https://newel.com/img/logo.png,legacy-or-cdn
+assets/css/fonts/flexslider-icon.woff.html,https://newel.com/css/app.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.woff.html,https://newel.com/css/desktop.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.woff.html,https://newel.com/css/bootstrap-social.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.woff.html,https://newel.com/css/ion.rangeSlider.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.woff.html,https://newel.com/css/ion.rangeSlider.skinFlat.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.woff.html,https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css,other-external
+assets/css/fonts/flexslider-icon.woff.html,https://newel.com/css/custom-inputs.css,legacy-or-cdn
+assets/css/fonts/flexslider-icon.woff.html,https://newel.com/img/logo.png,legacy-or-cdn
+assets/css/Lightbox-Gallery-baguetteBox.min.css,https://github.com/feimosi/baguetteBox.js,other-external
+assets/css/magiczoomplus.css,https://www.magictoolbox.com/magiczoomplus/,other-external
+assets/css/magiczoomplus.css,https://www.magictoolbox.com/license/,other-external
+assets/css/magiczoomplus.css,http://www.w3.org/2000/svg,other-external
+assets/css/styles.css,https://fonts.googleapis.com/css?family=Roboto,google/tracker
+assets/fonts/font-awesome.min.css,http://fontawesome.io,other-external
+assets/fonts/font-awesome.min.css,http://fontawesome.io/license,other-external
+assets/fonts/ionicons.min.css,http://ionicons.com/,other-external
+assets/fonts/ionicons.min.css,https://twitter.com/benjsperry,other-external
+assets/fonts/ionicons.min.css,https://twitter.com/ionicframework,other-external
+assets/fonts/ionicons.min.css,https://github.com/driftyco/ionicons,other-external
+assets/fonts/ionicons.min.css,https://github.com/google/material-design-icons,other-external
+assets/fonts/ionicons.min.css,http://creativecommons.org/licenses/by/4.0/,other-external
+assets/fonts/line-awesome.min.css,https://icons8.com/line-awesome,other-external
+assets/fonts/line-awesome.min.css,https://icons8.com/good-boy-license/,other-external
+assets/fonts/line-awesome.min.css,https://icons8.com/,other-external
+assets/fonts/line-awesome.min.css,https://github.com/FontCustom/fontcustom,other-external
+assets/fonts/line-awesome.min.css,https://icons8.com/contact,other-external
+assets/fonts/line-awesome.min.css,https://twitter.com/icons_8,other-external
+assets/fonts/line-awesome.min.css,https://www.facebook.com/Icons8,legacy-or-cdn
+assets/fonts/line-awesome.min.css,https://plus.google.com/+Icons8,google/tracker
+assets/fonts/line-awesome.min.css,https://github.com/icons8,other-external
+assets/img/favicon5e1f.html,https://newel.com/css/app.css,legacy-or-cdn
+assets/img/favicon5e1f.html,https://newel.com/css/desktop.css,legacy-or-cdn
+assets/img/favicon5e1f.html,https://newel.com/css/bootstrap-social.css,legacy-or-cdn
+assets/img/favicon5e1f.html,https://newel.com/css/ion.rangeSlider.css,legacy-or-cdn
+assets/img/favicon5e1f.html,https://newel.com/css/ion.rangeSlider.skinFlat.css,legacy-or-cdn
+assets/img/favicon5e1f.html,https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css,other-external
+assets/img/favicon5e1f.html,https://newel.com/css/custom-inputs.css,legacy-or-cdn
+assets/img/favicon5e1f.html,https://newel.com/img/logo.png,legacy-or-cdn
+assets/img/inventory/no_image_available_300x300.html,https://newel.com/css/app.css,legacy-or-cdn
+assets/img/inventory/no_image_available_300x300.html,https://newel.com/css/desktop.css,legacy-or-cdn
+assets/img/inventory/no_image_available_300x300.html,https://newel.com/css/bootstrap-social.css,legacy-or-cdn
+assets/img/inventory/no_image_available_300x300.html,https://newel.com/css/ion.rangeSlider.css,legacy-or-cdn
+assets/img/inventory/no_image_available_300x300.html,https://newel.com/css/ion.rangeSlider.skinFlat.css,legacy-or-cdn
+assets/img/inventory/no_image_available_300x300.html,https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css,other-external
+assets/img/inventory/no_image_available_300x300.html,https://newel.com/css/custom-inputs.css,legacy-or-cdn
+assets/img/inventory/no_image_available_300x300.html,https://newel.com/img/logo.png,legacy-or-cdn
+assets/img/newel-modern-bg.webp_.html,https://newel.com/css/app.css,legacy-or-cdn
+assets/img/newel-modern-bg.webp_.html,https://newel.com/css/desktop.css,legacy-or-cdn
+assets/img/newel-modern-bg.webp_.html,https://newel.com/css/bootstrap-social.css,legacy-or-cdn
+assets/img/newel-modern-bg.webp_.html,https://newel.com/css/ion.rangeSlider.css,legacy-or-cdn
+assets/img/newel-modern-bg.webp_.html,https://newel.com/css/ion.rangeSlider.skinFlat.css,legacy-or-cdn
+assets/img/newel-modern-bg.webp_.html,https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css,other-external
+assets/img/newel-modern-bg.webp_.html,https://newel.com/css/custom-inputs.css,legacy-or-cdn
+assets/img/newel-modern-bg.webp_.html,https://newel.com/img/logo.png,legacy-or-cdn
+assets/js/ion.rangeSlider.html,https://newel.com/css/app.css,legacy-or-cdn
+assets/js/ion.rangeSlider.html,https://newel.com/css/desktop.css,legacy-or-cdn
+assets/js/ion.rangeSlider.html,https://newel.com/css/bootstrap-social.css,legacy-or-cdn
+assets/js/ion.rangeSlider.html,https://newel.com/css/ion.rangeSlider.css,legacy-or-cdn
+assets/js/ion.rangeSlider.html,https://newel.com/css/ion.rangeSlider.skinFlat.css,legacy-or-cdn
+assets/js/ion.rangeSlider.html,https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css,other-external
+assets/js/ion.rangeSlider.html,https://newel.com/css/custom-inputs.css,legacy-or-cdn
+assets/js/ion.rangeSlider.html,https://newel.com/img/logo.png,legacy-or-cdn
+assets/js/jquery.flexslider.js,https://github.com/brandonaaron/jquery-mousewheel,other-external
+assets/js/Lightbox-Gallery-baguetteBox.min.js,https://github.com/feimosi/baguetteBox.js,other-external
+assets/js/Lightbox-Gallery-baguetteBox.min.js,http://www.w3.org/2000/svg,other-external
+assets/js/mdb.min.js,https://mdbootstrap.com/,other-external
+assets/js/mdb.min.js,https://mdbootstrap.com/general/license/,other-external
+assets/js/mdb.min.js,https://mdbootstrap.com/docs/standard/,other-external
+assets/js/mdb.min.js,https://mdbootstrap.com/support/,other-external
+assets/js/mdb.min.js,https://popper.js.org,other-external
+assets/vendor/cdnjs/ajax/libs/font-awesome/6.5.1/css/all.min.css,https://fontawesome.com,other-external
+assets/vendor/cdnjs/ajax/libs/font-awesome/6.5.1/css/all.min.css,https://fontawesome.com/license/free,other-external
+assets/vendor/cdnjs/ajax/libs/font-awesome/6.5.1/css/all.min.css,https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2,legacy-or-cdn
+assets/vendor/cdnjs/ajax/libs/font-awesome/6.5.1/css/all.min.css,https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.ttf,legacy-or-cdn
+assets/vendor/cdnjs/ajax/libs/font-awesome/6.5.1/css/all.min.css,https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-regular-400.woff2,legacy-or-cdn
+assets/vendor/cdnjs/ajax/libs/font-awesome/6.5.1/css/all.min.css,https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-regular-400.ttf,legacy-or-cdn
+assets/vendor/cdnjs/ajax/libs/font-awesome/6.5.1/css/all.min.css,https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2,legacy-or-cdn
+assets/vendor/cdnjs/ajax/libs/font-awesome/6.5.1/css/all.min.css,https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.ttf,legacy-or-cdn
+assets/vendor/cdnjs/ajax/libs/font-awesome/6.5.1/css/all.min.css,https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-v4compatibility.woff2,legacy-or-cdn
+assets/vendor/cdnjs/ajax/libs/font-awesome/6.5.1/css/all.min.css,https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-v4compatibility.ttf,legacy-or-cdn
+assets/vendor/cdnjs/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js,https://github.com/select2/select2/blob/master/LICENSE.md,other-external
+assets/vendor/stg2/js/magiczoomplus.js,https://www.magictoolbox.com/magiczoomplus/,other-external
+assets/vendor/stg2/js/magiczoomplus.js,https://www.magictoolbox.com/license/,other-external
+assets/vendor/typekit/tid5nrh.css,http://www.adobe.com/products/eulas/tou_typekit,other-external
+assets/vendor/typekit/tid5nrh.css,http://typekit.com/eulas/00000000000000007735a71f,legacy-or-cdn
+assets/vendor/typekit/tid5nrh.css,http://typekit.com/eulas/00000000000000007735a723,legacy-or-cdn
+assets/vendor/typekit/tid5nrh.css,http://typekit.com/eulas/00000000000000007735a730,legacy-or-cdn
+assets/vendor/typekit/tid5nrh.css,http://typekit.com/eulas/00000000000000007735a731,legacy-or-cdn
+assets/vendor/typekit/tid5nrh.css,http://typekit.com/eulas/00000000000000007735a734,legacy-or-cdn
+assets/vendor/typekit/tid5nrh.css,http://typekit.com/eulas/00000000000000007735a735,legacy-or-cdn
+assets/vendor/typekit/tid5nrh.css,http://typekit.com/eulas/00000000000000007735a71e,legacy-or-cdn
+assets/vendor/typekit/tid5nrh.css,http://typekit.com/eulas/00000000000000007735a72d,legacy-or-cdn
+assets/vendor/typekit/tid5nrh.css,http://typekit.com/eulas/000000000000000077359a0f,legacy-or-cdn
+assets/vendor/typekit/tid5nrh.css,http://typekit.com/eulas/0000000000000000775a06be,legacy-or-cdn
+assets/vendor/typekit/tid5nrh.css,http://typekit.com/eulas/000000000000000077359a17,legacy-or-cdn
+assets/vendor/typekit/tid5nrh.css,http://typekit.com/eulas/000000000000000077359a32,legacy-or-cdn
+assets/vendor/wix/parastorage/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[ImageX].cb16f202.min.css,https://github.com/wix/yoshi/issues/2689,other-external
+assets/vendor/wix/parastorage/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_menu.d7f69225.min.css,http://www.w3.org/2000/svg%27,other-external
+assets/vendor/wix/parastorage/services/form-app/1.2883.0/client-viewer/4660.chunk.min.js,https://github.com/focus-trap/tabbable/blob/master/LICENSE,other-external
+assets/vendor/wix/parastorage/services/form-app/1.2883.0/client-viewer/5995.chunk.min.js,https://github.com/focus-trap/focus-trap/blob/master/LICENSE,other-external
+assets/vendor/wix/parastorage/services/form-app/1.2883.0/client-viewer/7757.chunk.min.js,https://static.parastorage.com/services/linguist-flags/1.1005.0/assets/flags/square/${a}`}var,legacy-or-cdn
+assets/vendor/wix/parastorage/services/form-app/1.2883.0/client-viewer/form-app-file-upload.chunk.min.js,"https://static.parastorage.com/services/wix-ui-icons-common/dist/icons/${r}/${l}/${t}.${a}.json`,{signal:function(){if(",legacy-or-cdn
+assets/vendor/wix/parastorage/services/form-app/1.2883.0/client-viewer/form-app-wix-ricos-viewer.chunk.min.js,https://static.wixstatic.com/media/${e}`;var,legacy-or-cdn
+assets/vendor/wix/parastorage/services/form-app/1.2883.0/client-viewer/form-app-wix-ricos-viewer.chunk.min.js,https://static.wixstatic.com,legacy-or-cdn
+assets/vendor/wix/parastorage/services/form-app/1.2883.0/client-viewer/form-app-wix-ricos-viewer.chunk.min.js,https://${i}/${e}`)}return(async,other-external
+assets/vendor/wix/parastorage/services/form-app/1.2883.0/client-viewer/form-app-wix-ricos-viewer.chunk.min.js,https://static.wixstatic.com/,legacy-or-cdn
+assets/vendor/wix/parastorage/services/form-app/1.2883.0/client-viewer/form-app-wix-ricos-viewer.chunk.min.js,https://static.wixstatic.com/media/,legacy-or-cdn
+assets/vendor/wix/parastorage/services/wix-thunderbolt/dist/group_7.c472a333.chunk.min.css,https://static.parastorage.com/services/wix-thunderbolt/dist/group_7.c472a333.chunk.min.css.map*/,legacy-or-cdn
+assets/vendor/wix/parastorage/services/wix-thunderbolt/dist/handleAccessTokens.inline.3250797b.bundle.min.js,https://static.parastorage.com/services/wix-thunderbolt/dist/handleAccessTokens.inline.3250797b.bundle.min.js.map,legacy-or-cdn
+assets/vendor/wix/parastorage/services/wix-thunderbolt/dist/main.744ea815.min.css,https://static.parastorage.com/services/wix-thunderbolt/dist/main.744ea815.min.css.map*/,legacy-or-cdn
+assets/vendor/wix/parastorage/services/wix-thunderbolt/dist/main.renderer.5cae55b2.min.css,https://static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.5cae55b2.min.css.map*/,legacy-or-cdn
+assets/vendor/wix/parastorage/services/wix-thunderbolt/dist/overrideGlobals.inline.b271af7d.bundle.min.js,https://static.parastorage.com/services/wix-thunderbolt/dist/overrideGlobals.inline.b271af7d.bundle.min.js.map,legacy-or-cdn
+assets/vendor/wix/parastorage/unpkg/@formatjs/intl-segmenter@11.7.10/polyfill.iife.js,https://github.com/MikeMcl/decimal.js,other-external
+assets/vendor/wix/parastorage/unpkg/core-js-bundle@3.2.1/minified.js,https://github.com/zloirock/core-js,other-external
+assets/vendor/wix/parastorage/unpkg/core-js-bundle@3.2.1/minified.js,http://rock.mit-license.org,other-external
+assets/vendor/wix/parastorage/unpkg/core-js-bundle@3.2.1/minified.js,http://a/,other-external
+assets/vendor/wix/parastorage/unpkg/core-js-bundle@3.2.1/minified.js,http://a/c%20d?e=1,other-external
+assets/vendor/wix/parastorage/unpkg/core-js-bundle@3.2.1/minified.js,https://a@b/,other-external
+assets/vendor/wix/parastorage/unpkg/core-js-bundle@3.2.1/minified.js,http://xn--e1aybc/,other-external
+assets/vendor/wix/parastorage/unpkg/core-js-bundle@3.2.1/minified.js,http://a/#б,other-external
+newel.com/api/solrKeyword.html,https://newel.com/css/app.css,legacy-or-cdn
+newel.com/api/solrKeyword.html,https://newel.com/css/desktop.css,legacy-or-cdn
+newel.com/api/solrKeyword.html,https://newel.com/css/bootstrap-social.css,legacy-or-cdn
+newel.com/api/solrKeyword.html,https://newel.com/css/ion.rangeSlider.css,legacy-or-cdn
+newel.com/api/solrKeyword.html,https://newel.com/css/ion.rangeSlider.skinFlat.css,legacy-or-cdn
+newel.com/api/solrKeyword.html,https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css,other-external
+newel.com/api/solrKeyword.html,https://newel.com/css/custom-inputs.css,legacy-or-cdn
+newel.com/api/solrKeyword.html,https://newel.com/img/logo.png,legacy-or-cdn
+newel.com/api/solrProductsKeyword.html,https://newel.com/css/app.css,legacy-or-cdn
+newel.com/api/solrProductsKeyword.html,https://newel.com/css/desktop.css,legacy-or-cdn
+newel.com/api/solrProductsKeyword.html,https://newel.com/css/bootstrap-social.css,legacy-or-cdn
+newel.com/api/solrProductsKeyword.html,https://newel.com/css/ion.rangeSlider.css,legacy-or-cdn
+newel.com/api/solrProductsKeyword.html,https://newel.com/css/ion.rangeSlider.skinFlat.css,legacy-or-cdn
+newel.com/api/solrProductsKeyword.html,https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css,other-external
+newel.com/api/solrProductsKeyword.html,https://newel.com/css/custom-inputs.css,legacy-or-cdn
+newel.com/api/solrProductsKeyword.html,https://newel.com/img/logo.png,legacy-or-cdn
+newel.com/api/solrProductsKeywordLoad.html,https://newel.com/css/app.css,legacy-or-cdn
+newel.com/api/solrProductsKeywordLoad.html,https://newel.com/css/desktop.css,legacy-or-cdn
+newel.com/api/solrProductsKeywordLoad.html,https://newel.com/css/bootstrap-social.css,legacy-or-cdn
+newel.com/api/solrProductsKeywordLoad.html,https://newel.com/css/ion.rangeSlider.css,legacy-or-cdn
+newel.com/api/solrProductsKeywordLoad.html,https://newel.com/css/ion.rangeSlider.skinFlat.css,legacy-or-cdn
+newel.com/api/solrProductsKeywordLoad.html,https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css,other-external
+newel.com/api/solrProductsKeywordLoad.html,https://newel.com/css/custom-inputs.css,legacy-or-cdn
+newel.com/api/solrProductsKeywordLoad.html,https://newel.com/img/logo.png,legacy-or-cdn
+newel.com/cdn-cgi/l/email-protection.html,https://www.cloudflare.com/sign-up?utm_source=email_protection,legacy-or-cdn
+newel.com/cdn-cgi/l/email-protection.html,https://developers.cloudflare.com/waf/tools/scrape-shield/email-address-obfuscation/,legacy-or-cdn
+newel.com/cdn-cgi/l/email-protection.html,https://developers.cloudflare.com/fundamentals/setup/account/create-account/,legacy-or-cdn
+newel.com/cdn-cgi/l/email-protection.html,https://www.cloudflare.com/5xx-error-landing,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://newel.com/creator-collection/Barbara,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.googletagmanager.com/gtag/js?id=AW-852219973,google/tracker
+newel.com/creator-collection/Barbara Kiskovski.html,https://fonts.googleapis.com/css?family=Raleway&amp;display=swap,google/tracker
+newel.com/creator-collection/Barbara Kiskovski.html,https://newel.com/css/Pagination_01.css,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.2.4,google/tracker
+newel.com/creator-collection/Barbara Kiskovski.html,https://fonts.googleapis.com/css?family=Major+Mono+Display&amp;display=swap,google/tracker
+newel.com/creator-collection/Barbara Kiskovski.html,"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;family=UnifrakturMaguntia&amp;family=Jost:wght@300;400;500;600&amp;display=swap",google/tracker
+newel.com/creator-collection/Barbara Kiskovski.html,https://cdn.searchspring.net/ajax_search/sites/v861ky/css/v861ky.css,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://newel.com/css/slick.css,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://newel.com/css/slick-theme.css,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newelauctions.com/,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://newel.com/products,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/art-deco#/filter:ss_style:Art$2520Deco,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products?search=dutch+painting,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/art-deco#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/art-nouveau#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/asian#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/middle-eastern#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/sculpture/busts-figureheads,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products?search=oval#/filter:cardtype_hierarchy:Mirrors,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products?search=rectangular#/filter:cardtype_hierarchy:Mirrors,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products?search=large+mirror,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/african-pre-columbian#/filter:ss_style:Misc.$2520Style$253EAfrican,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/american#/filter:ss_style:American,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/art-nouveau#/filter:ss_style:Art$2520Nouveau,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/asian#/filter:ss_style:Asian,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/bamboo-style#/filter:ss_style:Bamboo,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/biedermeier-continental#/filter:ss_style:Biedermeier,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/contemporary-post-war#/filter:ss_style:Contemporary$252FPost-War$2520Design,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/country#/filter:ss_style:English$253ECountry,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/english#/filter:ss_style:English,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/french#/filter:ss_style:French,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/italian#/filter:ss_style:Italian,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/mid-century#/filter:ss_style:Mid-Century$253EAmerican,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/middle-eastern#/filter:ss_style:Middle$2520Eastern,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/outdoor-style#/filter:ss_style:Outdoor,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/renaissance#/filter:ss_style:Spanish$2520Renaissance,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/russian#/filter:ss_style:Russian,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/rustic-style#/filter:ss_style:Rustic,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/products/wicker-bentwood#/filter:ss_style:Wicker$253EEuropean,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creators-directory,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Murano,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Edward,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Dunbar,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Milo,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Old,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Jens,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/T.H,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Maison,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Strehla,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Knoll,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Harvey,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Baccarat,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Karl,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Gio,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Thayer,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Heywood,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Jules,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Andre,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Thonet,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Ico,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/James,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Jean,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Louis,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/creator-collection/Fontana,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newel.com/newel-modern,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.newelauctions.com/selling-at-newel-auctions/request-estimate,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,http://www.w3.org/2000/svg,other-external
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.instagram.com/newel_1939/,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.facebook.com/Newel.New.York,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://www.pinterest.com/newelgallery,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://blog.newel.com/timeline/,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://blog.newel.com/,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://blog.newel.com/timeline,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://newel.com/register,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://admin.newel.com/,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://newel.com/login/google,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://newel.com/login/facebook,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://newel.com/login,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://newelprops.com/password/reset?redirect=newel,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://stg2.newelprops.com/password/reset?redirect=newel,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://newel.com/js/slick.js,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://newel.com/js/slick.min.js,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://newel.com/js/om-javascript-range-slider.js,legacy-or-cdn
+newel.com/creator-collection/Barbara Kiskovski.html,https://us1-config.doofinder.com/2.x/4ad55788-6a70-460f-8637-73611a98ede2.js,other-external
+newel.com/creator-collection/Brad Robertson.html,https://newel.com/creator-collection/Brad,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.googletagmanager.com/gtag/js?id=AW-852219973,google/tracker
+newel.com/creator-collection/Brad Robertson.html,https://fonts.googleapis.com/css?family=Raleway&amp;display=swap,google/tracker
+newel.com/creator-collection/Brad Robertson.html,https://newel.com/css/Pagination_01.css,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.2.4,google/tracker
+newel.com/creator-collection/Brad Robertson.html,https://fonts.googleapis.com/css?family=Major+Mono+Display&amp;display=swap,google/tracker
+newel.com/creator-collection/Brad Robertson.html,"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;family=UnifrakturMaguntia&amp;family=Jost:wght@300;400;500;600&amp;display=swap",google/tracker
+newel.com/creator-collection/Brad Robertson.html,https://cdn.searchspring.net/ajax_search/sites/v861ky/css/v861ky.css,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://newel.com/css/slick.css,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://newel.com/css/slick-theme.css,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newelauctions.com/,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://newel.com/products,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/art-deco#/filter:ss_style:Art$2520Deco,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products?search=dutch+painting,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/art-deco#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/art-nouveau#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/asian#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/middle-eastern#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/sculpture/busts-figureheads,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products?search=oval#/filter:cardtype_hierarchy:Mirrors,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products?search=rectangular#/filter:cardtype_hierarchy:Mirrors,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products?search=large+mirror,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/african-pre-columbian#/filter:ss_style:Misc.$2520Style$253EAfrican,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/american#/filter:ss_style:American,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/art-nouveau#/filter:ss_style:Art$2520Nouveau,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/asian#/filter:ss_style:Asian,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/bamboo-style#/filter:ss_style:Bamboo,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/biedermeier-continental#/filter:ss_style:Biedermeier,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/contemporary-post-war#/filter:ss_style:Contemporary$252FPost-War$2520Design,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/country#/filter:ss_style:English$253ECountry,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/english#/filter:ss_style:English,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/french#/filter:ss_style:French,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/italian#/filter:ss_style:Italian,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/mid-century#/filter:ss_style:Mid-Century$253EAmerican,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/middle-eastern#/filter:ss_style:Middle$2520Eastern,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/outdoor-style#/filter:ss_style:Outdoor,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/renaissance#/filter:ss_style:Spanish$2520Renaissance,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/russian#/filter:ss_style:Russian,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/rustic-style#/filter:ss_style:Rustic,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/products/wicker-bentwood#/filter:ss_style:Wicker$253EEuropean,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creators-directory,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Murano,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Edward,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Dunbar,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Milo,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Old,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Jens,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/T.H,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Maison,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Strehla,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Knoll,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Harvey,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Baccarat,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Karl,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Gio,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Thayer,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Heywood,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Jules,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Andre,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Thonet,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Ico,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/James,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Jean,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Louis,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/creator-collection/Fontana,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newel.com/newel-modern,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.newelauctions.com/selling-at-newel-auctions/request-estimate,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,http://www.w3.org/2000/svg,other-external
+newel.com/creator-collection/Brad Robertson.html,https://www.instagram.com/newel_1939/,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.facebook.com/Newel.New.York,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://www.pinterest.com/newelgallery,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://blog.newel.com/timeline/,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://blog.newel.com/,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://blog.newel.com/timeline,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://newel.com/register,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://admin.newel.com/,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://newel.com/login/google,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://newel.com/login/facebook,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://newel.com/login,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://newelprops.com/password/reset?redirect=newel,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://stg2.newelprops.com/password/reset?redirect=newel,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://newel.com/js/slick.js,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://newel.com/js/slick.min.js,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://newel.com/js/om-javascript-range-slider.js,legacy-or-cdn
+newel.com/creator-collection/Brad Robertson.html,https://us1-config.doofinder.com/2.x/4ad55788-6a70-460f-8637-73611a98ede2.js,other-external
+newel.com/creator-collection/Brittney Ciccone.html,https://newel.com/creator-collection/Brittney,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.googletagmanager.com/gtag/js?id=AW-852219973,google/tracker
+newel.com/creator-collection/Brittney Ciccone.html,https://fonts.googleapis.com/css?family=Raleway&amp;display=swap,google/tracker
+newel.com/creator-collection/Brittney Ciccone.html,https://newel.com/css/Pagination_01.css,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.2.4,google/tracker
+newel.com/creator-collection/Brittney Ciccone.html,https://fonts.googleapis.com/css?family=Major+Mono+Display&amp;display=swap,google/tracker
+newel.com/creator-collection/Brittney Ciccone.html,"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;family=UnifrakturMaguntia&amp;family=Jost:wght@300;400;500;600&amp;display=swap",google/tracker
+newel.com/creator-collection/Brittney Ciccone.html,https://cdn.searchspring.net/ajax_search/sites/v861ky/css/v861ky.css,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://newel.com/css/slick.css,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://newel.com/css/slick-theme.css,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newelauctions.com/,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://newel.com/products,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/art-deco#/filter:ss_style:Art$2520Deco,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products?search=dutch+painting,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/art-deco#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/art-nouveau#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/asian#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/middle-eastern#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/sculpture/busts-figureheads,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products?search=oval#/filter:cardtype_hierarchy:Mirrors,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products?search=rectangular#/filter:cardtype_hierarchy:Mirrors,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products?search=large+mirror,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/african-pre-columbian#/filter:ss_style:Misc.$2520Style$253EAfrican,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/american#/filter:ss_style:American,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/art-nouveau#/filter:ss_style:Art$2520Nouveau,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/asian#/filter:ss_style:Asian,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/bamboo-style#/filter:ss_style:Bamboo,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/biedermeier-continental#/filter:ss_style:Biedermeier,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/contemporary-post-war#/filter:ss_style:Contemporary$252FPost-War$2520Design,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/country#/filter:ss_style:English$253ECountry,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/english#/filter:ss_style:English,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/french#/filter:ss_style:French,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/italian#/filter:ss_style:Italian,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/mid-century#/filter:ss_style:Mid-Century$253EAmerican,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/middle-eastern#/filter:ss_style:Middle$2520Eastern,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/outdoor-style#/filter:ss_style:Outdoor,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/renaissance#/filter:ss_style:Spanish$2520Renaissance,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/russian#/filter:ss_style:Russian,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/rustic-style#/filter:ss_style:Rustic,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/products/wicker-bentwood#/filter:ss_style:Wicker$253EEuropean,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creators-directory,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Murano,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Edward,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Dunbar,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Milo,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Old,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Jens,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/T.H,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Maison,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Strehla,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Knoll,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Harvey,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Baccarat,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Karl,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Gio,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Thayer,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Heywood,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Jules,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Andre,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Thonet,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Ico,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/James,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Jean,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Louis,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/creator-collection/Fontana,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newel.com/newel-modern,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.newelauctions.com/selling-at-newel-auctions/request-estimate,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,http://www.w3.org/2000/svg,other-external
+newel.com/creator-collection/Brittney Ciccone.html,https://www.instagram.com/newel_1939/,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.facebook.com/Newel.New.York,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://www.pinterest.com/newelgallery,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://blog.newel.com/timeline/,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://blog.newel.com/,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://blog.newel.com/timeline,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://newel.com/register,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://admin.newel.com/,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://newel.com/login/google,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://newel.com/login/facebook,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://newel.com/login,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://newelprops.com/password/reset?redirect=newel,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://stg2.newelprops.com/password/reset?redirect=newel,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://newel.com/js/slick.js,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://newel.com/js/slick.min.js,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://newel.com/js/om-javascript-range-slider.js,legacy-or-cdn
+newel.com/creator-collection/Brittney Ciccone.html,https://us1-config.doofinder.com/2.x/4ad55788-6a70-460f-8637-73611a98ede2.js,other-external
+newel.com/creator-collection/Eric Von Seibert.html,https://newel.com/creator-collection/Eric,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.googletagmanager.com/gtag/js?id=AW-852219973,google/tracker
+newel.com/creator-collection/Eric Von Seibert.html,https://fonts.googleapis.com/css?family=Raleway&amp;display=swap,google/tracker
+newel.com/creator-collection/Eric Von Seibert.html,https://newel.com/css/Pagination_01.css,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.2.4,google/tracker
+newel.com/creator-collection/Eric Von Seibert.html,https://fonts.googleapis.com/css?family=Major+Mono+Display&amp;display=swap,google/tracker
+newel.com/creator-collection/Eric Von Seibert.html,"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;family=UnifrakturMaguntia&amp;family=Jost:wght@300;400;500;600&amp;display=swap",google/tracker
+newel.com/creator-collection/Eric Von Seibert.html,https://cdn.searchspring.net/ajax_search/sites/v861ky/css/v861ky.css,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://newel.com/css/slick.css,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://newel.com/css/slick-theme.css,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newelauctions.com/,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://newel.com/products,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/art-deco#/filter:ss_style:Art$2520Deco,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products?search=dutch+painting,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/art-deco#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/art-nouveau#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/asian#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/middle-eastern#/filter:cardtype_hierarchy:Art,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/sculpture/busts-figureheads,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products?search=oval#/filter:cardtype_hierarchy:Mirrors,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products?search=rectangular#/filter:cardtype_hierarchy:Mirrors,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products?search=large+mirror,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/african-pre-columbian#/filter:ss_style:Misc.$2520Style$253EAfrican,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/american#/filter:ss_style:American,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/art-nouveau#/filter:ss_style:Art$2520Nouveau,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/asian#/filter:ss_style:Asian,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/bamboo-style#/filter:ss_style:Bamboo,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/biedermeier-continental#/filter:ss_style:Biedermeier,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/contemporary-post-war#/filter:ss_style:Contemporary$252FPost-War$2520Design,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/country#/filter:ss_style:English$253ECountry,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/english#/filter:ss_style:English,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/french#/filter:ss_style:French,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/italian#/filter:ss_style:Italian,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/mid-century#/filter:ss_style:Mid-Century$253EAmerican,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/middle-eastern#/filter:ss_style:Middle$2520Eastern,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/outdoor-style#/filter:ss_style:Outdoor,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/renaissance#/filter:ss_style:Spanish$2520Renaissance,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/russian#/filter:ss_style:Russian,legacy-or-cdn
+newel.com/creator-collection/Eric Von Seibert.html,https://www.newel.com/products/rustic-style#/filter:ss_style:Rustic,legacy-or-cdn

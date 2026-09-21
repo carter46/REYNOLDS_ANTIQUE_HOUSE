@@ -1,0 +1,25 @@
+{
+  "liveFilesScanned": [
+    "index.html",
+    "about.html",
+    "contact.html",
+    "products.html",
+    "product-details.html",
+    "trade-program.html",
+    "estate-services.html",
+    "js/site-chrome.js",
+    "js/product-catalog.js",
+    "data/products.json",
+    "assets/css/chrome.css"
+  ],
+  "productCount": 342,
+  "skuFoldersRetained": 342,
+  "validProductImageRefs": 2348,
+  "missingProductImages": 0,
+  "httrackHits": 0,
+  "httrackFiles": [],
+  "absoluteHttpUrlsInLiveSurface": [],
+  "blockedCount": 0,
+  "verdict": "PASS",
+  "note": "Scan limited to live Reynolds pages and their direct JS/CSS/data."
+}

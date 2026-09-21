@@ -1,0 +1,278 @@
+{
+  "scannedFiles": 129,
+  "productCount": 342,
+  "missingProductImages": 0,
+  "missingSample": [],
+  "httrackHits": 17,
+  "httrackFiles": [
+    "newel.com/creator-collection/Barbara Kiskovski.html",
+    "newel.com/creator-collection/Brad Robertson.html",
+    "newel.com/creator-collection/Brittney Ciccone.html",
+    "newel.com/creator-collection/Eric Von Seibert.html",
+    "newel.com/creator-collection/Eva Petric.html",
+    "newel.com/creator-collection/Gary DiPasquale.html",
+    "newel.com/creator-collection/Karl Springer LTD.html",
+    "newel.com/creator-collection/Kevin Kelly.html",
+    "newel.com/creator-collection/larry bentley.html",
+    "newel.com/creator-collection/Natale Adgnot.html",
+    "newel.com/creator-collection/paul makovski.html",
+    "newel.com/creator-collection/Ray Geary.html",
+    "newel.com/creator-collection/Richard Rumi.html",
+    "newel.com/creator-collection/Robert Lee Morris.html",
+    "newel.com/creator-collection/Sharone Halevy.html",
+    "newel.com/creator-collection/Soo Kim.html",
+    "newel.com/creator-collection/Tristan Govignon.html"
+  ],
+  "blockedCount": 1651,
+  "blockedHosts": [
+    "${i}",
+    "a",
+    "admin.newel.com",
+    "b",
+    "blog.newel.com",
+    "cdn.rawgit.com",
+    "cdn.searchspring.net",
+    "cdnjs.cloudflare.com",
+    "creativecommons.org",
+    "developers.cloudflare.com",
+    "fontawesome.com",
+    "fontawesome.io",
+    "fonts.googleapis.com",
+    "getbootstrap.com",
+    "github.com",
+    "goo.gl",
+    "icons8.com",
+    "ionicons.com",
+    "mdbootstrap.com",
+    "newel.com",
+    "newelprops.com",
+    "opensource.org",
+    "plus.google.com",
+    "popper.js.org",
+    "rock.mit-license.org",
+    "static.parastorage.com",
+    "static.wixstatic.com",
+    "stg2.newelprops.com",
+    "twitter.com",
+    "typekit.com",
+    "us1-config.doofinder.com",
+    "www.adobe.com",
+    "www.cloudflare.com",
+    "www.facebook.com",
+    "www.gnu.org",
+    "www.googletagmanager.com",
+    "www.instagram.com",
+    "www.magictoolbox.com",
+    "www.newel.com",
+    "www.newelauctions.com",
+    "www.pinterest.com",
+    "www.quirksmode.org",
+    "www.w3.org",
+    "www.woocommerce.com",
+    "xn--e1aybc"
+  ],
+  "blockedSample": [
+    {
+      "file": "assets/bootstrap/css/bootstrap.css",
+      "url": "https://getbootstrap.com",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/css/bootstrap.css",
+      "url": "https://github.com/twbs/bootstrap/blob/master/LICENSE",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/css/bootstrap.css",
+      "url": "http://www.w3.org/2000/svg",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/css/bootstrap.min.css",
+      "url": "https://getbootstrap.com/",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/css/bootstrap.min.css",
+      "url": "https://github.com/twbs/bootstrap/blob/main/LICENSE",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/css/bootstrap.min.css",
+      "url": "http://www.w3.org/2000/svg",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/js/bootstrap.js",
+      "url": "https://getbootstrap.com",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/js/bootstrap.js",
+      "url": "https://github.com/twbs/bootstrap/graphs/contributors",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/js/bootstrap.js",
+      "url": "https://github.com/twbs/bootstrap/blob/master/LICENSE",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/js/bootstrap.js",
+      "url": "https://goo.gl/pxwQGp",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/js/bootstrap.js",
+      "url": "https://popper.js.org",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/js/bootstrap.js",
+      "url": "https://github.com/twbs/bootstrap/issues/24251",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/js/bootstrap.js",
+      "url": "https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/js/bootstrap.min.js",
+      "url": "https://getbootstrap.com/",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/js/bootstrap.min.js",
+      "url": "https://github.com/twbs/bootstrap/graphs/contributors",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/js/bootstrap.min.js",
+      "url": "https://github.com/twbs/bootstrap/blob/main/LICENSE",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/bootstrap/js/bootstrap.min.js",
+      "url": "https://popper.js.org",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/css/bootstrap-mega-menu.min.css",
+      "url": "https://mdbootstrap.com/",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/css/bootstrap-mega-menu.min.css",
+      "url": "https://mdbootstrap.com/general/license/",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/css/bootstrap-mega-menu.min.css",
+      "url": "https://mdbootstrap.com/docs/standard/",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/css/bootstrap-mega-menu.min.css",
+      "url": "https://mdbootstrap.com/support/",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/css/bootstrap-mega-menu.min.css",
+      "url": "http://www.w3.org/2000/svg",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/css/bootstrap-mega-menu.min.css",
+      "url": "http://github.com/semantic-org/semantic-ui/",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/css/bootstrap-mega-menu.min.css",
+      "url": "http://opensource.org/licenses/MIT",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/css/flexslider.css",
+      "url": "https://www.woocommerce.com/flexslider/",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/css/flexslider.css",
+      "url": "http://www.gnu.org/licenses/gpl-2.0.html",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eot.html",
+      "url": "https://newel.com/css/app.css",
+      "reason": "legacy-or-cdn"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eot.html",
+      "url": "https://newel.com/css/desktop.css",
+      "reason": "legacy-or-cdn"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eot.html",
+      "url": "https://newel.com/css/bootstrap-social.css",
+      "reason": "legacy-or-cdn"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eot.html",
+      "url": "https://newel.com/css/ion.rangeSlider.css",
+      "reason": "legacy-or-cdn"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eot.html",
+      "url": "https://newel.com/css/ion.rangeSlider.skinFlat.css",
+      "reason": "legacy-or-cdn"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eot.html",
+      "url": "https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css",
+      "reason": "other-external"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eot.html",
+      "url": "https://newel.com/css/custom-inputs.css",
+      "reason": "legacy-or-cdn"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eot.html",
+      "url": "https://newel.com/img/logo.png",
+      "reason": "legacy-or-cdn"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eotd41d.html",
+      "url": "https://newel.com/css/app.css",
+      "reason": "legacy-or-cdn"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eotd41d.html",
+      "url": "https://newel.com/css/desktop.css",
+      "reason": "legacy-or-cdn"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eotd41d.html",
+      "url": "https://newel.com/css/bootstrap-social.css",
+      "reason": "legacy-or-cdn"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eotd41d.html",
+      "url": "https://newel.com/css/ion.rangeSlider.css",
+      "reason": "legacy-or-cdn"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eotd41d.html",
+      "url": "https://newel.com/css/ion.rangeSlider.skinFlat.css",
+      "reason": "legacy-or-cdn"
+    },
+    {
+      "file": "assets/css/fonts/flexslider-icon.eotd41d.html",
+      "url": "https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/nprogress.css",
+      "reason": "other-external"
+    }
+  ],
+  "intentional": [],
+  "verdict": "ISSUES_REMAIN"
+}

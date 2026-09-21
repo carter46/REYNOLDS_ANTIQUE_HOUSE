@@ -1,0 +1,15 @@
+{
+  "completedAt": "2026-09-21",
+  "productTarget": 1000,
+  "productCount": 342,
+  "shortfall": 658,
+  "shortfallReason": "HTTrack mirror only contained 343 product detail pages; 342 had complete local SKU image folders. Per plan, incomplete products were not added to pad the catalog.",
+  "architecture": {
+    "records": "data/products.json",
+    "template": "product-details.html?id=<stable-id>",
+    "chrome": ["js/site-chrome.js", "assets/css/chrome.css"],
+    "images": "assets/images/inventory/{SKU}/"
+  },
+  "verifyLive": "PASS",
+  "serve": "npx --yes serve -l 4173"
+}
