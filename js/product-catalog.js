@@ -55,10 +55,16 @@ window.ReynoldsCatalog = (function () {
       "/assets/images/placeholders/no-image.jpg";
     const href = "/product-details.html?id=" + encodeURIComponent(p.id);
     const price = p.price || "";
-    const dims = p.dimensions || "";
+    const dimHtml =
+      p.dimensionsHtml ||
+      (p.dimensions
+        ? esc(p.dimensions).replace(/\n/g, "<br>")
+        : [p.width && "Width: " + esc(p.width), p.depth && "Depth: " + esc(p.depth), p.height && "Height: " + esc(p.height)]
+            .filter(Boolean)
+            .join("<br>"));
     return (
       '<article class="rah-product-card featured_container_col">' +
-      '<div class="shadow1 img_box_shadow card card-body">' +
+      '<div class="shadow1 hvrcls img_box_shadow card card-body">' +
       '<div class="product-container">' +
       '<a href="' +
       href +
@@ -75,7 +81,7 @@ window.ReynoldsCatalog = (function () {
       esc(p.title) +
       "</a></h2>" +
       '<div class="price-row">' +
-      "<div>" +
+      '<div class="prince_colm">' +
       (price
         ? '<p class="prod-price">' +
           esc(price) +
@@ -83,7 +89,9 @@ window.ReynoldsCatalog = (function () {
         : '<p class="prod-price">Price on request</p>') +
       (p.sku ? '<p class="prod-sku">#' + esc(p.sku) + "</p>" : "") +
       "</div>" +
-      (dims ? '<p class="prod-dims">' + esc(dims) + "</p>" : "") +
+      (dimHtml
+        ? '<div class="dimension_col"><p class="prod-dims">' + dimHtml + "</p></div>"
+        : "") +
       "</div></div></div></article>"
     );
   }

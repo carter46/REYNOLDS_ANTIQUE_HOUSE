@@ -6,8 +6,8 @@
   <title>Product | Reynolds Antique House</title>
   <meta name="description" content="Product details — Reynolds Antique House." />
   <meta name="theme-color" content="#1a1410" />
-  <link rel="stylesheet" href="/assets/css/chrome.css" />
-  <link rel="stylesheet" href="/assets/css/newel/NEWEL-PRODUCT-INFO.css" />
+  <link rel="stylesheet" href="/assets/css/chrome.css?v=1789982609196" />
+  <link rel="stylesheet" href="/assets/css/newel/NEWEL-PRODUCT-INFO.css?v=1789982609196" />
 </head>
 <body data-page="product">
   <div id="site-header-root"></div>
@@ -19,7 +19,7 @@
           <div class="rah-grid" id="related-grid"></div>
         </div>
       </section>
-      <script src="/js/product-catalog.js"></script>
+      <script src="/js/product-catalog.js?v=1789982609196"></script>
       <script>
         (async function () {
           await ReynoldsCatalog.load();
@@ -50,7 +50,24 @@
               '<p class="rah-pdp-sku">' + (product.sku ? "Item # " + product.sku : "") + "</p>" +
               '<p class="rah-pdp-desc">' + (product.description || "") + "</p>" +
               '<ul class="rah-specs">' +
-              (product.dimensions ? "<li><strong>Dimensions</strong> " + product.dimensions + "</li>" : "") +
+              (function () {
+                if (product.dimensionsHtml) {
+                  return "<li><strong>Dimensions</strong><br>" + product.dimensionsHtml + "</li>";
+                }
+                if (product.width || product.depth || product.height) {
+                  return (
+                    "<li><strong>Dimensions</strong><br>" +
+                    [product.width && ("Width: " + product.width), product.depth && ("Depth: " + product.depth), product.height && ("Height: " + product.height)]
+                      .filter(Boolean)
+                      .join("<br>") +
+                    "</li>"
+                  );
+                }
+                if (product.dimensions) {
+                  return "<li><strong>Dimensions</strong><br>" + String(product.dimensions).replace(/\n/g, "<br>") + "</li>";
+                }
+                return "";
+              })() +
               (product.material ? "<li><strong>Material</strong> " + product.material + "</li>" : "") +
               (product.style ? "<li><strong>Style</strong> " + product.style + "</li>" : "") +
               (product.period ? "<li><strong>Period</strong> " + product.period + "</li>" : "") +
@@ -74,6 +91,6 @@
       </script>
   </main>
   <div id="site-footer-root"></div>
-  <script src="/js/site-chrome.js"></script>
+  <script src="/js/site-chrome.js?v=1789982609196"></script>
 </body>
 </html>

@@ -1800,12 +1800,22 @@ form#product-search {
   .menu-toggle { display: inline-flex !important; }
   .mainnav { display: none !important; }
   .menu-flyout.is-open { display: block !important; }
-}
-@media (max-width: 767px) {
   #product-search,
   #product-search.search-input-style,
   #product-search.search-btn,
   form#product-search {
     display: none !important;
   }
+  .responsive-search { display: block !important; }
+}
+@media (max-width: 767px) {
+  .responsive-search { display: block !important; }
+}
+.featured_container .product-image,
+.product-image {
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 280px !important;
+  object-fit: contain !important;
 }

@@ -306,7 +306,7 @@
       '        <span class="menu-toggle__icon" aria-hidden="true"><span class="menu-toggle__line"></span><span class="menu-toggle__line"></span><span class="menu-toggle__line"></span></span>',
       '        <span class="menu-toggle__label">Menu</span>',
       "      </button>",
-      '      <form id="product-search" class="search-input-style search-btn" action="/products.html" method="get" role="search">',
+      '      <form id="product-search" class="search-input-style" action="/products.html" method="get" role="search">',
       '        <div class="input-group">',
       '          <input id="search-input" name="q" type="search" placeholder="Search..." class="form-control search-overlay__input" autocomplete="off" aria-label="Search the collection" />',
       '          <div class="input-group-addon"><button type="submit" class="search-submit" aria-label="Submit search"><img src="/assets/img/search-icon.png" alt="" width="16" height="16" /></button></div>',
@@ -320,12 +320,6 @@
       "  </div>",
       '  <div class="header__gold-rule" aria-hidden="true"></div>',
       "</header>",
-      '<form class="responsive-search" id="responsiveSearchLauncher" action="/products.html" method="get" role="search">',
-      '  <div class="responsive-search__inner">',
-      '    <input id="search-input-mobile" name="q" type="search" enterkeyhint="search" placeholder="Search..." class="form-control responsive-search__input" autocomplete="off" aria-label="Search the collection" />',
-      '    <button class="responsive-search__submit" type="submit">Search</button>',
-      "  </div>",
-      "</form>",
       '<nav class="mainnav" aria-label="Main"><div class="mainnav__inner">' + navTriggers(page) + "</div></nav>",
       '<div class="menu-flyout" id="menuFlyout" hidden>',
       '  <button type="button" class="menu-flyout__backdrop" data-menu-close aria-label="Close menu"></button>',
@@ -338,6 +332,10 @@
       '        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
       "      </button>",
       "    </div>",
+      '    <form class="menu-flyout__search" action="/products.html" method="get" role="search">',
+      '      <input type="search" name="q" placeholder="Search..." aria-label="Search the collection" />',
+      '      <button type="submit" aria-label="Search"><img src="/assets/img/search-icon.png" alt="" width="14" height="14" /></button>',
+      "    </form>",
       mobileAccordion(),
       '    <div class="menu-flyout__utility">',
       '      <div class="menu-flyout__utility-title">Quick links</div>',
@@ -452,7 +450,7 @@
       });
     }
     wireSearch(document.getElementById("product-search"));
-    wireSearch(document.getElementById("responsiveSearchLauncher"));
+    wireSearch(document.querySelector(".menu-flyout__search"));
   }
 
   if (document.readyState === "loading") {

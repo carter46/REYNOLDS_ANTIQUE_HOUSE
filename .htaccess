@@ -1,0 +1,20 @@
+# Hostinger / Apache — keep HTML fresh; allow short asset cache with revalidation
+<IfModule mod_headers.c>
+  # HTML always revalidated
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  # Site chrome must not stick for a week on CDN
+  <FilesMatch "\.(js|css)$">
+    Header set Cache-Control "public, max-age=300, must-revalidate"
+  </FilesMatch>
+
+  # Images can cache longer
+  <FilesMatch "\.(png|jpe?g|gif|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=86400, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Prefer index.html
+DirectoryIndex index.html
