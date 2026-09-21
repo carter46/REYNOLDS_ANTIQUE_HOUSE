@@ -16,14 +16,13 @@
         <p class="rah-section-lead">342 pieces with complete local imagery.</p>
         <div class="rah-filters" id="category-filters">
           <button type="button" data-cat="all" class="is-active">All</button>
-          <button type="button" data-cat="accessories">accessories</button>
-<button type="button" data-cat="art.html">art.html</button>
-<button type="button" data-cat="decor">decor</button>
-<button type="button" data-cat="funiture">funiture</button>
-<button type="button" data-cat="furniture.html">furniture.html</button>
-<button type="button" data-cat="lighting.html">lighting.html</button>
-<button type="button" data-cat="mirrors.html">mirrors.html</button>
-<button type="button" data-cat="sculpture.html">sculpture.html</button>
+<button type="button" data-cat="Furniture">Furniture</button>
+<button type="button" data-cat="Sculpture">Sculpture</button>
+<button type="button" data-cat="Mirrors">Mirrors</button>
+<button type="button" data-cat="Lighting">Lighting</button>
+<button type="button" data-cat="Decor">Decor</button>
+<button type="button" data-cat="Art">Art</button>
+<button type="button" data-cat="Accessories">Accessories</button>
         </div>
         <div class="rah-grid" id="product-grid"></div>
       </section>
@@ -32,15 +31,30 @@
         (async function () {
           const data = await ReynoldsCatalog.load();
           const grid = document.getElementById("product-grid");
+          const params = new URLSearchParams(window.location.search);
+          const initialCat = params.get("cat") || "all";
           function render(list) {
             grid.innerHTML = list.map(ReynoldsCatalog.cardHtml).join("");
           }
-          render(data.products);
+          function activate(cat) {
+            document.querySelectorAll("#category-filters button").forEach(function (b) {
+              b.classList.toggle("is-active", b.getAttribute("data-cat") === cat);
+            });
+            render(ReynoldsCatalog.byCategory(cat));
+          }
+          const known = Array.from(document.querySelectorAll("#category-filters button")).map(function (b) {
+            return b.getAttribute("data-cat");
+          });
+          activate(known.indexOf(initialCat) >= 0 ? initialCat : "all");
           document.getElementById("category-filters").addEventListener("click", function (e) {
             const btn = e.target.closest("button[data-cat]");
             if (!btn) return;
-            document.querySelectorAll("#category-filters button").forEach(function (b) { b.classList.toggle("is-active", b === btn); });
-            render(ReynoldsCatalog.byCategory(btn.getAttribute("data-cat")));
+            const cat = btn.getAttribute("data-cat");
+            activate(cat);
+            const url = new URL(window.location.href);
+            if (cat === "all") url.searchParams.delete("cat");
+            else url.searchParams.set("cat", cat);
+            history.replaceState(null, "", url.pathname + url.search);
           });
         })();
       </script>

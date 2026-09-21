@@ -1,0 +1,93 @@
+{
+  "phase": "R5",
+  "estate": {
+    "beforeBytes": 2258761,
+    "afterBytes": 2210215,
+    "googleFontsLinksBefore": 4,
+    "searchspringBefore": 2,
+    "httrackBefore": 1,
+    "httpsBefore": 7,
+    "googleFontsLinksAfter": 0,
+    "searchspringAfter": 0,
+    "httrackAfter": 0,
+    "notes": [
+      "removed google fonts link",
+      "removed google fonts link",
+      "removed google fonts link",
+      "removed google fonts link",
+      "removed searchspring css link",
+      "injected rah-font-override"
+    ]
+  },
+  "surfaceFindings": [
+    {
+      "file": "index.html",
+      "httpsUnique": [],
+      "httpUnique": [],
+      "flags": []
+    },
+    {
+      "file": "about.html",
+      "httpsUnique": [],
+      "httpUnique": [],
+      "flags": []
+    },
+    {
+      "file": "products.html",
+      "httpsUnique": [],
+      "httpUnique": [],
+      "flags": []
+    },
+    {
+      "file": "product-details.html",
+      "httpsUnique": [],
+      "httpUnique": [],
+      "flags": []
+    },
+    {
+      "file": "contact.html",
+      "httpsUnique": [],
+      "httpUnique": [],
+      "flags": []
+    },
+    {
+      "file": "trade-program.html",
+      "httpsUnique": [],
+      "httpUnique": [],
+      "flags": []
+    },
+    {
+      "file": "estate-services.html",
+      "httpsUnique": [
+        "https://github.com/wix/yoshi/issues/2689",
+        "https://blog.newel.com/timeline/"
+      ],
+      "httpUnique": [
+        "http://www.w3.org/2000/svg%27",
+        "http://www.w3.org/2000/svg"
+      ],
+      "flags": [
+        "commerce_or_tracking_or_remote_font"
+      ]
+    },
+    {
+      "file": "assets/css/chrome.css",
+      "httpsUnique": [],
+      "httpUnique": [],
+      "flags": []
+    },
+    {
+      "file": "js/site-chrome.js",
+      "httpsUnique": [],
+      "httpUnique": [],
+      "flags": []
+    },
+    {
+      "file": "js/product-catalog.js",
+      "httpsUnique": [],
+      "httpUnique": [],
+      "flags": []
+    }
+  ],
+  "chromeFonts": "system stacks in chrome.css (no remote @font-face)"
+}

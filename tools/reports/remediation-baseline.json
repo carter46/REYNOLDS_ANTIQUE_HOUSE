@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-09-21T00:12:09.841Z",
+  "workingRoot": "C:\\Users\\user pc\\OneDrive\\Documents\\carter\\REYNOLDS_ANTIQUE_HOUSE",
+  "archivePath": "C:\\My Web Sites\\REYNOLDS_ANTIQUE_HOUSE\\antics website",
+  "productCount": 342,
+  "filterLabels": [
+    "all",
+    "accessories",
+    "art.html",
+    "decor",
+    "funiture",
+    "furniture.html",
+    "lighting.html",
+    "mirrors.html",
+    "sculpture.html"
+  ],
+  "estateServicesBytes": 1069,
+  "estateLooksLikeStub": true,
+  "deadFallbackPath": "/assets/img/inventory/no_image_available_300x300.jpg",
+  "deadFallbackExists": false,
+  "chromeCssExists": true,
+  "siteChromeExists": true,
+  "reconciliation": {
+    "archivePath": "C:\\My Web Sites\\REYNOLDS_ANTIQUE_HOUSE\\antics website",
+    "archiveProductPages": 343,
+    "currentKeptProducts": 342,
+    "reconciledInKeepSet": 342,
+    "excludedProducts": 1,
+    "unmappedKeptProductIds": [],
+    "reconcileOk": true,
+    "excludedRows": [
+      {
+        "source_path": "newel.com/product/white-and-pink-loop-armchairs.html",
+        "source_product_identifier": "newel.com | 520: Web server is returning an unknown error",
+        "sku": "",
+        "current_product_id": "",
+        "in_current_keep_set": "no",
+        "image_reference_count": 0,
+        "valid_image_count": 0,
+        "image_complete": "no",
+        "exclusion_reason": "Cloudflare/HTTP error shell; incomplete images; excluded from keep-set"
+      }
+    ]
+  }
+}

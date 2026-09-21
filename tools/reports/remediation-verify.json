@@ -1,0 +1,146 @@
+{
+  "phase": "R6",
+  "generatedAt": "2026-09-21T00:33:00.758Z",
+  "keepSet": 342,
+  "productsPass": 342,
+  "productsFail": 0,
+  "productFailures": [],
+  "requirements": [
+    {
+      "id": "catalog.count",
+      "status": "PASS",
+      "detail": "count=342"
+    },
+    {
+      "id": "catalog.data_and_images",
+      "status": "PASS",
+      "detail": "pass=342 fail=0"
+    },
+    {
+      "id": "pdp.not_found_ui",
+      "status": "PASS",
+      "detail": "product-details.html contains not-found branch"
+    },
+    {
+      "id": "filters.labels",
+      "status": "PASS",
+      "detail": "Furniture,Sculpture,Mirrors,Lighting,Decor,Art,Accessories"
+    },
+    {
+      "id": "fallback.no_image",
+      "status": "PASS",
+      "detail": "C:\\Users\\user pc\\OneDrive\\Documents\\carter\\REYNOLDS_ANTIQUE_HOUSE\\assets\\images\\placeholders\\no-image.jpg"
+    },
+    {
+      "id": "estate.present",
+      "status": "PASS",
+      "detail": "bytes=2210119"
+    },
+    {
+      "id": "estate.shared_chrome_roots",
+      "status": "PASS",
+      "detail": "injection roots"
+    },
+    {
+      "id": "chrome.injection",
+      "status": "PASS",
+      "detail": "site-chrome.js"
+    },
+    {
+      "id": "chrome.no_commerce",
+      "status": "PASS",
+      "detail": "chrome surface"
+    },
+    {
+      "id": "network.render_critical_https",
+      "status": "PASS",
+      "detail": "none"
+    },
+    {
+      "id": "render.browser_automation",
+      "status": "UNVERIFIED",
+      "detail": "UNVERIFIED — static/source scan only (browser automation unavailable in this environment)"
+    },
+    {
+      "id": "render.pdp_title_gallery",
+      "status": "UNVERIFIED",
+      "detail": "requires browser"
+    },
+    {
+      "id": "render.filters_interaction",
+      "status": "UNVERIFIED",
+      "detail": "requires browser"
+    },
+    {
+      "id": "render.no_js_blocking_errors",
+      "status": "UNVERIFIED",
+      "detail": "requires browser"
+    },
+    {
+      "id": "http.page/",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "id": "http.page/index.html",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "id": "http.page/products.html",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "id": "http.page/product-details.html",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "id": "http.page/estate-services.html",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "id": "http.page/about.html",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "id": "http.page/data/products.json",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "id": "http.page/assets/css/chrome.css",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "id": "http.page/js/site-chrome.js",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "id": "http.page/js/product-catalog.js",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "id": "http.all_342_pdp_shell",
+      "status": "PASS",
+      "detail": "pass=342 fail=0"
+    },
+    {
+      "id": "http.invalid_id_shell",
+      "status": "PASS",
+      "detail": "status=200 (not-found handled client-side)"
+    },
+    {
+      "id": "http.products_json",
+      "status": "PASS",
+      "detail": "status=200 count=342"
+    }
+  ],
+  "overall": "PARTIAL"
+}

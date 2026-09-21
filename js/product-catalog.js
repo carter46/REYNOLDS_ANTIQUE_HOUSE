@@ -29,7 +29,7 @@ window.ReynoldsCatalog = (function () {
   }
 
   function cardHtml(p) {
-    const img = (p.images && p.images[0] && p.images[0].src) || "/assets/img/inventory/no_image_available_300x300.jpg";
+    const img = (p.images && p.images[0] && p.images[0].src) || "/assets/images/placeholders/no-image.jpg";
     return (
       '<a class="rah-card-link" href="/product-details.html?id=' + encodeURIComponent(p.id) + '">' +
       '<div class="rah-card-img"><img src="' + img + '" alt="' + (p.title || "").replace(/"/g, "&quot;") + '" loading="lazy" /></div>' +

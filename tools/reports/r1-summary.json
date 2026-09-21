@@ -1,0 +1,24 @@
+{
+  "phase": "R1",
+  "completedAt": "2026-09-21T00:13:28.120Z",
+  "filters": {
+    "categories": [
+      "Furniture",
+      "Sculpture",
+      "Mirrors",
+      "Lighting",
+      "Decor",
+      "Art",
+      "Accessories"
+    ]
+  },
+  "fallback": {
+    "dest": "assets/images/placeholders/no-image.jpg",
+    "fromArchive": false
+  },
+  "estate": {
+    "wixStaticCopied": 16,
+    "parastorageCopied": 54,
+    "outBytes": 4052312
+  }
+}

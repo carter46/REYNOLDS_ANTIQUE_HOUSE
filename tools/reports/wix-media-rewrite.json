@@ -1,0 +1,76 @@
+{
+  "replaced": 16,
+  "unresolvedCount": 4,
+  "unresolved": [
+    "/assets/vendor/wix/static/media/798b6e_585ccd633b7e4b4ba74b5d2c478d9a11%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/798b6e_585ccd633b7e4b4ba74b5d2c478d9a11%7Emv2.png",
+    "/assets/vendor/wix/static/media/798b6e_585ccd633b7e4b4ba74b5d2c478d9a11%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/798b6e_585ccd633b7e4b4ba74b5d2c478d9a11%7Emv2.png",
+    "/assets/vendor/wix/static/media/798b6e_585ccd633b7e4b4ba74b5d2c478d9a11%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/798b6e_585ccd633b7e4b4ba74b5d2c478d9a11%7Emv2.png",
+    "/assets/vendor/wix/static/media/798b6e_409e03cf78aa4c3dbc54e45350267ca2%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/798b6e_409e03cf78aa4c3dbc54e45350267ca2%7Emv2.jpg"
+  ],
+  "resolved": [
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_2ff991ae80614097ab22b6739861ea67_mv2.png/v1/crop/x_170%2cy_49%2cw_251%2ch_147/fill/w_178%2ch_104%2cal_c%2cq_85%2cusm_0.66_1.00_0.01%2cenc_av/Copy%20of%20Modern%20%26%20Contemporary%20Art%20and%20Desi.png",
+      "to": "/assets/vendor/wix/static/media/_flat/f7ed47c0b0249b49.png"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_852eeadfac484fd8b3b1a10c4f693679_mv2.jpg/v1/crop/x_20%2cy_38%2cw_760%2ch_724/fill/w_380%2ch_350%2cal_c%2cq_80%2cusm_0.66_1.00_0.01%2cenc_avif%2cquality_auto/NWL7818-01.jpg",
+      "to": "/assets/vendor/wix/static/media/_flat/968bf0871d92436e.jpg"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_852eeadfac484fd8b3b1a10c4f693679_mv2.jpg/v1/crop/x_20%2cy_0%2cw_760%2ch_800/fill/w_380%2ch_350%2cal_c%2cq_80%2cusm_0.66_1.00_0.01%2cenc_avif%2cquality_auto/NWL7818-01.jpg",
+      "to": "/assets/vendor/wix/static/media/_flat/a6f60aac79ea4113.jpg"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_2e2a7c7d56294b8c990dbd48f925ee4b_mv2.png/v1/crop/x_24%2cy_32%2cw_258%2ch_145/fill/w_178%2ch_100%2cal_c%2cq_85%2cusm_0.66_1.00_0.01%2cenc_avif%2cquality_auto/RENTALS.png",
+      "to": "/assets/vendor/wix/static/media/_flat/e1bcfef7c24d54da.png"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_761f96a210ea445f952a58c5e91a96d9_mv2.png/v1/crop/x_224%2cy_149%2cw_602%2ch_298/fill/w_178%2ch_88%2cal_c%2cq_85%2cusm_0.66_1.00_0.01%2cenc_avif%2cquality_auto/5.png",
+      "to": "/assets/vendor/wix/static/media/_flat/f4521b73bbb03a5c.png"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_dfb0ba7747f944a49f51a911933ead82_mv2.jpg/v1/fill/w_517%2ch_688%2cfp_0.50_0.42%2cq_80%2cusm_0.66_1.00_0.01%2cenc_avif%2cquality_auto/jane-lippencot-hero.jpg",
+      "to": "/assets/vendor/wix/static/media/_flat/d0becfaef3fc0099.jpg"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_43e1f20780584b609f9592ad424833eb_mv2.jpg/v1/fill/w_380%2ch_350%2cal_c%2cq_80%2cusm_0.66_1.00_0.01%2cenc_av/gpt-image-2_photography_of_Don_t_change_anyt.jpg",
+      "to": "/assets/vendor/wix/static/media/_flat/afdd039c6d7b6507.jpg"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_dfb0ba7747f944a49f51a911933ead82_mv2.jpg/v1/fill/w_380%2ch_350%2cfp_0.52_0.33%2cq_80%2cusm_0.66_1.00_0.01%2cenc_avif%2cquality_auto/jane-lippencot-hero.jpg",
+      "to": "/assets/vendor/wix/static/media/_flat/b6351c140d56f00d.jpg"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_03244ced490240b489b3b66d46b5d9ba_mv2.jpg/v1/fill/w_489%2ch_651%2cal_c%2cq_80%2cusm_0.66_1.00_0.01%2cenc_avif%2cquality_auto/diamond-sapphire-ring-hero.jpg",
+      "to": "/assets/vendor/wix/static/media/_flat/ee018effd07ecf51.jpg"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_43e1f20780584b609f9592ad424833eb_mv2.jpg/v1/fill/w_517%2ch_688%2cfp_0.49_0.62%2cq_80%2cusm_0.66_1.00_0.0/gpt-image-2_photography_of_Don_t_change_anyt.jpg",
+      "to": "/assets/vendor/wix/static/media/_flat/2fe242b7b44647dc.jpg"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_b6d164768d1847ec8dcc9bb1087f1c78_mv2.jpeg/v1/fill/w_380%2ch_350%2cal_c%2cq_80%2cusm_0.66_1.00_0.01%2cenc_avif%2cquality_auto/sapphire-diamond-ring.jpeg",
+      "to": "/assets/vendor/wix/static/media/_flat/e4680c0f4ade3c23.jpeg"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_03244ced490240b489b3b66d46b5d9ba_mv2.jpg/v1/fill/w_144%2ch_216%2cal_c%2cq_80%2cusm_0.66_1.00_0.01%2cblur_2%2cenc_auto/diamond-sapphire-ring-hero.jpg",
+      "to": "/assets/vendor/wix/static/media/_flat/345e0f3b67a8b19c.jpg"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_75644a3f0600490f9f1201ecf6ef9d38_mv2.jpeg/v1/fill/w_380%2ch_350%2cal_c%2cq_80%2cusm_0.66_1.00_0.01%2cenc_avif%2cquality_auto/nardin-watch.jpeg",
+      "to": "/assets/vendor/wix/static/media/_flat/f53979d4d655fa62.jpeg"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_dfb0ba7747f944a49f51a911933ead82_mv2.jpg/v1/fill/w_144%2ch_216%2cal_c%2cq_80%2cusm_0.66_1.00_0.01%2cblur_2%2cenc_auto/jane-lippencot-hero.jpg",
+      "to": "/assets/vendor/wix/static/media/_flat/02d18122a2642f5f.jpg"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_852eeadfac484fd8b3b1a10c4f693679_mv2.jpg/v1/fill/w_380%2ch_350%2cal_c%2cq_80%2cusm_0.66_1.00_0.01%2cenc_avif%2cquality_auto/NWL7818-01.jpg",
+      "to": "/assets/vendor/wix/static/media/_flat/c4e9f7205e2a7efb.jpg"
+    },
+    {
+      "from": "/assets/vendor/wix/static/media/798b6e_825da07e71ba42b4b39fd9a9a917cac3_mv2.jpg/v1/fill/w_380%2ch_350%2cal_c%2cq_80%2cusm_0.66_1.00_0.01%2cenc_avif%2cquality_auto/nwl7797.jpg",
+      "to": "/assets/vendor/wix/static/media/_flat/3e89ce2b6683f90d.jpg"
+    }
+  ]
+}
