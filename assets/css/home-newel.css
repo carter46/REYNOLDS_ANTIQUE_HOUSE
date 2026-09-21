@@ -1352,7 +1352,7 @@
       .utility-bar__left { font-size: 8.5px; letter-spacing: 0.14em; }
       .utility-bar__right { gap: 10px; font-size: 8px; letter-spacing: 0.08em; }
       .header__inner { height: 118px; padding: 0 var(--page-gutter-glb-hdr); }
-      .logo__image { width: 195px; }
+      .logo__image { width: 72px !important; max-height: 40px !important; }
       .search-btn { display: none; }
       .search-btn1 { display: none; }
       .my-srch-icon {display: none;}
@@ -1381,7 +1381,7 @@
       }
       .utility-bar__right { display: none; }
       .header__inner { height: 108px; padding: 0 var(--page-gutter-glb-hdr); }
-      .logo__image { width: 172px; }
+      .logo__image { width: 72px !important; max-height: 40px !important; }
       .menu-toggle { padding: 7px; }
       .menu-toggle__icon { width: 19px; height: 15px; }
       .menu-toggle__label { font-size: 8px; }
@@ -1394,7 +1394,7 @@
       .responsive-search__submit { padding: 0 14px; }
       .menu-flyout__panel { width: 100vw; }
       .menu-flyout__header { height: 70px; padding: 0 18px; }
-      .mobile-menu { padding: 8px 18px 22px 0px; }
+      .mobile-menu { padding: 8px 18px 22px !important; }
       .mobile-menu__toggle { font-size: 13px; padding: 20px 2px; }
       .mobile-menu__direct { font-size: 13px; padding: 20px 2px; }
       .mobile-menu__group-toggle { font-size: 12px; padding: 15px 2px; }
@@ -1783,6 +1783,12 @@ form#product-search {
   height: auto !important;
   max-height: 100px;
   object-fit: contain;
+}
+@media (max-width: 1100px) {
+  .logo__image {
+    width: 72px !important;
+    max-height: 40px !important;
+  }
 }
 .utility-bar {
   display: block !important;

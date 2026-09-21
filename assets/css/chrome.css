@@ -597,17 +597,17 @@ a:hover { color: var(--rah-gold-dark); }
     border-bottom: 1px solid var(--rule-glb-hdr);
   }
   .header__icons .icon-btn--spacer { display: none; }
+  .logo__image { width: 72px !important; max-height: 40px !important; }
   .header__inner {
-    height: 96px;
-    grid-template-columns: 72px 1fr 72px;
+    height: 80px;
+    grid-template-columns: 64px 1fr 64px;
   }
   .header__icons {
-    width: 72px;
+    width: 64px;
     height: 1px;
     visibility: hidden;
     pointer-events: none;
   }
-  .logo__image { width: 130px !important; }
   .utility-bar__right { display: none; }
 }
 
@@ -923,6 +923,12 @@ a:hover { color: var(--rah-gold-dark); }
   max-height: 100px;
   object-fit: contain;
 }
+@media (max-width: 1100px) {
+  .logo__image {
+    width: 72px !important;
+    max-height: 40px !important;
+  }
+}
 .utility-bar {
   display: block !important;
 }
@@ -931,22 +937,31 @@ a:hover { color: var(--rah-gold-dark); }
   pointer-events: auto !important;
 }
 
-/* Sticky stacking chrome (utility + header + mobile search + nav) */
+/* Sticky header only — utility + logo row; search scrolls away on mobile */
 #site-header-root {
+  position: static;
+  background: transparent;
+}
+#site-header-root .header {
   position: sticky;
   top: 0;
   z-index: 1000;
   background: var(--warm-white-glb-hdr, #fff);
+  box-shadow: 0 1px 0 var(--rule-glb-hdr, rgba(0,0,0,.08));
 }
-#site-header-root .header {
-  position: relative;
-  top: auto;
-  box-shadow: none;
+#site-header-root .header__gold-rule {
+  background: var(--warm-white-glb-hdr, #fff);
 }
-#site-header-root .header__gold-rule,
 #site-header-root .responsive-search,
 #site-header-root .mainnav {
+  position: relative;
+  z-index: 1;
   background: var(--warm-white-glb-hdr, #fff);
+}
+@media (max-width: 1100px) {
+  #site-header-root .responsive-search {
+    position: static;
+  }
 }
 
 /* Product card shadow on outer card (hvrcls overflow clips self-shadow) — archive img_box_shadow values */
@@ -1005,14 +1020,15 @@ a:hover { color: var(--rah-gold-dark); }
     border: 0 !important;
   }
   .responsive-search { display: block !important; }
-  .logo__image { width: 130px !important; }
+  .logo__image { width: 72px !important; max-height: 40px !important; }
   /* Balance menu button so logo stays centered (no empty 1fr ghost search column) */
   .header__inner {
-    grid-template-columns: 72px 1fr 72px;
+    height: 80px;
+    grid-template-columns: 64px 1fr 64px;
   }
   .header__icons {
     display: block;
-    width: 72px;
+    width: 64px;
     height: 1px;
     visibility: hidden;
     pointer-events: none;

@@ -30,17 +30,60 @@ window.ReynoldsCatalog = (function () {
     return cache.products.filter((p) => (p.category || "").toLowerCase().includes(c));
   }
 
+  function byStyle(style) {
+    if (!cache) return [];
+    const s = (style || "").trim().toLowerCase();
+    if (!s) return cache.products.slice();
+    const fromField = cache.products.filter((p) => (p.style || "").toLowerCase().includes(s));
+    if (fromField.length >= 3) return fromField;
+    // Fall back to scored title/description search so thin styles still show mapped stock
+    const seen = {};
+    fromField.forEach(function (p) { seen[p.id] = true; });
+    search(style).forEach(function (p) {
+      if (!seen[p.id]) {
+        seen[p.id] = true;
+        fromField.push(p);
+      }
+    });
+    return fromField;
+  }
+
   function search(query) {
     if (!cache) return [];
-    const q = (query || "").trim().toLowerCase();
-    if (!q) return cache.products.slice();
-    return cache.products.filter((p) => {
-      const hay = [p.title, p.sku, p.id, p.category, p.description, p.material, p.style, p.period]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      return hay.includes(q);
-    });
+    const raw = (query || "").trim().toLowerCase();
+    if (!raw) return cache.products.slice();
+    // Support OR groups: "wormley|dunbar" or "louis|french"
+    const groups = raw.split("|").map(function (g) { return g.trim(); }).filter(Boolean);
+    function matchGroup(hay, style, title, group) {
+      if (!group) return false;
+      if (hay.includes(group) || style.includes(group) || title.includes(group)) return true;
+      const tokens = group.split(/\s+/).filter(Boolean);
+      return tokens.length > 0 && tokens.every(function (t) { return hay.includes(t); });
+    }
+    return cache.products
+      .map(function (p) {
+        const style = (p.style || "").toLowerCase();
+        const title = (p.title || "").toLowerCase();
+        const hay = [p.title, p.sku, p.id, p.category, p.description, p.material, p.style, p.period]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+        const hit = groups.some(function (g) { return matchGroup(hay, style, title, g); });
+        if (!hit) return null;
+        let score = 0;
+        groups.forEach(function (g) {
+          if (style === g || style.includes(g)) score += 50;
+          if (title.includes(g)) score += 30;
+          g.split(/\s+/).filter(Boolean).forEach(function (t) {
+            if (style.includes(t)) score += 10;
+            if (title.includes(t)) score += 5;
+          });
+        });
+        return { p: p, score: score };
+      })
+      .filter(Boolean)
+      .sort(function (a, b) { return b.score - a.score; })
+      .map(function (x) { return x.p; });
   }
 
   function related(product, limit) {
@@ -115,5 +158,5 @@ window.ReynoldsCatalog = (function () {
     );
   }
 
-  return { load, getProduct, byCategory, search, related, cardHtml };
+  return { load, getProduct, byCategory, byStyle, search, related, cardHtml };
 })();

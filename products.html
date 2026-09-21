@@ -6,13 +6,13 @@
   <title>Collection | Reynolds Antique House</title>
   <meta name="description" content="Browse the Reynolds Antique House collection." />
   <meta name="theme-color" content="#1a1410" />
-  <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css?v=1789992304326" />
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css?v=1789993695971" />
   <link rel="stylesheet" href="/assets/fonts/typekit/tid5nrh.css" />
-  <link rel="stylesheet" href="/assets/css/chrome.css?v=1789992304326" />
+  <link rel="stylesheet" href="/assets/css/chrome.css?v=1789993695971" />
   <link rel="stylesheet" href="/assets/css/newel/BrowseALL.css" />
-  <link rel="stylesheet" href="/assets/css/newel/styles.css?v=1789992304326" />
+  <link rel="stylesheet" href="/assets/css/newel/styles.css?v=1789993695971" />
   <style>
-    .rah-collection { padding: 1.5rem 0 3rem; }
+    .rah-collection { padding: 1.5rem 24px 3rem; }
     .rah-collection .category-title {
       font-size: 36px; font-weight: 300; font-family: ASTORIA, Georgia, serif;
       text-align: center; margin: 1rem 0 .25rem; color: #000;
@@ -23,8 +23,15 @@
     .rah-collection #collection-lead {
       text-align: center; color: #6b5e52; margin-bottom: 1.5rem; font-size: 14px;
     }
+    .rah-collection .rah-collection-row {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0 8px;
+    }
     .rah-collection .rah-cat-sidebar {
-      padding: 0 12px 24px;
+      padding: 12px 28px 40px 28px !important;
+      margin: 0 0 1rem 0 !important;
+      box-sizing: border-box;
     }
     .rah-collection .rah-cat-sidebar .filter-menu {
       display: block; font: 600 12px/1.2 ASTORIA, Georgia, serif;
@@ -42,13 +49,18 @@
     }
     .rah-collection .featured_container {
       position: relative; top: 0;
+      padding-left: 12px;
+      padding-right: 12px;
     }
     .rah-collection #product-grid > .imgboxsplit {
       margin-bottom: 8px;
     }
     @media (max-width: 991px) {
+      .rah-collection { padding: 1rem 12px 2.5rem; }
       .rah-collection .rah-cat-sidebar {
-        display: flex; flex-wrap: wrap; gap: 4px 10px; padding: 0 16px 16px;
+        display: flex; flex-wrap: wrap; gap: 4px 10px;
+        padding: 8px 12px 20px !important;
+        margin-bottom: 1rem !important;
       }
       .rah-collection .rah-cat-sidebar .filter-menu { width: 100%; }
       .rah-collection .rah-cat-sidebar button {
@@ -70,7 +82,7 @@
         <li class="breadcrumb-item active" aria-current="page">Collection</li>
       </ol>
       <p id="collection-lead">Gallery inventory with complete local imagery.</p>
-      <div class="row">
+      <div class="row rah-collection-row">
         <aside class="col-lg-2 col-xl-2 d-lg-block rah-cat-sidebar" id="category-filters">
           <span class="filter-menu">Category</span>
           <button type="button" data-cat="all" class="is-active">All</button>
@@ -89,7 +101,7 @@
         </div>
       </div>
     </section>
-    <script src="/js/product-catalog.js?v=1789992304326"></script>
+    <script src="/js/product-catalog.js?v=1789993695971"></script>
     <script>
       (async function () {
         await ReynoldsCatalog.load();
@@ -97,6 +109,7 @@
         const lead = document.getElementById("collection-lead");
         const params = new URLSearchParams(window.location.search);
         const q = params.get("q") || "";
+        const style = params.get("style") || "";
         const initialCat = params.get("cat") || "all";
         function wrapCard(html) {
           return '<div class="col imgboxsplit">' + html + "</div>";
@@ -110,22 +123,35 @@
           document.querySelectorAll("#category-filters button").forEach(function (b) {
             b.classList.toggle("is-active", b.getAttribute("data-cat") === cat);
           });
-          let list = ReynoldsCatalog.byCategory(cat);
-          if (q) {
-            list = ReynoldsCatalog.search(q).filter(function (p) {
-              if (!cat || cat === "all") return true;
+          let list;
+          if (style && ReynoldsCatalog.byStyle) {
+            list = ReynoldsCatalog.byStyle(style);
+          } else if (q) {
+            list = ReynoldsCatalog.search(q);
+          } else {
+            list = ReynoldsCatalog.byCategory(cat);
+          }
+          if (cat && cat !== "all") {
+            list = list.filter(function (p) {
               return (p.category || "").toLowerCase().includes(cat.toLowerCase());
             });
           }
           render(list);
-          lead.textContent = q
-            ? ('Search results for "' + q + '" — ' + list.length + " pieces")
-            : (list.length + " pieces with complete local imagery.");
+          if (style) {
+            lead.textContent = 'Style: "' + style + '" — ' + list.length + " pieces";
+          } else if (q) {
+            lead.textContent = 'Search results for "' + q.replace(/\|/g, " / ") + '" — ' + list.length + " pieces";
+          } else {
+            lead.textContent = list.length + " pieces with complete local imagery.";
+          }
         }
-        if (q) {
+        if (q || style) {
           setTimeout(function () {
             const el = document.getElementById("search-input");
-            if (el) el.value = q;
+            const elM = document.getElementById("search-input-mobile");
+            const shown = style || q.replace(/\|/g, " ");
+            if (el) el.value = shown;
+            if (elM) elM.value = shown;
           }, 0);
         }
         const known = Array.from(document.querySelectorAll("#category-filters button")).map(function (b) {
@@ -141,12 +167,15 @@
           if (cat === "all") url.searchParams.delete("cat");
           else url.searchParams.set("cat", cat);
           if (q) url.searchParams.set("q", q);
+          else url.searchParams.delete("q");
+          if (style) url.searchParams.set("style", style);
+          else url.searchParams.delete("style");
           history.replaceState(null, "", url.pathname + url.search);
         });
       })();
     </script>
   </main>
   <div id="site-footer-root"></div>
-  <script src="/js/site-chrome.js?v=1789992304326"></script>
+  <script src="/js/site-chrome.js?v=1789993695971"></script>
 </body>
 </html>
