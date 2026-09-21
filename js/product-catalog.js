@@ -41,14 +41,50 @@ window.ReynoldsCatalog = (function () {
       .slice(0, limit || 4);
   }
 
+  function esc(s) {
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  /** Newel-style product card used site-wide */
   function cardHtml(p) {
-    const img = (p.images && p.images[0] && p.images[0].src) || "/assets/images/placeholders/no-image.jpg";
+    const img =
+      (p.images && p.images[0] && p.images[0].src) ||
+      "/assets/images/placeholders/no-image.jpg";
+    const href = "/product-details.html?id=" + encodeURIComponent(p.id);
+    const price = p.price || "";
+    const dims = p.dimensions || "";
     return (
-      '<a class="rah-card-link" href="/product-details.html?id=' + encodeURIComponent(p.id) + '">' +
-      '<div class="rah-card-img"><img src="' + img + '" alt="' + (p.title || "").replace(/"/g, "&quot;") + '" loading="lazy" /></div>' +
-      '<h3 class="rah-card-title">' + (p.title || "") + "</h3>" +
-      '<p class="rah-card-meta">' + (p.sku ? "Item # " + p.sku : "") + (p.price ? " · " + p.price : "") + "</p>" +
-      "</a>"
+      '<article class="rah-product-card featured_container_col">' +
+      '<div class="shadow1 img_box_shadow card card-body">' +
+      '<div class="product-container">' +
+      '<a href="' +
+      href +
+      '"><img src="' +
+      esc(img) +
+      '" class="product-image" alt="' +
+      esc(p.title) +
+      '" loading="lazy" width="400" height="400" /></a>' +
+      "</div>" +
+      '<div class="price-part">' +
+      '<h2 class="fw-light text-dark prod_title"><a href="' +
+      href +
+      '">' +
+      esc(p.title) +
+      "</a></h2>" +
+      '<div class="price-row">' +
+      "<div>" +
+      (price
+        ? '<p class="prod-price">' +
+          esc(price) +
+          ' <span class="prod-currency">(USD)</span></p>'
+        : '<p class="prod-price">Price on request</p>') +
+      (p.sku ? '<p class="prod-sku">#' + esc(p.sku) + "</p>" : "") +
+      "</div>" +
+      (dims ? '<p class="prod-dims">' + esc(dims) + "</p>" : "") +
+      "</div></div></div></article>"
     );
   }
 
