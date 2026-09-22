@@ -27,3 +27,10 @@ DirectoryIndex index.html
   RewriteRule ^product-details/?$ /product-details.html [L,QSA]
   RewriteRule ^products/?$ /products.html [L,QSA]
 </IfModule>
+
+# Inquiry API — never cache responses
+<IfModule mod_headers.c>
+  <Files "inquiry.php">
+    Header set Cache-Control "no-store, no-cache, must-revalidate"
+  </Files>
+</IfModule>

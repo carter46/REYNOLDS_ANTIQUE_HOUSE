@@ -290,7 +290,7 @@
       '  <div class="utility-bar__inner">',
       '    <div class="utility-bar__left">',
       '      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21C12 21 4 13.5 4 8.5C4 5.46 7.134 3 12 3C16.866 3 20 5.46 20 8.5C20 13.5 12 21 12 21Z"/><circle cx="12" cy="8.5" r="2.5"/></svg>',
-      "      New York City &nbsp;·&nbsp; Est. 1967",
+      "      California &nbsp;·&nbsp; Est. 1993",
       "    </div>",
       '    <div class="utility-bar__right">',
       '      <a href="/estate-services.html">Sell / Consign</a><div class="utility-bar__divider"></div>',

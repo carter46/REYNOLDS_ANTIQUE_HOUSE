@@ -1,0 +1,14 @@
+# Local / secrets — real SMTP credentials (upload manually to server)
+includes/mail-config.php
+.env
+.env.*
+!.env.example
+
+# Runtime inquiry rate-limit / logs (keep .htaccess + .gitkeep)
+includes/storage/*.json
+includes/storage/*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log

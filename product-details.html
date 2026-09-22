@@ -6,12 +6,12 @@
   <title>Product | Reynolds Antique House</title>
   <meta name="description" content="Product details — Reynolds Antique House." />
   <meta name="theme-color" content="#1a1410" />
-  <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css?v=1789993695971" />
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css?v=1790120628779" />
   <link rel="stylesheet" href="/assets/fonts/typekit/tid5nrh.css" />
-  <link rel="stylesheet" href="/assets/css/chrome.css?v=1789993695971" />
-  <link rel="stylesheet" href="/assets/css/newel/styles.css?v=1789993695971" />
+  <link rel="stylesheet" href="/assets/css/chrome.css?v=1790120628779" />
+  <link rel="stylesheet" href="/assets/css/newel/styles.css?v=1790120628779" />
   <link rel="stylesheet" href="/assets/css/newel/productinfo.css" />
-  <link rel="stylesheet" href="/assets/css/newel/NEWEL-PRODUCT-INFO.css?v=1789993695971" />
+  <link rel="stylesheet" href="/assets/css/newel/NEWEL-PRODUCT-INFO.css?v=1790120628779" />
   <link rel="stylesheet" href="/assets/css/newel/flexslider.css" />
 </head>
 <body data-page="product">
@@ -26,13 +26,20 @@
         </div>
       </div>
     </section>
-    <script src="/js/product-catalog.js?v=1789993695971"></script>
+    <script src="/js/product-catalog.js?v=1790120628779"></script>
     <script>
       (async function () {
+        function esc(s) {
+          return String(s == null ? "" : s)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+        }
+
         await ReynoldsCatalog.load();
         const params = new URLSearchParams(window.location.search);
         let id = params.get("id");
-        // Fallback if a host strips ?query on .html → clean-URL redirects
         if (!id && window.location.hash) {
           const hash = window.location.hash.replace(/^#/, "");
           const hp = new URLSearchParams(hash);
@@ -54,21 +61,56 @@
         document.title = product.title + " | Reynolds Antique House";
         const images = product.images && product.images.length ? product.images : [{ src: "", alt: product.title }];
         let index = 0;
+
+        function fillProductFields(p) {
+          document.getElementById("inq-product-title").value = p.title || "";
+          document.getElementById("inq-product-sku").value = p.sku || "";
+          document.getElementById("inq-product-id").value = p.id || "";
+          document.getElementById("inq-product-url").value = window.location.href;
+          document.getElementById("inq-product-label").textContent =
+            (p.title || "This piece") + (p.sku ? " · #" + p.sku : "");
+        }
+
+        function openInquiryModal(p) {
+          var modal = document.getElementById("inquiry-modal");
+          var form = document.getElementById("inquiry-form");
+          var status = document.getElementById("inq-status");
+          if (!modal || !form) return;
+          form.reset();
+          fillProductFields(p);
+          status.hidden = true;
+          status.textContent = "";
+          status.className = "rah-inquiry-status";
+          modal.hidden = false;
+          document.body.classList.add("rah-inquiry-open");
+          var nameEl = document.getElementById("inq-name");
+          if (nameEl) nameEl.focus();
+        }
+
+        function closeInquiryModal() {
+          var modal = document.getElementById("inquiry-modal");
+          if (!modal || modal.hidden) return;
+          modal.hidden = true;
+          document.body.classList.remove("rah-inquiry-open");
+          var inquireBtn = document.getElementById("inquire-open");
+          if (inquireBtn) inquireBtn.focus();
+        }
+
         function paint() {
           const img = images[index] || images[0];
           root.innerHTML =
             '<div class="rah-pdp">' +
-            '<div><div class="rah-gallery-main"><img id="pdp-main" src="' + (img.src || "") + '" alt="' + (img.alt || product.title).replace(/"/g, "&quot;") + '" /></div>' +
+            '<div><div class="rah-gallery-main"><img id="pdp-main" src="' + esc(img.src || "") + '" alt="' + esc(img.alt || product.title) + '" /></div>' +
             '<div class="rah-thumbs" id="pdp-thumbs">' +
             images.map(function (im, i) {
-              return '<button type="button" data-i="' + i + '" class="' + (i === index ? "is-active" : "") + '"><img src="' + im.src + '" alt="" /></button>';
+              return '<button type="button" data-i="' + i + '" class="' + (i === index ? "is-active" : "") + '"><img src="' + esc(im.src) + '" alt="" /></button>';
             }).join("") +
             "</div></div>" +
             "<div>" +
-            '<h1 class="rah-pdp-title">' + product.title + "</h1>" +
-            (product.price ? '<p class="rah-pdp-price">' + product.price + "</p>" : "") +
-            '<p class="rah-pdp-sku">' + (product.sku ? "Item # " + product.sku : "") + "</p>" +
-            '<p class="rah-pdp-desc">' + (product.description || "") + "</p>" +
+            '<h1 class="rah-pdp-title">' + esc(product.title) + "</h1>" +
+            (product.price ? '<p class="rah-pdp-price">' + esc(product.price) + "</p>" : "") +
+            '<p class="rah-pdp-sku">' + (product.sku ? "Item # " + esc(product.sku) : "") + "</p>" +
+            '<p class="rah-pdp-desc">' + esc(product.description || "") + "</p>" +
             '<ul class="rah-specs">' +
             (function () {
               if (product.dimensionsHtml) {
@@ -77,24 +119,24 @@
               if (product.width || product.depth || product.height) {
                 return (
                   "<li><strong>Dimensions</strong><br>" +
-                  [product.width && ("Width: " + product.width), product.depth && ("Depth: " + product.depth), product.height && ("Height: " + product.height)]
+                  [product.width && ("Width: " + esc(product.width)), product.depth && ("Depth: " + esc(product.depth)), product.height && ("Height: " + esc(product.height))]
                     .filter(Boolean)
                     .join("<br>") +
                   "</li>"
                 );
               }
               if (product.dimensions) {
-                return "<li><strong>Dimensions</strong><br>" + String(product.dimensions).replace(/\n/g, "<br>") + "</li>";
+                return "<li><strong>Dimensions</strong><br>" + esc(String(product.dimensions)).replace(/\n/g, "<br>") + "</li>";
               }
               return "";
             })() +
-            (product.material ? "<li><strong>Material</strong> " + product.material + "</li>" : "") +
-            (product.style ? "<li><strong>Style</strong> " + product.style + "</li>" : "") +
-            (product.period ? "<li><strong>Period</strong> " + product.period + "</li>" : "") +
-            (product.category ? "<li><strong>Category</strong> " + product.category + "</li>" : "") +
-            (product.availability ? "<li><strong>Status</strong> " + product.availability + "</li>" : "") +
+            (product.material ? "<li><strong>Material</strong> " + esc(product.material) + "</li>" : "") +
+            (product.style ? "<li><strong>Style</strong> " + esc(product.style) + "</li>" : "") +
+            (product.period ? "<li><strong>Period</strong> " + esc(product.period) + "</li>" : "") +
+            (product.category ? "<li><strong>Category</strong> " + esc(product.category) + "</li>" : "") +
+            (product.availability ? "<li><strong>Status</strong> " + esc(product.availability) + "</li>" : "") +
             "</ul>" +
-            '<a class="rah-btn" href="mailto:info@reynoldsantiquehouse.com?subject=' + encodeURIComponent("Inquiry: " + product.title + " (" + (product.sku || product.id) + ")") + '">Inquire</a>' +
+            '<button type="button" class="rah-btn" id="inquire-open" data-inquire>Inquire</button>' +
             ' <a class="rah-btn" style="background:transparent;color:var(--rah-ink)!important;border:1px solid rgba(0,0,0,.2)" href="/products.html">Back to Collection</a>' +
             "</div></div>";
           document.getElementById("pdp-thumbs").addEventListener("click", function (e) {
@@ -103,16 +145,119 @@
             index = parseInt(btn.getAttribute("data-i"), 10) || 0;
             paint();
           });
+          var inquireBtn = document.getElementById("inquire-open");
+          if (inquireBtn) {
+            inquireBtn.addEventListener("click", function () {
+              openInquiryModal(product);
+            });
+          }
         }
+
         paint();
         const related = ReynoldsCatalog.related(product, 8);
         document.getElementById("related-grid").innerHTML = related.map(function (p) {
           return '<div class="col imgboxsplit">' + ReynoldsCatalog.cardHtml(p) + "</div>";
         }).join("");
+
+        var modal = document.getElementById("inquiry-modal");
+        var form = document.getElementById("inquiry-form");
+        if (!modal || !form) return;
+
+        modal.addEventListener("click", function (e) {
+          if (e.target.closest("[data-inquiry-close]")) closeInquiryModal();
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeInquiryModal();
+        });
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          var status = document.getElementById("inq-status");
+          var submitBtn = document.getElementById("inq-submit");
+          status.hidden = true;
+          status.className = "rah-inquiry-status";
+          fillProductFields(product);
+          var payload = {
+            name: form.name.value.trim(),
+            email: form.email.value.trim(),
+            phone: form.phone.value.trim(),
+            message: form.message.value.trim(),
+            product_title: form.product_title.value,
+            product_sku: form.product_sku.value,
+            product_id: form.product_id.value,
+            product_url: form.product_url.value || window.location.href,
+            website: form.website.value
+          };
+          submitBtn.disabled = true;
+          try {
+            var res = await fetch("/inquiry.php", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+              },
+              body: JSON.stringify(payload),
+              credentials: "same-origin"
+            });
+            var data = {};
+            try {
+              data = await res.json();
+            } catch (err) {
+              data = {};
+            }
+            if (res.ok && data.ok) {
+              status.textContent = "Thank you. Your inquiry has been sent.";
+              status.className = "rah-inquiry-status is-success";
+              status.hidden = false;
+              form.reset();
+              fillProductFields(product);
+            } else {
+              status.textContent =
+                (data && data.error) || "Unable to send your inquiry right now. Please try again later.";
+              status.className = "rah-inquiry-status is-error";
+              status.hidden = false;
+            }
+          } catch (err) {
+            status.textContent = "Unable to send your inquiry right now. Please try again later.";
+            status.className = "rah-inquiry-status is-error";
+            status.hidden = false;
+          }
+          submitBtn.disabled = false;
+        });
       })();
     </script>
   </main>
+  <div id="inquiry-modal" class="rah-inquiry-modal" hidden>
+    <div class="rah-inquiry-backdrop" data-inquiry-close tabindex="-1" aria-hidden="true"></div>
+    <div class="rah-inquiry-dialog" role="dialog" aria-modal="true" aria-labelledby="inq-heading">
+      <button type="button" class="rah-inquiry-close" data-inquiry-close aria-label="Close inquiry form">&times;</button>
+      <h2 id="inq-heading">Inquire about this piece</h2>
+      <p class="rah-inquiry-product" id="inq-product-label"></p>
+      <form id="inquiry-form" class="rah-inquiry-form" novalidate>
+        <input type="hidden" name="product_title" id="inq-product-title" />
+        <input type="hidden" name="product_sku" id="inq-product-sku" />
+        <input type="hidden" name="product_id" id="inq-product-id" />
+        <input type="hidden" name="product_url" id="inq-product-url" />
+        <div class="rah-inquiry-hp" aria-hidden="true">
+          <label for="inq-website">Website</label>
+          <input type="text" name="website" id="inq-website" tabindex="-1" autocomplete="off" />
+        </div>
+        <label for="inq-name">Name <span aria-hidden="true">*</span></label>
+        <input type="text" name="name" id="inq-name" required maxlength="120" autocomplete="name" />
+        <label for="inq-email">Email <span aria-hidden="true">*</span></label>
+        <input type="email" name="email" id="inq-email" required maxlength="200" autocomplete="email" />
+        <label for="inq-phone">Phone <span class="rah-inquiry-optional">(optional)</span></label>
+        <input type="tel" name="phone" id="inq-phone" maxlength="40" autocomplete="tel" />
+        <label for="inq-message">Message <span aria-hidden="true">*</span></label>
+        <textarea name="message" id="inq-message" required maxlength="4000" rows="5"></textarea>
+        <p id="inq-status" class="rah-inquiry-status" hidden></p>
+        <div class="rah-inquiry-actions">
+          <button type="submit" class="rah-btn" id="inq-submit">Send inquiry</button>
+          <button type="button" class="rah-btn rah-btn--ghost" data-inquiry-close>Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
   <div id="site-footer-root"></div>
-  <script src="/js/site-chrome.js?v=1789993695971"></script>
+  <script src="/js/site-chrome.js?v=1790120628779"></script>
 </body>
 </html>
