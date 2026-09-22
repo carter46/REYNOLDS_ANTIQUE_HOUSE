@@ -258,6 +258,13 @@ $productTitle = rah_str($input, 'product_title', 300);
 $productSku = rah_str($input, 'product_sku', 80);
 $productId = rah_str($input, 'product_id', 120);
 $productUrl = rah_str($input, 'product_url', 500);
+$productPrice = rah_str($input, 'product_price', 80);
+$productCategory = rah_str($input, 'product_category', 120);
+$productStyle = rah_str($input, 'product_style', 120);
+$productMaterial = rah_str($input, 'product_material', 200);
+$productPeriod = rah_str($input, 'product_period', 120);
+$productAvailability = rah_str($input, 'product_availability', 80);
+$productDimensions = rah_str($input, 'product_dimensions', 300);
 
 if ($name === '' || $email === '' || $message === '') {
     rah_json(400, false, 'Please provide your name, email, and message.');
@@ -312,6 +319,9 @@ $subject = 'Inquiry: ' . ($productTitle !== '' ? $productTitle : 'Collection pie
 if ($productSku !== '') {
     $subject .= ' (' . $productSku . ')';
 }
+if ($productPrice !== '') {
+    $subject .= ' — ' . $productPrice;
+}
 $subject = str_replace(["\r", "\n", "\0"], '', $subject);
 if (function_exists('mb_substr')) {
     $subject = mb_substr($subject, 0, 200);
@@ -319,24 +329,55 @@ if (function_exists('mb_substr')) {
     $subject = substr($subject, 0, 200);
 }
 
+$productRows = [
+    'Title' => $productTitle,
+    'SKU / Item #' => $productSku,
+    'Product ID' => $productId,
+    'Price' => $productPrice,
+    'Category' => $productCategory,
+    'Style' => $productStyle,
+    'Material' => $productMaterial,
+    'Period' => $productPeriod,
+    'Availability' => $productAvailability,
+    'Dimensions' => $productDimensions,
+    'Product URL' => $productUrl,
+];
+
+$productHtmlLines = '';
+$productTextLines = '';
+foreach ($productRows as $label => $value) {
+    if ($value === '') {
+        continue;
+    }
+    if ($label === 'Product URL') {
+        $productHtmlLines .= '<strong>' . $esc($label) . ':</strong> <a href="' . $esc($value) . '">' . $esc($value) . '</a><br>';
+    } else {
+        $productHtmlLines .= '<strong>' . $esc($label) . ':</strong> ' . $esc($value) . '<br>';
+    }
+    $productTextLines .= $label . ': ' . $value . "\n";
+}
+if ($productHtmlLines === '') {
+    $productHtmlLines = '<em>No product details were attached.</em>';
+    $productTextLines = "(No product details were attached)\n";
+}
+
 $html = '<p><strong>New product inquiry</strong></p>'
-    . '<p><strong>Name:</strong> ' . $esc($name) . '<br>'
+    . '<p><strong>Visitor</strong><br>'
+    . '<strong>Name:</strong> ' . $esc($name) . '<br>'
     . '<strong>Email:</strong> ' . $esc($email) . '<br>'
     . ($phone !== '' ? '<strong>Phone:</strong> ' . $esc($phone) . '<br>' : '')
     . '</p>'
-    . '<p><strong>Product</strong><br>'
-    . 'Title: ' . $esc($productTitle) . '<br>'
-    . 'SKU: ' . $esc($productSku) . '<br>'
-    . 'ID: ' . $esc($productId) . '<br>'
-    . ($productUrl !== '' ? 'URL: <a href="' . $esc($productUrl) . '">' . $esc($productUrl) . '</a><br>' : '')
+    . '<p><strong>Product details</strong><br>'
+    . $productHtmlLines
     . '</p>'
     . '<p><strong>Message</strong><br>' . nl2br($esc($message)) . '</p>';
 
 $text = "New product inquiry\n\n"
+    . "Visitor\n"
     . "Name: {$name}\nEmail: {$email}\n"
     . ($phone !== '' ? "Phone: {$phone}\n" : '')
-    . "\nProduct title: {$productTitle}\nSKU: {$productSku}\nID: {$productId}\n"
-    . ($productUrl !== '' ? "URL: {$productUrl}\n" : '')
+    . "\nProduct details\n"
+    . $productTextLines
     . "\nMessage:\n{$message}\n";
 
 try {

@@ -6,12 +6,12 @@
   <title>Product | Reynolds Antique House</title>
   <meta name="description" content="Product details — Reynolds Antique House." />
   <meta name="theme-color" content="#1a1410" />
-  <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css?v=1790120628779" />
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css?v=1790121402421" />
   <link rel="stylesheet" href="/assets/fonts/typekit/tid5nrh.css" />
-  <link rel="stylesheet" href="/assets/css/chrome.css?v=1790120628779" />
-  <link rel="stylesheet" href="/assets/css/newel/styles.css?v=1790120628779" />
+  <link rel="stylesheet" href="/assets/css/chrome.css?v=1790121402421" />
+  <link rel="stylesheet" href="/assets/css/newel/styles.css?v=1790121402421" />
   <link rel="stylesheet" href="/assets/css/newel/productinfo.css" />
-  <link rel="stylesheet" href="/assets/css/newel/NEWEL-PRODUCT-INFO.css?v=1790120628779" />
+  <link rel="stylesheet" href="/assets/css/newel/NEWEL-PRODUCT-INFO.css?v=1790121402421" />
   <link rel="stylesheet" href="/assets/css/newel/flexslider.css" />
 </head>
 <body data-page="product">
@@ -26,7 +26,7 @@
         </div>
       </div>
     </section>
-    <script src="/js/product-catalog.js?v=1790120628779"></script>
+    <script src="/js/product-catalog.js?v=1790121402421"></script>
     <script>
       (async function () {
         function esc(s) {
@@ -62,13 +62,52 @@
         const images = product.images && product.images.length ? product.images : [{ src: "", alt: product.title }];
         let index = 0;
 
+        function productDimensionsText(p) {
+          if (p.width || p.depth || p.height) {
+            return [
+              p.width ? ("Width: " + p.width) : "",
+              p.depth ? ("Depth: " + p.depth) : "",
+              p.height ? ("Height: " + p.height) : ""
+            ].filter(Boolean).join(" · ");
+          }
+          if (p.dimensions) return String(p.dimensions).replace(/\s+/g, " ").trim();
+          return "";
+        }
+
         function fillProductFields(p) {
-          document.getElementById("inq-product-title").value = p.title || "";
-          document.getElementById("inq-product-sku").value = p.sku || "";
-          document.getElementById("inq-product-id").value = p.id || "";
-          document.getElementById("inq-product-url").value = window.location.href;
-          document.getElementById("inq-product-label").textContent =
-            (p.title || "This piece") + (p.sku ? " · #" + p.sku : "");
+          var set = function (id, val) {
+            var el = document.getElementById(id);
+            if (el) el.value = val == null ? "" : String(val);
+          };
+          set("inq-product-title", p.title || "");
+          set("inq-product-sku", p.sku || "");
+          set("inq-product-id", p.id || "");
+          set("inq-product-url", window.location.href);
+          set("inq-product-price", p.price || "");
+          set("inq-product-category", p.category || "");
+          set("inq-product-style", p.style || "");
+          set("inq-product-material", p.material || "");
+          set("inq-product-period", p.period || "");
+          set("inq-product-availability", p.availability || "");
+          set("inq-product-dimensions", productDimensionsText(p));
+          var label = document.getElementById("inq-product-label");
+          if (label) {
+            var bits = [p.title || "This piece"];
+            if (p.sku) bits.push("#" + p.sku);
+            if (p.price) bits.push(p.price);
+            label.textContent = bits.join(" · ");
+          }
+          var summary = document.getElementById("inq-product-summary");
+          if (summary) {
+            var lines = [];
+            if (p.category) lines.push("Category: " + p.category);
+            if (p.style) lines.push("Style: " + p.style);
+            if (p.material) lines.push("Material: " + p.material);
+            var dims = productDimensionsText(p);
+            if (dims) lines.push("Dimensions: " + dims);
+            summary.textContent = lines.join(" · ");
+            summary.hidden = lines.length === 0;
+          }
         }
 
         function openInquiryModal(p) {
@@ -185,6 +224,13 @@
             product_sku: form.product_sku.value,
             product_id: form.product_id.value,
             product_url: form.product_url.value || window.location.href,
+            product_price: form.product_price.value,
+            product_category: form.product_category.value,
+            product_style: form.product_style.value,
+            product_material: form.product_material.value,
+            product_period: form.product_period.value,
+            product_availability: form.product_availability.value,
+            product_dimensions: form.product_dimensions.value,
             website: form.website.value
           };
           submitBtn.disabled = true;
@@ -232,11 +278,19 @@
       <button type="button" class="rah-inquiry-close" data-inquiry-close aria-label="Close inquiry form">&times;</button>
       <h2 id="inq-heading">Inquire about this piece</h2>
       <p class="rah-inquiry-product" id="inq-product-label"></p>
+      <p class="rah-inquiry-product-summary" id="inq-product-summary" hidden></p>
       <form id="inquiry-form" class="rah-inquiry-form" novalidate>
         <input type="hidden" name="product_title" id="inq-product-title" />
         <input type="hidden" name="product_sku" id="inq-product-sku" />
         <input type="hidden" name="product_id" id="inq-product-id" />
         <input type="hidden" name="product_url" id="inq-product-url" />
+        <input type="hidden" name="product_price" id="inq-product-price" />
+        <input type="hidden" name="product_category" id="inq-product-category" />
+        <input type="hidden" name="product_style" id="inq-product-style" />
+        <input type="hidden" name="product_material" id="inq-product-material" />
+        <input type="hidden" name="product_period" id="inq-product-period" />
+        <input type="hidden" name="product_availability" id="inq-product-availability" />
+        <input type="hidden" name="product_dimensions" id="inq-product-dimensions" />
         <div class="rah-inquiry-hp" aria-hidden="true">
           <label for="inq-website">Website</label>
           <input type="text" name="website" id="inq-website" tabindex="-1" autocomplete="off" />
@@ -258,6 +312,6 @@
     </div>
   </div>
   <div id="site-footer-root"></div>
-  <script src="/js/site-chrome.js?v=1790120628779"></script>
+  <script src="/js/site-chrome.js?v=1790121402421"></script>
 </body>
 </html>
