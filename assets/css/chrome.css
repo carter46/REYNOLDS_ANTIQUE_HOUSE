@@ -628,7 +628,7 @@ a:hover { color: var(--rah-gold-dark); }
   display: block;
 }
 .rah-site-footer .footer_top_container,
-.newel-footer-restore .footer_top_container {
+.rah-footer-restore .footer_top_container {
   width: 100% !important;
   max-width: 1200px !important;
   margin: 0 auto !important;
@@ -932,7 +932,7 @@ a:hover { color: var(--rah-gold-dark); }
 .utility-bar {
   display: block !important;
 }
-.newel-arrow {
+.rah-arrow {
   z-index: 20 !important;
   pointer-events: auto !important;
 }
@@ -996,7 +996,7 @@ a:hover { color: var(--rah-gold-dark); }
 }
 
 @media (max-width: 900px) {
-  .newel-footer-restore .row { grid-template-columns: 1fr !important; }
+  .rah-footer-restore .row { grid-template-columns: 1fr !important; }
 }
 @media (max-width: 1100px) {
   .menu-toggle { display: inline-flex !important; }

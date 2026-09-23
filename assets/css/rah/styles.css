@@ -32,24 +32,24 @@ body {
 .no-border{
 	border-width: 0 !important;
 }
-.newel-modern_container .newel_text-column{
+.rah-modern_container .rah_text-column{
 	max-width: 600px;
     width: 100% !important;
     padding: 0 20px;
     text-align: center;
 }
-.newel-modern_container .newel_text-column h5 {
+.rah-modern_container .rah_text-column h5 {
     margin: 40px 0 15px;
     font-size: 60px;
     line-height: 70px;
 	}
-	.newel-modern_container .newel_text-column p
+	.rah-modern_container .rah_text-column p
 {
 	padding-bottom: 20px;
     font-size: 16px;
     line-height: 27px;
 }
-.newel-modern_container.no-border .bg_img{
+.rah-modern_container.no-border .bg_img{
     height: 450px;
 }
 .shop_btn_home{
@@ -77,10 +77,10 @@ body {
 .mt-35{
 	margin-top: 35px !important;
 }
-.newel_new_arrival{
+.rah_new_arrival{
 	padding-top: 30px;
 }
-.newel_new_arrival h5{
+.rah_new_arrival h5{
 	padding-top: 0px;
 	font-size: 10px;
 	margin: 0px;
@@ -88,7 +88,7 @@ body {
 	border-color: var(--bs-primary);
 	font-family: RALEWAY;
 }
-.newel_new_arrival h3{
+.rah_new_arrival h3{
 	font-size: 24px;
 	font-family: astoria;
 	padding-top: 10px;
@@ -1819,7 +1819,7 @@ body {
 	transition: all 0.5s;
 }
 
-.newel_text-column {
+.rah_text-column {
 	width: 50%;
 	margin-left: 40px;
 	padding-top: 60px;
@@ -1829,7 +1829,7 @@ body {
 	display: flex;
 }
 
-.newel_text-column h5 {
+.rah_text-column h5 {
 	margin: 0PX;
 	font-size: 72px;
 	line-height: 124px;
@@ -2174,19 +2174,19 @@ body {
 
 
 
-.newel-modern_container {
+.rah-modern_container {
 	margin: 0px;
 	border-top: 15px solid var(--bs-primary-text-emphasis);
 	border-bottom: 15px solid var(--bs-primary-text-emphasis);
 	height: 100%;
 }
 
-.newel_modern_content {
+.rah_modern_content {
 	margin-bottom: 40px;
 	margin-top: 20px;
 }
 
-.newel_modern_content h4 {
+.rah_modern_content h4 {
 	margin: 0px;
 	font-size: 12px;
 	margin-right: 15px;
@@ -2205,7 +2205,7 @@ body {
 	line-height: 24px;
 }
 
-.newel_modern_content p {
+.rah_modern_content p {
 	margin: 0px;
 	font-size: 12px;
 	margin-right: 15px;
@@ -2983,14 +2983,14 @@ a {
 		background-position: center !important;
 	}
 
-	.newel_text-column {
+	.rah_text-column {
 		width: 100%;
 		margin-left: 0;
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
 
-	.newel_text-column h5 {
+	.rah_text-column h5 {
 		font-size: 30px;
 		line-height: 60px;
 	}

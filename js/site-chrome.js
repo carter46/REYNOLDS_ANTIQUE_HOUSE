@@ -362,7 +362,7 @@
   function renderFooter() {
     const y = new Date().getFullYear();
     return [
-      '<footer class="rah-site-footer newel-footer-restore" id="site-footer">',
+      '<footer class="rah-site-footer rah-footer-restore" id="site-footer">',
       '  <div class="footer_top_container" style="width:100%;max-width:1200px;margin:0 auto;padding:2rem 24px;">',
       '    <div class="footer-grid">',
       "      <div>",
