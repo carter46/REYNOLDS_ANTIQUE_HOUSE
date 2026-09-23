@@ -219,20 +219,21 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
 }
 
 if (!rah_origin_ok()) {
-    rah_json(400, false, 'Invalid request origin.');
+    rah_log('E5 Invalid request origin Host=' . ($_SERVER['HTTP_HOST'] ?? '') . ' Origin=' . ($_SERVER['HTTP_ORIGIN'] ?? '') . ' Referer=' . ($_SERVER['HTTP_REFERER'] ?? ''));
+    rah_json(400, false, 'Invalid request origin. (E5)');
 }
 
 $configPath = __DIR__ . '/includes/mail-config.php';
 if (!is_file($configPath)) {
-    rah_log('mail-config.php missing');
-    rah_json(500, false, 'Unable to send your inquiry right now. Please try again later.');
+    rah_log('E0 mail-config.php missing');
+    rah_json(500, false, 'Unable to send your inquiry right now. Please try again later. (E0)');
 }
 
 /** @var mixed $config */
 $config = require $configPath;
 if (!is_array($config)) {
-    rah_log('mail-config.php invalid');
-    rah_json(500, false, 'Unable to send your inquiry right now. Please try again later.');
+    rah_log('E0 mail-config.php invalid return (not an array)');
+    rah_json(500, false, 'Unable to send your inquiry right now. Please try again later. (E0)');
 }
 
 $max = (int) ($config['rate_limit_max'] ?? 5);
@@ -294,15 +295,21 @@ if (
     || $pass === 'YOUR_SMTP_PASSWORD_HERE'
     || $host === 'smtp.example.com'
 ) {
-    rah_log('SMTP not configured (placeholder credentials)');
-    rah_json(500, false, 'Unable to send your inquiry right now. Please try again later.');
+    rah_log('E1 SMTP not configured (placeholder credentials)');
+    rah_json(500, false, 'Unable to send your inquiry right now. Please try again later. (E1)');
 }
 if (!filter_var($from, FILTER_VALIDATE_EMAIL) || !filter_var($adminTo, FILTER_VALIDATE_EMAIL)) {
-    rah_log('Invalid FROM or ADMIN_TO in config');
-    rah_json(500, false, 'Unable to send your inquiry right now. Please try again later.');
+    rah_log('E2 Invalid FROM or ADMIN_TO in config');
+    rah_json(500, false, 'Unable to send your inquiry right now. Please try again later. (E2)');
 }
 
 $phpmailerDir = __DIR__ . '/includes/lib/PHPMailer';
+foreach (['Exception.php', 'PHPMailer.php', 'SMTP.php'] as $pmFile) {
+    if (!is_file($phpmailerDir . '/' . $pmFile)) {
+        rah_log('E3 PHPMailer missing: ' . $pmFile);
+        rah_json(500, false, 'Unable to send your inquiry right now. Please try again later. (E3)');
+    }
+}
 require_once $phpmailerDir . '/Exception.php';
 require_once $phpmailerDir . '/PHPMailer.php';
 require_once $phpmailerDir . '/SMTP.php';
@@ -388,10 +395,21 @@ try {
     $mail->Username = $user;
     $mail->Password = $pass;
     $mail->Port = $port > 0 ? $port : 587;
-    $mail->Timeout = 15;
+    $mail->Timeout = 20;
     $mail->CharSet = 'UTF-8';
     if ($secure === 'tls' || $secure === 'ssl') {
         $mail->SMTPSecure = $secure;
+    }
+    // Shared hosts (Hostinger etc.) sometimes need relaxed SSL peer verify
+    $verifySsl = array_key_exists('smtp_verify_ssl', $config) ? (bool) $config['smtp_verify_ssl'] : false;
+    if (!$verifySsl) {
+        $mail->SMTPOptions = [
+            'ssl' => [
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true,
+            ],
+        ];
     }
     $mail->setFrom($from, $fromName !== '' ? $fromName : 'Reynolds Antique House');
     $mail->addAddress($adminTo);
@@ -403,7 +421,7 @@ try {
     $mail->send();
     rah_json(200, true);
 } catch (Throwable $e) {
-    // Log class only — never echo SMTP details / credentials to client
-    rah_log('SMTP send failed: ' . get_class($e) . ' — ' . $e->getMessage());
-    rah_json(500, false, 'Unable to send your inquiry right now. Please try again later.');
+    // Log class + message only — never echo SMTP credentials to client
+    rah_log('E4 SMTP send failed: ' . get_class($e) . ' — ' . $e->getMessage());
+    rah_json(500, false, 'Unable to send your inquiry right now. Please try again later. (E4)');
 }

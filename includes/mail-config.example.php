@@ -18,21 +18,27 @@ if (PHP_SAPI !== 'cli') {
 }
 
 return [
-    // SMTP server (use the authenticated mailbox's provider settings)
+    // Hostinger example:
+    // 'smtp_host' => 'smtp.hostinger.com',
+    // 'smtp_port' => 465,
+    // 'smtp_encryption' => 'ssl',
+    // (or port 587 with encryption 'tls')
+
     'smtp_host' => 'smtp.example.com',
     'smtp_port' => 587,
     'smtp_user' => 'your-smtp-username@example.com',
     'smtp_pass' => 'YOUR_SMTP_PASSWORD_HERE',
-    'smtp_encryption' => 'tls', // 'tls' or 'ssl'
+    'smtp_encryption' => 'tls', // 'tls' (587) or 'ssl' (465)
 
-    // FROM must be the authenticated SMTP mailbox when the provider requires it
+    // FROM must match the authenticated mailbox on Hostinger
     'smtp_from_email' => 'your-smtp-username@example.com',
     'smtp_from_name' => 'Reynolds Antique House',
 
-    // Fixed admin recipient (endpoint never accepts an arbitrary "to")
+    // Set true only if your host requires strict SSL cert verification
+    'smtp_verify_ssl' => false,
+
     'admin_to' => 'info@reynoldsantiquehouse.com',
 
-    // Abuse controls
-    'rate_limit_max' => 5,       // max submissions
-    'rate_limit_window' => 300,  // seconds
+    'rate_limit_max' => 5,
+    'rate_limit_window' => 300,
 ];

@@ -6,12 +6,12 @@
   <title>Product | Reynolds Antique House</title>
   <meta name="description" content="Product details — Reynolds Antique House." />
   <meta name="theme-color" content="#1a1410" />
-  <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css?v=1790121402421" />
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css?v=1790122434546" />
   <link rel="stylesheet" href="/assets/fonts/typekit/tid5nrh.css" />
-  <link rel="stylesheet" href="/assets/css/chrome.css?v=1790121402421" />
-  <link rel="stylesheet" href="/assets/css/newel/styles.css?v=1790121402421" />
+  <link rel="stylesheet" href="/assets/css/chrome.css?v=1790122434546" />
+  <link rel="stylesheet" href="/assets/css/newel/styles.css?v=1790122434546" />
   <link rel="stylesheet" href="/assets/css/newel/productinfo.css" />
-  <link rel="stylesheet" href="/assets/css/newel/NEWEL-PRODUCT-INFO.css?v=1790121402421" />
+  <link rel="stylesheet" href="/assets/css/newel/NEWEL-PRODUCT-INFO.css?v=1790122434546" />
   <link rel="stylesheet" href="/assets/css/newel/flexslider.css" />
 </head>
 <body data-page="product">
@@ -26,7 +26,7 @@
         </div>
       </div>
     </section>
-    <script src="/js/product-catalog.js?v=1790121402421"></script>
+    <script src="/js/product-catalog.js?v=1790122434546"></script>
     <script>
       (async function () {
         function esc(s) {
@@ -110,16 +110,56 @@
           }
         }
 
+        function setInquirySubmitting(isSubmitting) {
+          var submitBtn = document.getElementById("inq-submit");
+          if (!submitBtn) return;
+          submitBtn.disabled = !!isSubmitting;
+          submitBtn.classList.toggle("is-loading", !!isSubmitting);
+          submitBtn.setAttribute("aria-busy", isSubmitting ? "true" : "false");
+        }
+
+        function showInquirySuccess() {
+          var form = document.getElementById("inquiry-form");
+          var success = document.getElementById("inq-success");
+          var heading = document.getElementById("inq-heading");
+          var label = document.getElementById("inq-product-label");
+          var summary = document.getElementById("inq-product-summary");
+          if (form) form.hidden = true;
+          if (label) label.hidden = true;
+          if (summary) summary.hidden = true;
+          if (heading) heading.textContent = "Thank you";
+          if (success) {
+            success.hidden = false;
+            var closeBtn = document.getElementById("inq-success-close");
+            if (closeBtn) closeBtn.focus();
+          }
+        }
+
+        function resetInquiryView() {
+          var form = document.getElementById("inquiry-form");
+          var success = document.getElementById("inq-success");
+          var heading = document.getElementById("inq-heading");
+          var label = document.getElementById("inq-product-label");
+          var status = document.getElementById("inq-status");
+          if (form) form.hidden = false;
+          if (success) success.hidden = true;
+          if (heading) heading.textContent = "Inquire about this piece";
+          if (label) label.hidden = false;
+          if (status) {
+            status.hidden = true;
+            status.textContent = "";
+            status.className = "rah-inquiry-status";
+          }
+          setInquirySubmitting(false);
+        }
+
         function openInquiryModal(p) {
           var modal = document.getElementById("inquiry-modal");
           var form = document.getElementById("inquiry-form");
-          var status = document.getElementById("inq-status");
           if (!modal || !form) return;
+          resetInquiryView();
           form.reset();
           fillProductFields(p);
-          status.hidden = true;
-          status.textContent = "";
-          status.className = "rah-inquiry-status";
           modal.hidden = false;
           document.body.classList.add("rah-inquiry-open");
           var nameEl = document.getElementById("inq-name");
@@ -131,6 +171,7 @@
           if (!modal || modal.hidden) return;
           modal.hidden = true;
           document.body.classList.remove("rah-inquiry-open");
+          resetInquiryView();
           var inquireBtn = document.getElementById("inquire-open");
           if (inquireBtn) inquireBtn.focus();
         }
@@ -233,7 +274,7 @@
             product_dimensions: form.product_dimensions.value,
             website: form.website.value
           };
-          submitBtn.disabled = true;
+          setInquirySubmitting(true);
           try {
             var res = await fetch("/inquiry.php", {
               method: "POST",
@@ -251,29 +292,28 @@
               data = {};
             }
             if (res.ok && data.ok) {
-              status.textContent = "Thank you. Your inquiry has been sent.";
-              status.className = "rah-inquiry-status is-success";
-              status.hidden = false;
               form.reset();
               fillProductFields(product);
+              showInquirySuccess();
             } else {
               status.textContent =
                 (data && data.error) || "Unable to send your inquiry right now. Please try again later.";
               status.className = "rah-inquiry-status is-error";
               status.hidden = false;
+              setInquirySubmitting(false);
             }
           } catch (err) {
             status.textContent = "Unable to send your inquiry right now. Please try again later.";
             status.className = "rah-inquiry-status is-error";
             status.hidden = false;
+            setInquirySubmitting(false);
           }
-          submitBtn.disabled = false;
         });
       })();
     </script>
   </main>
   <div id="inquiry-modal" class="rah-inquiry-modal" hidden>
-    <div class="rah-inquiry-backdrop" data-inquiry-close tabindex="-1" aria-hidden="true"></div>
+    <div class="rah-inquiry-backdrop" data-inquiry-close></div>
     <div class="rah-inquiry-dialog" role="dialog" aria-modal="true" aria-labelledby="inq-heading">
       <button type="button" class="rah-inquiry-close" data-inquiry-close aria-label="Close inquiry form">&times;</button>
       <h2 id="inq-heading">Inquire about this piece</h2>
@@ -305,13 +345,23 @@
         <textarea name="message" id="inq-message" required maxlength="4000" rows="5"></textarea>
         <p id="inq-status" class="rah-inquiry-status" hidden></p>
         <div class="rah-inquiry-actions">
-          <button type="submit" class="rah-btn" id="inq-submit">Send inquiry</button>
+          <button type="submit" class="rah-btn" id="inq-submit">
+            <span class="rah-inquiry-btn-label">Send inquiry</span>
+            <span class="rah-inquiry-spinner" aria-hidden="true"></span>
+          </button>
           <button type="button" class="rah-btn rah-btn--ghost" data-inquiry-close>Cancel</button>
         </div>
       </form>
+      <div id="inq-success" class="rah-inquiry-success" hidden>
+        <p class="rah-inquiry-success-lead">Thank you for contacting us.</p>
+        <p>Your inquiry has been sent to our sales team. We&rsquo;ll get back in touch with you as soon as possible.</p>
+        <div class="rah-inquiry-actions">
+          <button type="button" class="rah-btn" id="inq-success-close" data-inquiry-close>Close</button>
+        </div>
+      </div>
     </div>
   </div>
   <div id="site-footer-root"></div>
-  <script src="/js/site-chrome.js?v=1790121402421"></script>
+  <script src="/js/site-chrome.js?v=1790122434546"></script>
 </body>
 </html>

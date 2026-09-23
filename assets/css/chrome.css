@@ -1140,6 +1140,45 @@ body.rah-inquiry-open { overflow: hidden; }
 .rah-inquiry-actions .rah-btn {
   border: 0;
   cursor: pointer;
+  position: relative;
+}
+#inq-submit.is-loading {
+  pointer-events: none;
+  opacity: 0.85;
+}
+#inq-submit .rah-inquiry-spinner {
+  display: none;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  vertical-align: -3px;
+  animation: rah-inquiry-spin 0.7s linear infinite;
+}
+#inq-submit.is-loading .rah-inquiry-spinner {
+  display: inline-block;
+}
+#inq-submit.is-loading .rah-inquiry-btn-label {
+  opacity: 0.92;
+}
+@keyframes rah-inquiry-spin {
+  to { transform: rotate(360deg); }
+}
+.rah-inquiry-success {
+  padding-top: 4px;
+}
+.rah-inquiry-success p {
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+.rah-inquiry-success-lead {
+  font-size: 18px !important;
+  color: #111 !important;
+  font-family: ASTORIA, Georgia, serif;
 }
 .rah-btn--ghost {
   background: transparent !important;
