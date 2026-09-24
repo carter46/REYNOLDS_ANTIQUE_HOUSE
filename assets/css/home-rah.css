@@ -1352,7 +1352,7 @@
       .utility-bar__left { font-size: 8.5px; letter-spacing: 0.14em; }
       .utility-bar__right { gap: 10px; font-size: 8px; letter-spacing: 0.08em; }
       .header__inner { height: 118px; padding: 0 var(--page-gutter-glb-hdr); }
-      .logo__image { width: 72px !important; max-height: 40px !important; }
+      .logo__image { width: 128px !important; max-height: 64px !important; }
       .search-btn { display: none; }
       .search-btn1 { display: none; }
       .my-srch-icon {display: none;}
@@ -1381,7 +1381,7 @@
       }
       .utility-bar__right { display: none; }
       .header__inner { height: 108px; padding: 0 var(--page-gutter-glb-hdr); }
-      .logo__image { width: 72px !important; max-height: 40px !important; }
+      .logo__image { width: 128px !important; max-height: 64px !important; }
       .menu-toggle { padding: 7px; }
       .menu-toggle__icon { width: 19px; height: 15px; }
       .menu-toggle__label { font-size: 8px; }
@@ -1786,8 +1786,8 @@ form#product-search {
 }
 @media (max-width: 1100px) {
   .logo__image {
-    width: 72px !important;
-    max-height: 40px !important;
+    width: 128px !important;
+    max-height: 64px !important;
   }
 }
 .utility-bar {
