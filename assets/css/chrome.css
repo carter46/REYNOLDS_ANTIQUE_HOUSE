@@ -1,5 +1,5 @@
 /* Reynolds Antique House — shared chrome
-   Visual structure restored from archive Newel header/nav/footer.
+   Visual structure restored from archive site header/nav/footer.
    Commerce/tracking removed. Local search only. */
 
 @font-face {
@@ -778,7 +778,7 @@ a:hover { color: var(--rah-gold-dark); }
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   align-items: stretch;
 }
-/* Catalog grid cards only — do NOT override homepage .featured_container Newel cards */
+/* Catalog grid cards only — do NOT override homepage .featured_container archive cards */
 .rah-grid .prince_colm { width: 66%; }
 .rah-grid .dimension_col { width: 34%; }
 .rah-grid .prod-dims {

@@ -503,13 +503,13 @@ background: var(--bs-light-bg-subtle);
 
 
 
-/*MY sell-or-consign-to-newel CSS start*/
+/*MY sell-or-consign CSS start*/
 .container-fluid-sell{
     padding: 0;
     overflow: hidden;
 }
 .banner-img{
-    /*background: url(assets/img/sell-consign-to-newel.jpg);*/
+    /*background: url(assets/img/sell-consign.jpg);*/
     height: 600px;
     padding-top: 80px;
 }
@@ -555,7 +555,7 @@ background: var(--bs-light-bg-subtle);
 	margin-left: 12px;
 }
 
-/*MY sell-or-consign-to-newel CSS end*/
+/*MY sell-or-consign CSS end*/
 
 /* trade program start*/
 .banner-head{
@@ -925,7 +925,7 @@ margin-right: 30px;
 	}
 /*login page end*/
 
-/* Newel Florida start */
+/* Florida location start */
 @media (max-width: 767px) {
         .nwlgrp-btn {
      	display: none;
@@ -933,7 +933,7 @@ margin-right: 30px;
 		}
 }
 
-/* Newel Florida start */
+/* Florida location start */
 
 
 /*glossary page start*/

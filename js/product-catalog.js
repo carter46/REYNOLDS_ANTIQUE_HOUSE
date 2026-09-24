@@ -108,7 +108,7 @@ window.ReynoldsCatalog = (function () {
       .join("<br>");
   }
 
-  /** Archive Newel product card markup (commerce controls removed).
+  /** Archive product card markup (commerce controls removed).
    * Nesting must match archive: card.card-body > featured_container_col > hvrcls
    * Never put card/card-body on the same node as hvrcls — Bootstrap padding kills the absolute image well.
    */

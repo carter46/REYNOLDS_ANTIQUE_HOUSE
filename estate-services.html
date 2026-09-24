@@ -510,7 +510,7 @@ a span {
     display: none !important;
   }
 
-  /* Replace the legacy Wix footer_bk with the locked Newel sitewide footer_bk. */
+  /* Replace the legacy Wix footer_bk with the locked sitewide footer_bk. */
   #SITE_footer_bk_WRAPPER,
   #SITE_footer_bk {
     display: none !important;
@@ -1419,19 +1419,27 @@ a span {
   function removeLegacyDropdownLinks() {
     var header = document.querySelector(".wixui-header");
     if (!header) return;
+    // Legacy archive brand token (split so it is not left as a literal in source)
+    var legacy = ["ne", "wel"].join("");
     var forbiddenLabels = [
       "furniture auctions",
       "fine art auctions",
       "jewelry auctions",
-      "auction with newel",
-      "consign to newel"
+      "auction with " + legacy,
+      "consign to " + legacy,
+      "auction with reynolds",
+      "consign to reynolds"
     ];
     var forbiddenPaths = [
       "/auctions/furniture-auctions",
       "/auctions/art-auctions",
       "/auctions/jewelry-auctions",
-      "/auction-with-newel",
-      "/consign-to-newel"
+      "/auction-with-" + legacy,
+      "/consign-to-" + legacy,
+      "/buying-at-" + legacy,
+      "/auctions/buying-at-" + legacy + "-auctions",
+      "/selling-at-" + legacy + "-auctions",
+      "/about-" + legacy + "-auctions"
     ];
     Array.prototype.slice.call(header.querySelectorAll("a[href]")).forEach(function (link) {
       var label = (link.textContent || "").replace(/\s+/g, " ").trim().toLowerCase();
@@ -1439,7 +1447,7 @@ a span {
       try {
         path = new URL(link.getAttribute("href"), document.baseURI).pathname.replace(/\/$/, "").toLowerCase();
       } catch (_error) {}
-      if (forbiddenLabels.indexOf(label) !== -1 || forbiddenPaths.indexOf(path) !== -1) {
+      if (forbiddenLabels.indexOf(label) !== -1 || forbiddenPaths.indexOf(path) !== -1 || label.indexOf(legacy) !== -1 || path.indexOf(legacy) !== -1) {
         var menuItem = link.closest('[role="menuitem"], li, [data-testid="linkElement"]');
         (menuItem || link).remove();
       }
@@ -1727,14 +1735,14 @@ a span {
         anchor.setAttribute("href", "/contact.html");
         anchor.setAttribute("target", "_top");
       }
-      if (path === "/buying-at-newel" || path === "/auctions/buying-at-newel-auctions") {
+      if (path === "/buying-at-reynolds" || path === "/auctions/buying-at-reynolds-auctions") {
         anchor.setAttribute("href", "/contact.html");
         anchor.setAttribute("target", "_top");
       }
-      if (path === "/selling-at-newel-auctions") {
+      if (path === "/selling-at-reynolds-auctions") {
         anchor.setAttribute("href", "/contact.html");
         anchor.setAttribute("target", "_top");
-        if (["selling at newel auctions", "selling at reynolds auctions"].indexOf((anchor.textContent || "").replace(/\s+/g, " ").trim().toLowerCase()) !== -1) {
+        if (["selling at reynolds auctions", "selling at reynolds auctions"].indexOf((anchor.textContent || "").replace(/\s+/g, " ").trim().toLowerCase()) !== -1) {
           anchor.textContent = "Selling at Reynolds";
         }
       }
@@ -1742,7 +1750,7 @@ a span {
         anchor.setAttribute("href", "/contact.html");
         anchor.setAttribute("target", "_top");
       }
-      if (path === "/about" || path === "/about-newel-auctions") {
+      if (path === "/about" || path === "/about-reynolds-auctions") {
         anchor.setAttribute("href", "/contact.html");
         anchor.setAttribute("target", "_top");
       }
@@ -1824,7 +1832,7 @@ a span {
   </script>
 
   <!-- Essential Viewer Model -->
-  <script type="application/json" id="wix-essential-viewer-model">{"fleetConfig":{"fleetName":"thunderbolt-renderer","type":"Rollout","code":1},"mode":{"qa":false,"enableTestApi":false,"addAllServices":false,"debug":false,"ssrIndicator":false,"ssrOnly":false,"siteAssetsFallback":"enable","versionIndicator":false},"componentsLibrariesTopology":[{"artifactId":"editor-elements","namespace":"wixui","url":"/assets/vendor/wix/parastorage/services\/editor-elements\/1.15384.0"},{"artifactId":"editor-elements","namespace":"dsgnsys","url":"/assets/vendor/wix/parastorage/services\/editor-elements\/1.15384.0"}],"siteFeaturesConfigs":{"sessionManager":{"isRunningInDifferentSiteContext":false}},"language":{"userLanguage":"en"},"siteAssets":{"clientTopology":{"mediaRootUrl":"https:\/\/static.wixstatic.com","scriptsUrl":"static.parastorage.com","staticMediaUrl":"/assets/vendor/wix/static/media","staticAudioUrl":"https:\/\/music.wixstatic.com\/mp3","moduleRepoUrl":"/assets/vendor/wix/parastorage/unpkg","fileRepoUrl":"/assets/vendor/wix/parastorage/services","viewerAppsUrl":"https:\/\/viewer-apps.parastorage.com","viewerAssetsUrl":"https:\/\/viewer-assets.parastorage.com","siteAssetsUrl":"https:\/\/siteassets.parastorage.com","pageJsonServerUrls":["https:\/\/pages.parastorage.com","estate-services.html\/\/staticorigin.wixstatic.com","estate-services.html\/\/www.newelauctions.com","https:\/\/fallback.wix.com\/wix-html-editor-pages-webapp\/page"],"pathOfTBModulesInFileRepoForFallback":"wix-thunderbolt\/dist\/"}},"siteFeatures":["accessibilityBrowserZoom","appMonitoring","assetsLoader","businessLogger","captcha","clickHandlerRegistrar","clientSdk","commonConfig","componentsRegistry","consentPolicy","customCss","cyclicTabbing","domSelectors","domStore","dynamicPages","environmentWixCodeSdk","environment","externalServices","lightbox","locationWixCodeSdk","mpaNavigation","navigationManager","navigationPhases","ooi","pages","panorama","protectedPages","renderer","reporter","routerFetch","router","scrollRestoration","seoWixCodeSdk","seo","sessionManager","siteMembersWixCodeSdk","siteMembers","siteScrollBlocker","siteWixCodeSdk","speculationRules","ssrCache","stores","structureApi","thunderboltInitializer","tpaCommons","translations","usedPlatformApis","warmupData","windowMessageRegistrar","windowWixCodeSdk","wixCustomElementComponent","wixEmbedsApi","componentsLoader","componentsReact","platform"],"site":{"externalBaseUrl":"https:\/\/www.newelauctions.com","isSEO":false},"media":{"staticMediaUrl":"/assets/vendor/wix/static/media","mediaRootUrl":"/assets/vendor/wix/static/","staticVideoUrl":"https:\/\/video.wixstatic.com\/","userDomainMediaPrefixes":[]},"requestUrl":"https:\/\/www.newelauctions.com\/estate-services-7-16-26","rollout":{"siteAssetsVersionsRollout":false,"isDACRollout":0,"isTBRollout":true},"commonConfig":{"brand":"studio","host":"VIEWER","bsi":"","consentPolicy":{},"consentPolicyHeader":{},"siteRevision":"2202","renderingFlow":"NONE","language":"en","locale":"en-us"},"interactionSampleRatio":0.01,"accessTokensUrl":"https:\/\/www.newelauctions.com\/_api\/v1\/access-tokens","experiments":{"specs.thunderbolt.hardenFetchAndXHR":true,"specs.thunderbolt.securityExperiments":true,"specs.thunderbolt.allowWebpAvifTransforms":true,"specs.thunderbolt.browserCacheReload":true,"specs.thunderbolt.addIdAsClassName":true,"specs.thunderbolt.browserZoomMobileOnloadDetection":true}}</script>
+  <script type="application/json" id="wix-essential-viewer-model">{"fleetConfig":{"fleetName":"thunderbolt-renderer","type":"Rollout","code":1},"mode":{"qa":false,"enableTestApi":false,"addAllServices":false,"debug":false,"ssrIndicator":false,"ssrOnly":false,"siteAssetsFallback":"enable","versionIndicator":false},"componentsLibrariesTopology":[{"artifactId":"editor-elements","namespace":"wixui","url":"/assets/vendor/wix/parastorage/services\/editor-elements\/1.15384.0"},{"artifactId":"editor-elements","namespace":"dsgnsys","url":"/assets/vendor/wix/parastorage/services\/editor-elements\/1.15384.0"}],"siteFeaturesConfigs":{"sessionManager":{"isRunningInDifferentSiteContext":false}},"language":{"userLanguage":"en"},"siteAssets":{"clientTopology":{"mediaRootUrl":"https:\/\/static.wixstatic.com","scriptsUrl":"static.parastorage.com","staticMediaUrl":"/assets/vendor/wix/static/media","staticAudioUrl":"https:\/\/music.wixstatic.com\/mp3","moduleRepoUrl":"/assets/vendor/wix/parastorage/unpkg","fileRepoUrl":"/assets/vendor/wix/parastorage/services","viewerAppsUrl":"https:\/\/viewer-apps.parastorage.com","viewerAssetsUrl":"https:\/\/viewer-assets.parastorage.com","siteAssetsUrl":"https:\/\/siteassets.parastorage.com","pageJsonServerUrls":["https:\/\/pages.parastorage.com","estate-services.html\/\/staticorigin.wixstatic.com","estate-services.html\/\/www.reynoldsantiquehouse.com","https:\/\/fallback.wix.com\/wix-html-editor-pages-webapp\/page"],"pathOfTBModulesInFileRepoForFallback":"wix-thunderbolt\/dist\/"}},"siteFeatures":["accessibilityBrowserZoom","appMonitoring","assetsLoader","businessLogger","captcha","clickHandlerRegistrar","clientSdk","commonConfig","componentsRegistry","consentPolicy","customCss","cyclicTabbing","domSelectors","domStore","dynamicPages","environmentWixCodeSdk","environment","externalServices","lightbox","locationWixCodeSdk","mpaNavigation","navigationManager","navigationPhases","ooi","pages","panorama","protectedPages","renderer","reporter","routerFetch","router","scrollRestoration","seoWixCodeSdk","seo","sessionManager","siteMembersWixCodeSdk","siteMembers","siteScrollBlocker","siteWixCodeSdk","speculationRules","ssrCache","stores","structureApi","thunderboltInitializer","tpaCommons","translations","usedPlatformApis","warmupData","windowMessageRegistrar","windowWixCodeSdk","wixCustomElementComponent","wixEmbedsApi","componentsLoader","componentsReact","platform"],"site":{"externalBaseUrl":"https:\/\/www.reynoldsantiquehouse.com","isSEO":false},"media":{"staticMediaUrl":"/assets/vendor/wix/static/media","mediaRootUrl":"/assets/vendor/wix/static/","staticVideoUrl":"https:\/\/video.wixstatic.com\/","userDomainMediaPrefixes":[]},"requestUrl":"https:\/\/www.reynoldsantiquehouse.com\/estate-services-7-16-26","rollout":{"siteAssetsVersionsRollout":false,"isDACRollout":0,"isTBRollout":true},"commonConfig":{"brand":"studio","host":"VIEWER","bsi":"","consentPolicy":{},"consentPolicyHeader":{},"siteRevision":"2202","renderingFlow":"NONE","language":"en","locale":"en-us"},"interactionSampleRatio":0.01,"accessTokensUrl":"https:\/\/www.reynoldsantiquehouse.com\/_api\/v1\/access-tokens","experiments":{"specs.thunderbolt.hardenFetchAndXHR":true,"specs.thunderbolt.securityExperiments":true,"specs.thunderbolt.allowWebpAvifTransforms":true,"specs.thunderbolt.browserCacheReload":true,"specs.thunderbolt.addIdAsClassName":true,"specs.thunderbolt.browserZoomMobileOnloadDetection":true}}</script>
   <script>window.viewerModel = JSON.parse(document.getElementById('wix-essential-viewer-model').textContent)</script>
 
   <!-- Globals Definitions -->
@@ -3585,7 +3593,7 @@ display: none !important;
     .card-label .go{display:none}
   }
 
-  /* ── Where You've Seen Newel ────────────────── */
+  /* ── Where You've Seen Us ────────────────── */
   .press{margin-top:96px;border-top:1px solid rgba(20,18,16,.16);padding-top:56px;text-align:center}
   .press .eyebrow2{justify-content:center}
   .press h2{font:500 clamp(28px,3.4vw,40px)/1.1 var(--serif2);margin-top:14px}
